@@ -54,7 +54,7 @@ function addStar(){
   scene.add(star);
 }
 
-let numstars = 100;
+let numstars = 200;
 
 Array(numstars).fill().forEach(addStar);
 
@@ -172,17 +172,17 @@ function stopScroll(){
     clearTimeout(delayScroll)
 }
 
-var scrollflag = false; // var so we only trigger the scroll setTimeout once, when the page loads
+var scrolldone = false; // changes to true once page is loaded, lets the settimeout run. var exists so we only trigger the scroll setTimeout once, when the page loads
 
 function autoScroll(){
-  if(window.pageYOffset >= sticky){
-    scrollflag = true; // Stops autoscroll from re-applying after its first ran upon load. So the user can scroll back to top without autoscroll applying.
-  }
-  else if(window.pageYOffset < sticky && scrollflag === false ){
-    delayScroll = setTimeout(scrollPage, 20)
-    scrollflag = true;
-  } else{
-    stopScroll()
+  if(scrolldone === true){
+  // do nothing, auto scroll is done
+  console.log("scroll done!")
+   }
+  else if(window.pageYOffset < sticky && scrolldone === false ){
+    // window is above navbar, start autoscroll
+    delayScroll = setTimeout(scrollPage, 20);
+    scrolldone = true; 
   }
 }
 
