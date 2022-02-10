@@ -1,0 +1,788 @@
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+:root {
+  --mainColor: rgba(228, 228, 228, 0.85);
+  --secondaryColor:rgba(255, 255, 255, 0.8);
+  --darkBgColor: rgba(34, 34, 34, 0.795);
+  --darkBgColorTrans: rgba(34, 34, 34, 0.301);
+  --darkBgColorSolid: rgb(34, 34, 34);
+  --transColor: rgba(255, 255, 255, 0);
+  --blockquoteOutlineColor: #3b3b3b;
+  
+  --mainText:black;
+  --secondaryText:rgb(39, 39, 39);
+  --lightText:rgb(255, 255, 255);
+
+
+  --borderSize: 10px;
+  --borderColor:#272727;
+
+  --bottomSpacing: 100px;
+
+  --shadowColor: darkslategray;
+
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darkBgColor)
+}
+
+body::-webkit-scrollbar-thumb {
+  background: darkslategray;
+}
+
+/* need this line to eliminate left whitespace */
+body {
+  margin: 0;
+  }
+  
+
+main {
+  width: 100vw;
+  color: var(--mainText);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+}
+
+/* ---------- DEFINING TEXT FORMATTING ----------*/
+
+h1, h2, h3, h4, h5, h6, strong, blockquote {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+p,li,span,label,input,textarena {
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  color: var(--secondaryText);
+  font-style: normal;
+}
+
+li{
+  color:white;
+}
+
+a{
+  text-decoration:none;
+  color: rgb(129, 230, 255);
+}
+
+ul{
+  padding-left: 20px;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+.s1 {
+  grid-column: 2 / span 6;
+  background: var(--mainColor);
+
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin-bottom: var(--bottomSpacing);
+  border: var(--borderSize) solid var(--transColor);
+  
+  box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -webkit-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -moz-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+}
+
+/* STYLING BUTTONS */
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: var(--transColor);
+  cursor: pointer;
+  transition: all .5s ease;
+
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
+}
+
+
+button:active {
+  transform: scale(0.8);
+}
+
+/* HIGHLIGHTER CLASS */
+highlight {
+  transition: all .5s ease;
+}
+
+highlight:hover{
+  background-color: black;
+}
+
+/* STYLING NAVBAR */
+
+.header{
+  grid-column: 1 / -1;
+
+  width:100%;
+  height: 10vh;
+  background-position: center;
+  background-size: cover;
+
+  margin-top: 80px;
+
+}
+
+nav{
+overflow: hidden;
+display:block;
+
+padding:0;
+
+text-align: center;
+border-top: 5px solid var(--shadowColor);
+border-bottom: 5px solid var(--shadowColor);
+z-index: 9;
+
+transition: all .5s ease;
+}
+
+nav:hover{
+  background-color: var(--shadowColor);
+}
+
+nav ul{
+  background: transparent;
+  width:100%;
+  margin: 0px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+  margin-bottom: 18px;
+  margin-top:18px;
+
+  text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+
+}
+
+
+
+nav.sticky{
+  position: fixed;
+  top:0;
+  width:100%;
+  overflow: hidden;
+display:block;
+margin-bottom: 40px;  
+text-align: center;
+z-index: 9;
+background: var(--shadowColor)
+}
+
+/* STYLING SUBHEADER */
+
+.subheader {
+grid-column: 2 / span 10;
+text-align: center;
+background: var(--transColor);
+margin-bottom: 100px; 
+border-top: 5px solid var(--shadowColor);
+border-bottom: 5px solid var(--shadowColor);
+
+font-size: rem;
+color: var(--lightText);
+text-shadow: 2px 2px 0px var(--borderColor);
+
+transition: all .5s ease;
+}
+
+.subheader:hover{
+  background-color: var(--shadowColor);
+}
+
+/* testing a hoverbox div */
+hoverbox{
+  transition: all .5s ease;
+}
+hoverbox:hover{
+  transform: scale(1.1);
+}
+
+/* STYLING TEXTBOX */
+
+.textbox {
+
+  grid-column: 2 / span 8;
+  padding: 1rem;
+  background: var(--mainColor);
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+  -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+  -moz-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+}
+
+/* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
+
+
+.column-container{
+  grid-column: 4 / span 6;
+
+  border: 0px solid white;
+  display:grid;
+  grid-template: "1fr 1fr " auto;
+  grid-template-rows: 1;
+  gap:0px;
+  margin-bottom: 0px;
+  
+}
+
+.column{
+  border: 0px solid white;
+  padding: 0rem;
+  margin: 0px;
+  text-align: center;
+}
+
+.longcolumn{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* STYLING SMALL TILES FOR OTHER PROJECTS */
+
+.small-tile-container{
+  grid-column: 2 / span 10;
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  gap:40px;
+  justify-content: left;
+}
+
+.small-tile{
+  border: var(--borderSize) solid var(--borderColor);
+}
+
+
+/* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
+:root {
+  --tile-margins: 30px;
+  --popout-scale: scale(1.04)
+}
+
+.project-container{
+  grid-column: 2 / span 10;
+
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  display:grid;
+  grid-template-columns: 1fr;
+  
+  justify-content: left;
+}
+
+/* Code for left-aligned project tiles*/
+
+.project-tile{
+  background: var(--transColor);
+  display:grid;
+  grid-template-columns:  4fr 5fr;
+  
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+}
+
+.project-tile:hover{
+  transform: var(--popout-scale);
+}
+
+.project-leftside{
+    transition: all 0.5s ease;
+}
+
+.project-leftside:hover{
+  background: rgb(47, 79, 79);
+}
+
+.project-rightside{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+}
+
+.project-leftside:hover + .project-rightside{
+display: block;
+opacity: 1;
+}
+
+.project-rightside >*{
+  transform: translateX(-30px);
+  transition: transform 0.5s;
+}
+
+.project-leftside:hover + .project-rightside>*{
+  transform: translateX(0);
+  }
+
+/* Code for right-aligned project tiles*/
+
+.R-project-tile{
+  background: var(--transColor);
+  display:grid;
+  grid-template-columns:  5fr 4fr;
+  
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+}
+
+.R-project-tile:hover{
+  transform: var(--popout-scale);
+}
+
+.R-project-leftside{
+    transition: all 0.5s ease;
+    grid-column-start: 2;
+    grid-row: 1;
+}
+
+.R-project-leftside:hover{
+  background: rgb(47, 79, 79);
+}
+
+.R-project-rightside{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+  grid-column-start: 1;
+  grid-row: 1;
+
+}
+
+.R-project-leftside:hover + .R-project-rightside{
+display: block;
+opacity: 1;
+}
+
+.R-project-rightside >*{
+  transform: translateX(30px);
+  transition: transform 0.5s;
+}
+
+.R-project-leftside:hover + .R-project-rightside>*{
+  transform: translateX(0);
+  }
+
+
+/* Code for project tile inner content*/
+
+.project-pic{
+  display:block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.project-body{
+padding:20px;
+  background: var(--transColor);
+  font-size: 1.2rem;
+
+}
+.project-title{
+  margin:0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+
+}
+.project-desc{
+  color:var(--lightText);
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+}
+.project-details{
+  font-size: 0.95rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+.buttons-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  text-align:center;
+  font-size: 0.8rem;
+}
+.project-livedemo{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+.project-sourcecode{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+
+.timeline-container{
+  grid-column: 2 / span 10;
+
+  color: white;
+  background-color: var(--transColor);
+
+  margin-bottom: 10px;
+  font-size: 1rem;
+
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: var(--borderSize);
+}
+
+.timeline-yr{
+  background: var(--darkBgColor);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-content{
+  background: var(--darkBgColor);
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  color:white;
+}
+
+
+/* STYLING BLOCKQUOTE FOR LARGE TEXT 1 LINERS */
+
+:root{
+  --blockquotespacing: 10px
+}
+
+blockquote {
+  margin: 0;
+  grid-column: 2 / span 9;
+  margin-top: var(--blockquotespacing);
+  line-height: 1;
+  text-align: left;
+  transition: all .5s ease;
+
+}
+
+blockquoteright {
+  margin: 0;
+  grid-column: 3 / span 9;
+  margin-top: var(--blockquotespacing);
+  line-height: 1;
+  text-align: right;
+  transition: all .5s ease;
+}
+
+
+blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6{
+  color: var(--lightText);
+  font-size: 2rem;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace h6{
+  transition: all .5s ease;
+  padding:20px;  
+}
+
+blockquote h6:hover, blockquoteright h6:hover{
+  background-color: black;
+}
+
+blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
+  color: var(--lightText);
+  font-size: 1.6rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p, blockquotecenter p{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquoterightsmall {
+  margin: 0;
+  padding: 0;
+  
+  grid-column: 8 / span 4;
+  margin-top: var(--bottomSpacing);
+  text-align: right;
+}
+
+blockquotenospace {
+  margin: 0;
+  padding-left:15px;
+  grid-column: 2 / span 9;
+  line-height: 1;
+  text-align: left;
+  transition: all .5s ease;
+
+}
+
+blockquotenospace:hover{
+  background-color: black;
+}
+
+blockquotenospaceright {
+  margin: 0;
+  padding-right: 15px;
+  grid-column: 3 / span 9;
+  line-height: 1;
+  text-align: right;
+  transition: all .5s ease;
+
+}
+
+blockquotenospaceright:hover{
+  background-color: black;
+}
+
+blockquotecenter{
+  grid-column: 1 / span 11;
+  text-align: center;
+  align-content: center;
+}
+
+/* Experimenting with tooltips */
+.tooltip {
+  position: relative;
+  
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: var(--darkBgColor);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+
+  width: 300px;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -150px;
+  transition: all .5s ease;
+  opacity:0;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity:1;
+}
+
+.tooltip p{
+  color: var(--lightText);
+  font-size: 1.2rem;
+  line-height: .8;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+/* FADE IN FEATURE */
+.js-scroll {
+  transition: all .5s ease;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+
+/* Divs for whitespace */
+
+addspace {
+  margin: 0;
+  grid-column: 2 / span 9;
+  line-height: 1;
+  text-align: left;
+}
+
+addbigspace{
+  height: 90vh;
+}
+
+addhalfspace{
+  height:40vh;
+}
+
+addquarterspace{
+  height:20vh;
+}
+
+addtenthspace{
+  height:10vh;
+}
+
+
+/* --------- OLD CODE FOR REFERENCE ----------*/
+/*
+
+OLD SUBHEADER BOX SHADOW:
+/*
+box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-moz-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+
+
+  .column-container-3{
+  grid-column: 2 / span 10;
+  background: var(--lightBgColor);
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+
+  grid-template-areas:
+  'column-one column-two column-three'
+  ;
+}
+
+*/
+
+
