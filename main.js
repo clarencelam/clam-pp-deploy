@@ -59,7 +59,8 @@ let numstars = 100;
 Array(numstars).fill().forEach(addStar);
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load('/astronomy.jpg');
+const loader = new THREE.TextureLoader();
+const spaceTexture = loader.load('https://i.imgur.com/NGDZtRM.jpg'); // This URL has to come from a domain that sends the right "headers", as per https://stackoverflow.com/questions/24087757/three-js-and-loading-a-cross-domain-image
 scene.background = spaceTexture;
 
 var navbar = document.getElementById("navbar");
