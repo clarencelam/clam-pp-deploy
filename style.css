@@ -256,6 +256,13 @@ hoverbox:hover{
   box-shadow: 11px 11px 0px 3px darkslategray;
   -webkit-box-shadow: 11px 11px 0px 3px darkslategray;
   -moz-box-shadow: 11px 11px 0px 3px darkslategray;
+
+  transition: all .5s ease;
+
+}
+
+.textbox:hover{
+  transform:scale(1.05)
 }
 
 /* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
