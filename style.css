@@ -496,7 +496,7 @@ padding:20px;
 }
 
 
-/* STYLING BLOCKQUOTE FOR LARGE TEXT 1 LINERS */
+/* STYLING BLOCKQUOTE FOR LARGE TEXT */
 
 :root{
   --blockquotespacing: 10px
@@ -521,37 +521,6 @@ blockquoteright {
   transition: all .5s ease;
 }
 
-
-blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6{
-  color: var(--lightText);
-  font-size: 2rem;
-  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
-}
-
-blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace h6{
-  transition: all .5s ease;
-  padding:20px;  
-}
-
-blockquote h6:hover, blockquoteright h6:hover{
-  background-color: black;
-}
-
-blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
-  color: var(--lightText);
-  font-size: 1.6rem;
-  line-height: 1;
-  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
-}
-
-
-blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p, blockquotecenter p{
-  color: var(--lightText);
-  font-size: 1.5rem;
-  line-height: 1;
-  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
-}
-
 blockquoterightsmall {
   margin: 0;
   padding: 0;
@@ -571,10 +540,6 @@ blockquotenospace {
 
 }
 
-blockquotenospace:hover{
-  background-color: black;
-}
-
 blockquotenospaceright {
   margin: 0;
   padding-right: 15px;
@@ -585,12 +550,8 @@ blockquotenospaceright {
 
 }
 
-blockquotenospaceright:hover{
-  background-color: black;
-}
-
 blockquotecenter{
-  grid-column: 1 / span 12;
+  grid-column: 2 / span 10;
   text-align: center;
   align-content: center;
 
@@ -599,10 +560,51 @@ blockquotecenter{
 
 }
 
-/* Experimenting with tooltips */
+/* BLOCKQUOTE HOVER ACTIONS */
+
+blockquote h6:hover, blockquoteright h6:hover{
+  transform: scale(1.05);
+}
+
+blockquotenospace:hover, blockquotenospaceright:hover{
+  transform: scale(1.07);
+}
+
+/* Blockquote text styling */
+
+blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
+  color: var(--lightText);
+  font-size: 1.6rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p, blockquotecenter p{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6, blockquotecenter h6{
+  color: var(--lightText);
+  font-size: 2rem;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace h6{
+  transition: all .5s ease;
+  padding:20px;  
+}
+
+/* TOOLTIP STYLING */
+
 .tooltip, .tooltip-wide {
   position: relative;
 }
+
 
 /* Tooltip text */
 .tooltip .tooltiptext {
@@ -611,7 +613,7 @@ blockquotecenter{
   padding-top:5px;
   padding-bottom:5px;
   
-  background-color: var(--darkBgColor);
+  background-color: #2F3F4F;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -628,16 +630,25 @@ blockquotecenter{
   opacity:0;
 }
 
-.tooltip-wide .tooltip-widetext {
+.tooltip-wide{
+  color:white;
+  --tooltipcolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--tooltipcolor), 2px -2px 0 var(--tooltipcolor), -2px 2px 0 var(--tooltipcolor), -2px -2px 0 var(--tooltipcolor), 2px 0px 0 var(--tooltipcolor), 0px 2px 0 var(--tooltipcolor), -2px 0px 0 var(--tooltipcolor), 0px -2px 0 var(--tooltipcolor);
+  background-color:  #2f3f4f;
+  transition: all .5s ease; 
+}
+
+ .tooltip-widetext {
   visibility: hidden;
   padding:10px;
   padding-top:5px;
   padding-bottom:5px;
   
-  background-color: var(--darkBgColor);
+  background-color: #2f3f4f;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  
+  font-size: 1.2rem;
  
   /* Position the tooltip text! */
   position: absolute;
@@ -662,6 +673,10 @@ blockquotecenter{
   opacity:1;
 }
 
+.tooltip-wide:hover{
+  background-color: transparent; 
+}
+
 .tooltip p{
   color: white;
   font-size: 1.2rem;
@@ -669,9 +684,6 @@ blockquotecenter{
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
 
-.tooltip-wide{
-  color:white;
-}
 
 /* FADE IN FEATURE */
 .js-scroll {
@@ -749,11 +761,6 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 
 canvas {
   position: fixed;
@@ -780,20 +787,6 @@ canvas {
     margin-bottom: var(--spacing);
   }
 
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
-  }
-
-  blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
-  }
 
   .left {
     grid-column: 6 / 12;
