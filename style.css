@@ -215,7 +215,7 @@ background: var(--shadowColor)
 grid-column: 2 / span 10;
 text-align: center;
 background: var(--transColor);
-margin-bottom: 100px; 
+margin-bottom: 0px;
 border-top: 5px solid var(--shadowColor);
 border-bottom: 5px solid var(--shadowColor);
 
@@ -590,15 +590,18 @@ blockquotenospaceright:hover{
 }
 
 blockquotecenter{
-  grid-column: 1 / span 11;
+  grid-column: 1 / span 12;
   text-align: center;
   align-content: center;
+
+  margin: 0;
+  transition: all .5s ease;
+
 }
 
 /* Experimenting with tooltips */
-.tooltip {
+.tooltip, .tooltip-wide {
   position: relative;
-  
 }
 
 /* Tooltip text */
@@ -613,7 +616,7 @@ blockquotecenter{
   text-align: center;
   border-radius: 6px;
  
-  /* Position the tooltip text - see examples below! */
+  /* Position the tooltip text! */
   position: absolute;
   z-index: 1;
 
@@ -625,17 +628,49 @@ blockquotecenter{
   opacity:0;
 }
 
+.tooltip-wide .tooltip-widetext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: var(--darkBgColor);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 1;
+
+  width: 400px;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -150px;
+  transition: all .5s ease;
+  opacity:0;
+}
+
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+  opacity:1;
+}
+
+.tooltip-wide:hover .tooltip-widetext{
   visibility: visible;
   opacity:1;
 }
 
 .tooltip p{
-  color: var(--lightText);
+  color: white;
   font-size: 1.2rem;
   line-height: .8;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+.tooltip-wide{
+  color:white;
 }
 
 /* FADE IN FEATURE */
