@@ -215,7 +215,7 @@ background: var(--shadowColor)
 grid-column: 2 / span 10;
 text-align: center;
 background: var(--transColor);
-margin-bottom: 0px;
+margin-bottom: 40px;
 border-top: 5px solid var(--shadowColor);
 border-bottom: 5px solid var(--shadowColor);
 
@@ -242,17 +242,20 @@ hoverbox:hover{
 
 .textbox {
 
-  grid-column: 2 / span 8;
+  grid-column: 2 / span 10  ;
   padding: 1rem;
-  background: var(--mainColor);
+  background: var(--borderColor);
 
-  font-size: 1.25rem;
+  text-align: center;
+
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: var(--bottomSpacing);
 
-  box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -moz-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+
+  box-shadow: 11px 11px 0px 3px darkslategray;
+  -webkit-box-shadow: 11px 11px 0px 3px darkslategray;
+  -moz-box-shadow: 11px 11px 0px 3px darkslategray;
 }
 
 /* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
@@ -530,6 +533,13 @@ blockquoterightsmall {
   text-align: right;
 }
 
+blockquotesmall {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  text-align: left;
+}
+
 blockquotenospace {
   margin: 0;
   padding-left:15px;
@@ -555,7 +565,7 @@ blockquotecenter{
   text-align: center;
   align-content: center;
 
-  margin: 0;
+  margin-bottom: 10px;
   transition: all .5s ease;
 
 }
@@ -566,7 +576,7 @@ blockquote h6:hover, blockquoteright h6:hover{
   transform: scale(1.05);
 }
 
-blockquotenospace:hover, blockquotenospaceright:hover{
+blockquotenospace:hover, blockquotenospaceright:hover, blockquotecenter:hover{
   transform: scale(1.07);
 }
 
@@ -588,7 +598,33 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
 
-blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6, blockquotecenter h6{
+.textbox p{
+  color: var(--lightText);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+.textbox h4{
+  color: var(--lightText);
+  font-size: 1.4rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+.textbox h6{
+  color: var(--lightText);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6, blockquotecenter h6 {
   color: var(--lightText);
   font-size: 2rem;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
@@ -674,7 +710,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
 }
 
 .tooltip-wide:hover{
-  background-color: transparent; 
+  background-color: var(--borderColor); 
 }
 
 .tooltip p{
