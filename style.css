@@ -240,7 +240,7 @@ hoverbox:hover{
 
 /* STYLING TEXTBOX */
 
-.textbox {
+textbox {
 
   grid-column: 2 / span 10  ;
   padding: 1rem;
@@ -261,7 +261,7 @@ hoverbox:hover{
 
 }
 
-.textbox:hover{
+textbox:hover{
   transform:scale(1.05)
 }
 
@@ -605,7 +605,7 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
 
-.textbox p{
+textbox p{
   color: var(--lightText);
   font-size: 1.1rem;
   line-height: 1.1;
@@ -613,7 +613,7 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
 
-.textbox h4{
+textbox h4{
   color: var(--lightText);
   font-size: 1.4rem;
   line-height: 1.1;
@@ -622,7 +622,7 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
 
 }
 
-.textbox h6{
+textbox h6{
   color: var(--lightText);
   font-size: 1.8rem;
   line-height: 1.1;
