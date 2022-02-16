@@ -243,26 +243,32 @@ hoverbox:hover{
 textbox {
 
   grid-column: 2 / span 10  ;
-  padding: 1rem;
-  background: var(--borderColor);
+  background: var(--transColor);
+
+  margin-bottom: 50px;
 
   text-align: center;
 
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: var(--bottomSpacing);
 
-
-  box-shadow: 11px 11px 0px 3px darkslategray;
-  -webkit-box-shadow: 11px 11px 0px 3px darkslategray;
-  -moz-box-shadow: 11px 11px 0px 3px darkslategray;
-
+/*
+  box-shadow: 11px 11px 0px 3px black;
+  -webkit-box-shadow: 11px 11px 0px 3px black;
+  -moz-box-shadow: 11px 11px 0px 3px black;
+*/
   transition: all .5s ease;
 
 }
 
 textbox:hover{
   transform:scale(1.05)
+}
+
+borderspace {
+  grid-column: 5 / span 4  ;
+  border-top: 2px solid grey;
+  margin-bottom: 50px;
 }
 
 /* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
@@ -572,7 +578,6 @@ blockquotecenter{
   text-align: center;
   align-content: center;
 
-  margin-bottom: 10px;
   transition: all .5s ease;
 
 }
@@ -607,8 +612,8 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
 
 textbox p{
   color: var(--lightText);
-  font-size: 1.1rem;
-  line-height: 1.1;
+  font-size: 1.3rem;
+  line-height: 1;
   --outlinecolor: black;
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
