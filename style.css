@@ -246,11 +246,8 @@ textbox {
   background: var(--transColor);
 
   margin-bottom: 50px;
-
   text-align: center;
-
   font-size: 1rem;
-  line-height: 1.5;
 
 /*
   box-shadow: 11px 11px 0px 3px black;
@@ -264,6 +261,20 @@ textbox {
 textbox:hover{
   transform:scale(1.05)
 }
+
+.textbox-pic{
+  display:inline;
+  width: 50%;
+  height: 200px;
+  object-fit:contain;
+}
+.textbox-widepic{
+  display:inline;
+  width: 50%;
+  height: 300px;
+  object-fit:contain;
+}
+
 
 borderspace {
   grid-column: 5 / span 4  ;
@@ -613,16 +624,16 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
 textbox p{
   color: var(--lightText);
   font-size: 1.3rem;
-  line-height: 1;
+  line-height: 1.1;
   --outlinecolor: black;
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
 
 textbox h4{
   color: var(--lightText);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.1;
-  --outlinecolor: black;
+  --outlinecolor: var(--blockquoteOutlineColor);
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 
 }
@@ -649,7 +660,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
 
 /* TOOLTIP STYLING */
 
-.tooltip, .tooltip-wide {
+.tooltip, .tooltip-wide, .tooltip-pic {
   position: relative;
 }
 
@@ -678,10 +689,41 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   opacity:0;
 }
 
-.tooltip-wide{
+.tooltip-pic{
   color:white;
-  --tooltipcolor: var(--blockquoteOutlineColor);
+  --tooltipcolor: black;
   text-shadow: 2px 2px 0 var(--tooltipcolor), 2px -2px 0 var(--tooltipcolor), -2px 2px 0 var(--tooltipcolor), -2px -2px 0 var(--tooltipcolor), 2px 0px 0 var(--tooltipcolor), 0px 2px 0 var(--tooltipcolor), -2px 0px 0 var(--tooltipcolor), 0px -2px 0 var(--tooltipcolor);
+  transition: all .5s ease; 
+}
+
+.tooltip-pictext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: #2f3f4f6b;
+  color: white;
+  text-align: center;
+  
+  font-size: 1rem;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 1;
+
+  width: 400px;
+  bottom: 25%;
+  left: 13%;
+  margin-left: 0px;
+  transition: all .5s ease;
+  opacity:0;
+  
+}
+
+
+.tooltip-wide {
+  color:white;
   background-color:  #2f3f4f;
   transition: all .5s ease; 
 }
@@ -692,7 +734,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   padding-top:5px;
   padding-bottom:5px;
   
-  background-color: #2f3f4f;
+  background-color: #2f3f4fea;
   color: #fff;
   text-align: center;
   
@@ -702,7 +744,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   position: absolute;
   z-index: 1;
 
-  width: 400px;
+  width: 300px;
   bottom: 150%;
   left: 50%;
   margin-left: -150px;
@@ -720,9 +762,14 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   visibility: visible;
   opacity:1;
 }
+.tooltip-wide:hover {
+  background-color:var(--borderColor);
+}
 
-.tooltip-wide:hover{
-  background-color: var(--borderColor); 
+
+.tooltip-pic:hover .tooltip-pictext{
+  visibility: visible;
+  opacity:1;
 }
 
 .tooltip p{
