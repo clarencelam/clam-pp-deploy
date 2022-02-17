@@ -258,6 +258,26 @@ textbox {
 
 }
 
+paragbox {
+
+  grid-column: 2 / span 10  ;
+  background: var(--borderColor);
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-align: left;
+  font-size: 1rem;
+
+  transition: all .5s ease;
+
+
+}
+
+paragbox:hover{
+  transform:scale(1.05)
+}
+
 textbox:hover{
   transform:scale(1.05)
 }
@@ -275,12 +295,48 @@ textbox:hover{
   object-fit:contain;
 }
 
+textbox p{
+  color: var(--lightText);
+  font-size: 1.3rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+paragbox p{
+  color: var(--lightText);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+textbox h4, paragbox h4{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+textbox h6, paragbox h6{
+  color: var(--lightText);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
 
 borderspace {
   grid-column: 5 / span 4  ;
   border-top: 2px solid grey;
   margin-bottom: 50px;
 }
+
+
+
 
 /* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
 
@@ -621,31 +677,6 @@ blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, bl
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 }
 
-textbox p{
-  color: var(--lightText);
-  font-size: 1.3rem;
-  line-height: 1.1;
-  --outlinecolor: black;
-  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
-}
-
-textbox h4{
-  color: var(--lightText);
-  font-size: 1.5rem;
-  line-height: 1.1;
-  --outlinecolor: var(--blockquoteOutlineColor);
-  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
-
-}
-
-textbox h6{
-  color: var(--lightText);
-  font-size: 1.8rem;
-  line-height: 1.1;
-  --outlinecolor: black;
-  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
-
-}
 
 blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6, blockquotecenter h6 {
   color: var(--lightText);
