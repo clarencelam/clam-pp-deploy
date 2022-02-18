@@ -435,15 +435,19 @@
 
     <textbox class="js-scroll">
       <h4 class="js-scroll">
+        <br><br><br><br><br><br><br><br><br>
         THE END. 
         <br><br>THANK YOU SO MUCH FOR VISITING...
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>  
       </h4>
     </textbox>
+
     <textbox class="js-scroll">
-      <br><br><br><br><br><br><br><br><br>
       <h4 class="js-scroll">
         Unless...
       </h4>
+      <br><br><br><br><br><br><br><br><br>
       <p class="js-scroll">
         If you're still curious about my professional journey, and
         why/how I started self-learning development,
@@ -451,10 +455,14 @@
       </p>
     </textbox>
   
+    <textbox class="js-scroll">
+        <h4 onclick="startScroll()" class="tooltip">🔽<span class="tooltiptext">
+            I recommend using the auto-scroll for this section. </span></h4>
+    </textbox>
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow()" id="myBtn">I'm interested. Let's read it.</button>
+      <button onclick="toggleShow()" id="myBtn" class="js-scroll">I'm interested. Let's read it.</button>
       <br><br>
     </textbox>
 
@@ -490,14 +498,6 @@
 
     <textcontainer class="js-scroll" id="more">
 
-      <textbox class="js-scroll">
-        <br><br><br>
-        <button onclick="startScroll()">
-          <p class="tooltip">🔽<span class="tooltiptext">
-              note: press "S" key to toggle scroll</span></p>
-        </button>
-        <br><br><br>
-      </textbox>
 
     
     <borderspace></borderspace>
@@ -1134,9 +1134,11 @@
     </paragbox>
 
   </textcontainer>
+  <br><br><br><br><br><br><br><br><br><br><br>
 
 </textcontainer>
-<borderspace></borderspace>
+
+<textbox><p></p></textbox> <!-- this textbox lets the last element before this surface correctly-->
 
 
 </main>

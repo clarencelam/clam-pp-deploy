@@ -363,7 +363,7 @@ borderspace {
 #more, #more2, #more3, #more4, #more5, #more6,#more7,#more8,#more9,#more10,#more11,#more12,#more13,#more14,#more15 {
  position: absolute; 
  left: -200%;
- top: -150%; 
+ top: -200%; 
  /* setting left = 200% pushes text off-screen. Javascript in index.html brings the text back.
  setting top =100% prevents an issue with infinite scrolling at the bottom of screen*/
 }
