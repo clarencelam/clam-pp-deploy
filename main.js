@@ -85,33 +85,6 @@ moveCamera()
 
 // Function to show hidden items on scroll
 
-/* BAD CODE
-const scrollOffset = 100;
-const scrollElement = document.querySelector(".js-scroll");
-
-scrollElements.forEach((el)=>{
-  el.style.opacity = 0;
-})
-
-const elementInView = (el, offset=0) => {
-  const elementTop = el.getBoundingClientRect().top;
-
-  return (
-    elementTop <= 
-    ((window.innerHeight || document.documentElement.clientHeight) - offset)
-  );
-};
-
-const displayScrollElement = () => {
-  scrollElement.classList.add('scrolled');
-}
-
-const handleScrollAnimation = () => {
-  if (elementInView(scrollElement, scrollOffset)) {
-      displayScrollElement();
-  } 
-}
-*/
 
 const scrollElements = document.querySelectorAll(".js-scroll");
 
