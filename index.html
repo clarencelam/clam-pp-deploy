@@ -450,31 +450,30 @@
         a piece below with all the answers you seek.
       </p>
       <p class="js-scroll">
-        Fair warning-- it's quite a bit of text, and you'll learn
-        things about me which you probably don't need to know.
-      </p>
-      <p class="js-scroll">
-        But as an self-teaching developer with a business degree, 
+        As a self-teaching developer with a business degree, 
         and no bootcamp experience, I thought my professional 
         journey would be a story worth telling.
       </p>
     </textbox>
   
 
+    <textbox>
+      <br><br><br><br><br><br><br><br><br>
+      <button onclick="toggleShow()" id="myBtn">Click me to keep reading</button>
+      <br><br><br><br><br><br><br><br><br>
+    </textbox>
 
 
-
-
-
-
+      
+  
     <a id="PROFHISTORY"></a>
 
 
     <!----------------------------- PROFESSIONAL HISTORY ------------------------------->
+    <textcontainer id="more">
     <section class="subheader">
       <h3>💼 HOW DID I GET HERE?</h3>
     </section>
-
     <blockquotecenter>
 
       <br><br><br>
@@ -488,7 +487,7 @@
     </blockquotecenter>
 
 
-    <textbox class="js-scroll">
+    <textbox >
       <h4 class="js-scroll">
         By now, you might be wondering: Who is this guy?</h4>
       <br><br>
@@ -1035,15 +1034,28 @@
         </p>
     </paragbox>
 
+  </textcontainer>
 
 
 
+    <!----------------------------- Script to show hidden text ------------------------------->
+  <script>
+    function toggleShow() {
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (btnText.innerHTML === "Click me to keep reading") {
+        btnText.innerHTML = "Click me to hide all this"; 
+        moreText.style.display = "inline";
+      } else {
+        btnText.innerHTML = "Click me to keep reading"; 
+        moreText.style.display = "none";
+      }
+    }
+    </script>
 
 
-    <textbox>
-      <p>Thanks for visiting.</p>
-    </textbox>
-
+    <!----------------------------- Script to handle sticky navbar ------------------------------->
 
     <script>
       var navbar = document.getElementById("navbar");

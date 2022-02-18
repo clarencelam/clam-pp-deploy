@@ -258,6 +258,8 @@ textbox {
 
 }
 
+
+
 paragbox {
 
   grid-column: 2 / span 10  ;
@@ -328,6 +330,20 @@ textbox h6, paragbox h6{
   text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
 }
 
+textbox button{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+  padding: 10px;
+  padding-right: 10px;
+  background-color: darkslategray;
+  border-radius: 0.5em;
+
+}
+
 
 borderspace {
   grid-column: 5 / span 4  ;
@@ -335,6 +351,23 @@ borderspace {
   margin-bottom: 50px;
 }
 
+/* CSS FOR HIDDEN ELEMENTS */
+
+#more {display: none;
+  transition: all .5s ease;}
+
+/*
+textcontainer will be used to hold hidden text
+*/
+
+textcontainer {
+
+  grid-column: 2 / span 10  ;
+  background: var(--transColor);
+  align-items: center;
+  transition: all .5s ease;
+
+}
 
 
 
