@@ -445,54 +445,28 @@
         Unless...
       </h4>
       <p class="js-scroll">
-        If you're still curious about my professional journey,
-        or just want to know more about how I got here, I've written 
-        a piece below with all the answers you seek.
-      </p>
-      <p class="js-scroll">
-        As a self-teaching developer with a business degree, 
-        and no bootcamp experience, I thought my professional 
-        journey would be a story worth telling.
+        If you're still curious about my professional journey, and
+        why/how I started self-learning development,
+        I've written a piece below with all the answers you seek.
       </p>
     </textbox>
   
 
     <textbox>
-      <br><br><br><br><br><br><br><br><br>
-      <button onclick="toggleShow()" id="myBtn">Click me to keep reading</button>
-      <br><br><br><br><br><br><br><br><br>
+      <br><br>
+      <button onclick="toggleShow()" id="myBtn">I'm interested. Let's read it.</button>
+      <br><br>
     </textbox>
 
-
-      
   
     <a id="PROFHISTORY"></a>
 
-
-    <!----------------------------- PROFESSIONAL HISTORY ------------------------------->
-    <textcontainer id="more">
-    <section class="subheader">
-      <h3>💼 HOW DID I GET HERE?</h3>
-    </section>
-    <blockquotecenter>
-
-      <br><br><br>
-
-      <button onclick="startScroll()" class="js-scroll">
-        <p class="tooltip">🔽<span class="tooltiptext">
-            note: press "S" key to toggle scroll</span></p>
-      </button>
-      <br><br><br>
-
-    </blockquotecenter>
-
-
+<!--------  Temp place to put unused content
     <textbox >
       <h4 class="js-scroll">
         By now, you might be wondering: Who is this guy?</h4>
       <br><br>
     </textbox>
-
     <textbox class="js-scroll">
       <h4 class="js-scroll">
         How did he get here?</h4>
@@ -504,32 +478,85 @@
       </h4>
       <br><br>
     </textbox>
-
     <textbox class="js-scroll">
       <h4 class="js-scroll">
         If you're interested in a (fairly long-winded) answer to these questions, keep reading.
       </h4>
       <br><br><br><br>
     </textbox>
+-->
 
-    <borderspace class="js-scroll"></borderspace>
+    <!----------------------------- PROFESSIONAL HISTORY ------------------------------->
 
+    <textcontainer class="js-scroll" id="more">
 
-    <textbox class="js-scroll">
-      <h6>Who am I?</h6>
+      <textbox class="js-scroll">
+        <br><br><br>
+        <button onclick="startScroll()">
+          <p class="tooltip">🔽<span class="tooltiptext">
+              note: press "S" key to toggle scroll</span></p>
+        </button>
+        <br><br><br>
+      </textbox>
+
+    
+    <borderspace></borderspace>
+
+        <!-- Button 2-->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow2()" id="showBtn2">Who are you?</button>
+      <br><br>
     </textbox>
+
+    <textcontainer id="more2">
 
     <textbox class="js-scroll">
       <p class="js-scroll">
-        Who am I? Just a 20-something year old tech professional, born and raised in Vancouver, Canada, looking to
+        Ok. First I'll answer the question: Who am I?
+      </p>
+      <p>I'm a 20-something year old tech professional, born and raised in Vancouver, Canada, looking to
         find work as a developer.
       </p>
+    </textbox>
+
+<!-- Button 3-->
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow3()" id="showBtn3">How did you get here?</button>
+      <br><br>
+    </textbox>
+  </textcontainer>
+
+    <textcontainer id="more3">
+
+    <textbox class="js-scroll">
       <p class="js-scroll">
-        How did I get here? Now that's a longer story...
+        Now that's a longer story...
+      </p>
+      <p class="js-scroll">
+        I suppose I don't have the traditional background of a developer.
+        No comp. sci. degree or development bootcamp here. 
+      </p>
+      <p class="js-scroll">
+        But technology has been a big part of my life for a long time. 
+      </p>
+      <p class="js-scroll">
+        And I think the best place to start, is from the start...
       </p>
     </textbox>
 
+    <!-- Button 4-->
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow4()" id="showBtn4">Sure. Let's start from the top.</button>
+      <br><br>
+    </textbox>
 
+  </textcontainer>
+
+  <textcontainer id="more4">
 
     <textbox class="js-scroll">
       <h6>A Geeky Beginning</h6>
@@ -552,13 +579,14 @@
       </p>
     </textbox>
 
+    
 
-    <blockquotecenter class="js-scroll">
+    <textbox class="js-scroll">
       <span class="tooltip-pic">
         <img class="textbox-pic" src="https://i.imgur.com/qjpdGs8.png">
         <span class="tooltip-pictext">A typical Windows PC in the 2000's, just like the one my parents picked up in
           2006</span></span>
-    </blockquotecenter>
+    </textbox>
 
     <textbox class="js-scroll">
       <br>
@@ -582,19 +610,21 @@
       </p>
     </textbox>
 
-    <blockquotecenter class="js-scroll">
-      <span class="tooltip-pic">
-        <img class="textbox-pic" src="https://i.imgur.com/yVWjc5Q.jpg">
-        <span class="tooltip-pictext">Youtube was, and still is, a treasure trove of knowledge.
-          This is what it looked like back when I was 15-- man, I'm getting old.
-        </span></span>
-    </blockquotecenter>
+        <!-- Button 5-->
+        <textbox>
+          <br><br>
+          <button onclick="toggleShow5()" id="showBtn5">Just like how you're self learning development now?</button>
+          <br><br>
+        </textbox>    
+  </textcontainer>
 
-
+    <textcontainer id="more5">
     <textbox class="js-scroll">
 
-      <p class="js-scroll">
-        <br>
+        <p>
+          Yep!
+        </p>
+        <p>
         Through my later high school years, continued my self-studies in technology and computing. I helped
         people with their computer problems, learned to
         <span class="tooltip-wide">build websites<span class="tooltip-widetext">
@@ -608,12 +638,19 @@
         But by the time graduation rolled around and it was time to choose my next steps,
         I didn't even consider studying Computer Science. Instead, I elected to study business.
       </p>
-
-      <br><br><br>
-
     </textbox>
 
-    <borderspace class="js-scroll"></borderspace>
+        <!-- Button 6-->
+  <textbox>
+    <br><br>
+    <button onclick="toggleShow6()" id="showBtn6">Wait, what? You went to business school?</button>
+     <br><br>
+  </textbox>    
+
+  </textcontainer>
+
+
+    <textcontainer id="more6">
 
     <textbox class="js-scroll">
       <h6>"Wait, what? You went to business school?"</h6>
@@ -664,9 +701,18 @@
           at the time.</span></span>
     </blockquotecenter>
 
+  <!-- Button 7-->
+  <textbox>
+    <br><br>
+    <button onclick="toggleShow7()" id="showBtn7">Dang. How did you handle the rejection from UBC?</button>
+     <br><br>
+  </textbox>    
+    </textcontainer>
+
+    <textcontainer id="more7">
     <textbox class="js-scroll">
       <br>
-      <p>I didn't give up though. I studied like mad. Had a great semester. Kept studying like mad. Had another great
+      <p>It felt terrible. I didn't give up though. I studied like mad. Had a great semester. Kept studying like mad. Had another great
         semester.
       </p>
       <p class="js-scroll">
@@ -682,7 +728,7 @@
     <borderspace class="js-scroll"></borderspace>
 
     <textbox class="js-scroll">
-      <h6>First foray into the industry</h6>
+      <h6>University Days</h6>
     </textbox>
 
     <textbox class="js-scroll">
@@ -700,7 +746,15 @@
       </p>
     </textbox>
 
-
+<!-- Button 8-->
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow8()" id="showBtn8">How was interning at Appnovation?</button>
+       <br><br>
+    </textbox>    
+      </textcontainer>
+  
+    <textcontainer id="more8">
     <blockquotecenter class="js-scroll">
       <span class="tooltip-pic">
         <img class="textbox-widepic" src="https://i.imgur.com/Dbm7UcB.png">
@@ -744,6 +798,16 @@
         from the development side of things.
       </p>
     </textbox>
+
+    <!-- Button 9-->
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow9()" id="showBtn9">Any other takeaways from these internships?</button>
+       <br><br>
+    </textbox>    
+      </textcontainer>
+
+    <textcontainer id="more9">
     <textbox class="js-scroll">
       <p class="js-scroll">
         Reflecting on these internships, my favorite challenges in both of these roles was when I was either:
@@ -765,25 +829,10 @@
       </p>
     </textbox>
 
-
-
     <borderspace class="js-scroll"></borderspace>
 
     <textbox class="js-scroll">
-      <h6>Into the workforce</h6>
-    </textbox>
-
-    <textbox class="js-scroll">
-      <p class="js-scroll">
-        Come 2019, it was my year to graduate.
-      </p>
-      <p class="js-scroll">
-        I fired out many, many resumes, as university graduates do.
-      </p>
-      <p>
-        The applications
-        turned to interviews, which then turned to offers. It was time to choose-- what would I do for a living?
-      </p>
+      <h6>Out of University, Into the Workforce</h6>
     </textbox>
 
     <blockquotecenter class="js-scroll">
@@ -794,8 +843,32 @@
           oldest laptop among my classmates, but I loved it. <br>
           As a student, sticker-bombing your laptop is a must.
         </span></span>
-    </blockquotecenter>
+    </blockquotecenter>  
 
+    <textbox class="js-scroll">
+      <p class="js-scroll">
+        Come 2019, it was my year to graduate.
+      </p>
+
+      <p class="js-scroll">
+        I fired out many, many resumes, as university graduates do.
+      </p>
+      <p>
+        The applications
+        turned to interviews, which then turned to offers. It was time to choose-- what would I do for a living?
+      </p>
+    </textbox>
+
+        <!-- Button 10-->
+        <textbox>
+          <br><br>
+          <button onclick="toggleShow10()" id="showBtn10">How'd you figure out what you wanted to do?</button>
+           <br><br>
+        </textbox>    
+</textcontainer>   
+
+
+<textcontainer id="more10">
     <textbox class="js-scroll">
       <br>
       <p class="js-scroll">
@@ -830,8 +903,15 @@
       <br><br>
     </textbox>
 
-    <borderspace class="js-scroll"></borderspace>
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow11()" id="showBtn11">Tell me about your time at Visier.</button>
+       <br><br>
+    </textbox>    
 
+    </textcontainer>
+
+<textcontainer id="more11">
     <textbox class="js-scroll">
       <h6>The start of a career</h6>
     </textbox>
@@ -866,12 +946,16 @@
       </p>
     </textbox>
 
-    <borderspace class="js-scroll"></borderspace>
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow12()" id="showBtn12">So why'd you leave?</button>
+       <br><br>
+    </textbox>    
 
-    <textbox class="js-scroll">
-      <h6>So why'd you leave?</h6>
-    </textbox>
+</textcontainer>
 
+
+<textcontainer id="more12">
     <textbox class="js-scroll">
       <p class="js-scroll">
         Well, by the start of 2021, I've matured into my Support role at Visier, and I felt like an established
@@ -912,8 +996,15 @@
       </p>
     </textbox>
 
-    <borderspace class="js-scroll"></borderspace>
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow13()" id="showBtn13">What've you been up to since Visier?</button>
+       <br><br>
+    </textbox>    
 
+    </textcontainer>
+
+<textcontainer id="more13">
     <textbox class="js-scroll">
       <h6>What am I up to now?</h6>
     </textbox>
@@ -934,7 +1025,21 @@
     </textbox>
 
 
-    <borderspace class="js-scroll"></borderspace>
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow14()" id="showBtn14">Any tips for others who are interested in self-learning development?</button>
+       <br><br>
+    </textbox>    
+
+  </textcontainer>
+
+  <textcontainer id="more14">
+
+    <textbox class="js-scroll">
+      <p class="js-scroll">
+        test test test
+      </p>
+    </textbox>
 
     <addquarterspace></addquarterspace>
 
@@ -945,20 +1050,14 @@
       hear about the stuff I'm interested in, I've written a bit about my that below:
     </h4>
   </textbox>
+  <textbox>
+    <br><br>
+    <button onclick="toggleShow15()" id="showBtn15">Sure, enough work talk. Let's hear about other stuff you do.</button>
+     <br><br>
+  </textbox>    
+</textcontainer>
 
-
-
-  <addquarterspace></addquarterspace>
-
-
-
-
-
-    <section class="subheader">
-      <h3>💼 OTHER STUFF I DO</h3>
-    </section>
-
-
+<textcontainer id="more15">
     <textbox class="js-scroll">
       <h4>
         <br>
@@ -1036,22 +1135,191 @@
 
   </textcontainer>
 
+</textcontainer>
+<borderspace></borderspace>
 
 
-    <!----------------------------- Script to show hidden text ------------------------------->
+</main>
+
+<script type="module" src="/main.js"></script>
+
+
+    <!----------------------------- Script to handle Hidden Text Showing Buttons ------------------------------->
   <script>
     function toggleShow() {
       var moreText = document.getElementById("more");
       var btnText = document.getElementById("myBtn");
     
-      if (btnText.innerHTML === "Click me to keep reading") {
+      if (btnText.innerHTML === "I'm interested. Let's read it.") {
+        /*moreText.style.display = "block";             
+        moreText.style.opacity = 0;
+        
+        GOOD CHANGE: instead of changing display to "none" to hide hidden text,
+        referencing an answer in https://stackoverflow.com/questions/2928688/how-to-hide-elements-without-having-them-take-space-on-the-page/25515420
+        I instead chose to move hidden text off-screen 
+
+        This was an attempt to preserve action animations
+        */
+        moreText.style.position = "relative"; 
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
         btnText.innerHTML = "Click me to hide all this"; 
-        moreText.style.display = "inline";
       } else {
-        btnText.innerHTML = "Click me to keep reading"; 
-        moreText.style.display = "none";
+        moreText.style.position = "absolute"; 
+        moreText.style.left = "-200%";
+        moreText.style.top = "-150%";
+        btnText.innerHTML = "I'm interested. Let's read it."; 
       }
     }
+
+    // The logic here is that each button calls a unique function which reveals a unique div of content
+    function toggleShow2(){
+      var moreText = document.getElementById("more2");
+      var button = document.getElementById("showBtn2");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+    function toggleShow3(){
+      var moreText = document.getElementById("more3");
+      var button = document.getElementById("showBtn3");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+      function toggleShow4(){
+      var moreText = document.getElementById("more4");
+      var button = document.getElementById("showBtn4");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+    function toggleShow5(){
+      var moreText = document.getElementById("more5");
+      var button = document.getElementById("showBtn5");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+    function toggleShow6(){
+      var moreText = document.getElementById("more6");
+      var button = document.getElementById("showBtn6");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+    function toggleShow7(){
+      var moreText = document.getElementById("more7");
+      var button = document.getElementById("showBtn7");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow8(){
+      var moreText = document.getElementById("more8");
+      var button = document.getElementById("showBtn8");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow9(){
+      var moreText = document.getElementById("more9");
+      var button = document.getElementById("showBtn9");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow10(){
+      var moreText = document.getElementById("more10");
+      var button = document.getElementById("showBtn10");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow11(){
+      var moreText = document.getElementById("more11");
+      var button = document.getElementById("showBtn11");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow12(){
+      var moreText = document.getElementById("more12");
+      var button = document.getElementById("showBtn12");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow13(){
+      var moreText = document.getElementById("more13");
+      var button = document.getElementById("showBtn13");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow14(){
+      var moreText = document.getElementById("more14");
+      var button = document.getElementById("showBtn14");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+    function toggleShow15(){
+      var moreText = document.getElementById("more15");
+      var button = document.getElementById("showBtn15");
+
+      moreText.style.position = "relative"; 
+      moreText.style.left = "0%";
+      moreText.style.top = "0%";
+      button.style.backgroundColor= "grey";
+      button.style.color = "darkgrey"
+    }
+
+
     </script>
 
 
@@ -1074,10 +1342,10 @@
       }
     </script>
 
-  </main>
+  
 
 
-  <script type="module" src="/main.js"></script>
+  
 </body>
 
 </html>

@@ -141,12 +141,6 @@ const handleScrollAnimation = () => {
   })
 }
 
-// Code for scroll dissapear feature 
-// to code
-
-window.addEventListener("scroll", () => { 
-  handleScrollAnimation();
-});
 
 
 // Function to handle sticky navbar
@@ -193,6 +187,7 @@ function autoScroll(){
 function onScrollActions(){
   moveCamera();
   stickyNav();
+  handleScrollAnimation();
 }
 
 document.body.onscroll = onScrollActions;

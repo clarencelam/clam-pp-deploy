@@ -241,7 +241,7 @@ hoverbox:hover{
 /* STYLING TEXTBOX */
 
 textbox {
-
+  display: block;
   grid-column: 2 / span 10  ;
   background: var(--transColor);
 
@@ -258,8 +258,6 @@ textbox {
 
 }
 
-
-
 paragbox {
 
   grid-column: 2 / span 10  ;
@@ -272,8 +270,17 @@ paragbox {
   font-size: 1rem;
 
   transition: all .5s ease;
+}
 
+centerbox {
+  display:block;
+  grid-column: 5 / span 2  ;
+  background: var(--transColor);
 
+  text-align: center;
+  font-size: 1rem;
+
+  transition: all .5s ease;
 }
 
 paragbox:hover{
@@ -353,8 +360,13 @@ borderspace {
 
 /* CSS FOR HIDDEN ELEMENTS */
 
-#more {display: none;
-  transition: all .5s ease;}
+#more, #more2, #more3, #more4, #more5, #more6,#more7,#more8,#more9,#more10,#more11,#more12,#more13,#more14,#more15 {
+ position: absolute; 
+ left: -200%;
+ top: -150%; 
+ /* setting left = 200% pushes text off-screen. Javascript in index.html brings the text back.
+ setting top =100% prevents an issue with infinite scrolling at the bottom of screen*/
+}
 
 /*
 textcontainer will be used to hold hidden text
@@ -677,7 +689,7 @@ blockquotecenter{
   grid-column: 2 / span 10;
   text-align: center;
   align-content: center;
-
+  align-items: center;
   transition: all .5s ease;
 
 }
@@ -847,6 +859,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
 /* FADE IN FEATURE */
 .js-scroll {
   transition: all .5s ease;
+  opacity: 0;
 }
 
 .js-scroll.scrolled {
