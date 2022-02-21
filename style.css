@@ -124,14 +124,13 @@ button {
 
 }
 
-button:hover,
-button:focus {
+button:hover{
   transform: scale(1.1);
 }
 
 
 button:active {
-  transform: scale(0.8);
+  transform: scale(.8);
 }
 
 /* HIGHLIGHTER CLASS */
@@ -358,7 +357,6 @@ textbox button{
   padding: 10px;
   background-color: darkslategray;
   border-radius: 0.5em;
-
 }
 
 
@@ -407,36 +405,6 @@ textcontainer {
 
 
 
-/* STYLING 3 COLUMN CONTAINER FOR GENERAL USE
-
-NO LONGER IN USE
-
-.column-container{
-  grid-column: 4 / span 6;
-
-  border: 0px solid white;
-  display:grid;
-  grid-template: "1fr 1fr " auto;
-  grid-template-rows: 1;
-  gap:0px;
-  margin-bottom: 0px;
-  
-}
-
-.column{
-  border: 0px solid white;
-  padding: 0rem;
-  margin: 0px;
-  text-align: center;
-}
-
-.longcolumn{
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
- */
 
 /* STYLING SMALL TILES FOR OTHER PROJECTS */
 
@@ -450,13 +418,167 @@ NO LONGER IN USE
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
   gap:40px;
-  justify-content: left;
+  justify-content: center;
 }
 
 .small-tile{
-  border: var(--borderSize) solid var(--borderColor);
+  display:flex; /* best solution I found to center the contents */ 
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: var(--borderSize) solid var(--transColor);
+
+  background-color: var(--darkBgColorTrans);
+  transition: all 0.5s;
+  padding: 0px;
 }
 
+.small-tile-main{
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+}
+
+.small-tile-info{
+  /* -- visibility:hidden + max-height: 0 is great for
+  hidden content without taking space */
+  color:white;
+  display:inline;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.5s;
+
+  padding:20px;
+  padding-top: 0px;
+  font-size: 1.2rem;
+
+}
+
+.small-tile:hover{
+  border: var(--borderSize) solid var(--transColor);
+  background-color: var(--darkBgColorTrans);
+  transform: scale(1.04)
+}
+
+.small-tile-info:hover {
+}
+
+.small-tile-info p{
+  /* -- visibility:hidden + max-height: 0 is great for
+  hidden content without taking space */
+  color:white;
+  margin:0px;
+  padding: 10px;
+  background-color: #2F3F4F;
+  border-radius: 0.5em;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+.small-buttons-container{
+  display:inline;
+  font-size: 0.8rem;
+  max-height: min-content;
+
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+
+  padding: 10px;
+  background-color: #2F3F4F;
+  border-radius: 0.5em;
+
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+  transition: all 0.5s;
+
+  margin: auto;
+
+}
+
+.small-buttons-container:hover + .small-tile-info{
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.small-buttons-container:hover {
+  background-color: var(--borderColor);
+  transition: all 0.5s;
+}
+
+/* small tile inner content formatting */
+
+.project-pic{
+  display:block;
+  width: 100%;
+  height: 280px;
+  object-fit:scale-down;
+}
+.project-body{
+  padding:20px;
+  background: var(--transColor);
+  font-size: 1.2rem;
+
+}
+.project-title{
+  margin:0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+  align-content: center;
+}
+.project-desc{
+  color:var(--lightText);
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  text-align: left;
+
+}
+.project-details{
+  font-size: 0.95rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+
+
+
+.project-livedemo{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+.project-sourcecode{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+
+button_hover{
+  font-size: 1.2rem;
+  display: inline;
+  max-height: min-content;
+
+}
+
+.buttons-container{
+  display:inline;
+  font-size: 0.8rem;
+
+
+  color: var(--lightText);
+  font-size: 1.2rem;
+  line-height: 1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+  margin:0px;
+  padding: 10px;
+  border-radius: 0.5em;
+}
 
 
 /* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
@@ -569,58 +691,6 @@ opacity: 1;
 .R-project-leftside:hover + .R-project-rightside>*{
   transform: translateX(0);
   }
-
-
-/* Code for project tile inner content*/
-
-.project-pic{
-  display:block;
-  width: 100%;
-  height: 280px;
-  object-fit:scale-down;
-}
-.project-body{
-padding:20px;
-  background: var(--transColor);
-  font-size: 1.2rem;
-
-}
-.project-title{
-  margin:0;
-  font-size: 2rem;
-  color: white;
-  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
-
-
-}
-.project-desc{
-  color:var(--lightText);
-  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
-
-}
-.project-details{
-  font-size: 0.95rem;
-  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
-}
-.buttons-container{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-  text-align:center;
-  font-size: 0.8rem;
-}
-.project-livedemo{
-  background-color: var(--borderColor);
-  border: 2px solid var(--borderColor);
-  text-align: center;
-}
-.project-sourcecode{
-  background-color: var(--borderColor);
-  border: 2px solid var(--borderColor);
-  text-align: center;
-}
-
-
 
 
 

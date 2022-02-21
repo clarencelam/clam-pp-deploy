@@ -92,13 +92,13 @@
 
       function pageScrollonLoad() {
         window.scrollBy(0, 1);
-        scrolldelay = setTimeout(pageScrollonLoad, 20)
-        scrolling = true;
+        scrolldelay = setTimeout(pageScrollonLoad, 10)
         if (window.pageYOffset >= navbar.offsetTop) {
           stopScroll();
         }
+        scrolling = true;
+        console.log("triedscroll")
       }
-
       pageScrollonLoad();
 
       // functions to handle scrolling buttons
@@ -386,33 +386,59 @@
 
 
     <section class="small-tile-container">
+
       <div class="small-tile">
-        <img class="project-pic" src="https://i.imgur.com/aTC9cbV.png">
-        <div class="project-body">
-          <h6 class="project-title">Zense - 2018-2029</h6>
-          <p class="project-desc">Cofounded Zense along with
+        <div class="small-tile-main">
+          <img class="project-pic" src="https://i.imgur.com/aTC9cbV.png">
+          <div class="project-body">
+            <h6 class="project-title">Zense <br> 2018-2019</h6>
+            <p class="project-desc">Cofounded Zense along with
+              5 other UBC Business / Engineering students.
+              We created an award-winning start-up project
+              with the goal of creating an IoT product to ensure safer
+              and longer independent living for seniors.
+            </p>
+          </div>
+        </div>
+
+        <div class="small-buttons-container">
+          <button_hover>AWARDS & ACHIEVEMENTS</button_hover>
+        </div>
+
+        <div class="small-tile-info">
+          <p>Cofounded Zense along with
             5 other UBC Business / Engineering students.
             We created an award-winning start-up project
             with the goal of creating an IoT product to ensure safer
             and longer independent living for seniors.
           </p>
-          <div class="buttons-container">
-            <a href="#" class="project-livedemo">LIVE DEMO</a>
-          </div>
         </div>
       </div>
+
+
       <div class="small-tile">
-        <img class="project-pic" src="https://i.imgur.com/Gx69VXy.png">
-        <div class="project-body">
-          <h6 class="project-title">UBC Biztech Mentorship Program - 2016-2017</h6>
-          <p class="project-desc">Sole manager of a student & professional mentorship program.
-            Scaled membership from 32 to a total of 74 members, consisting of technology students
-            at UBC and local professionals in the technology sector.
-          </p>
-          <div class="buttons-container">
-            <a href="#" class="project-livedemo">LIVE DEMO</a>
+        <div class="small-tile-main">
+          <img class="project-pic" src="https://i.imgur.com/Gx69VXy.png">
+          <div class="project-body">
+            <h6 class="project-title">UBC Biztech Mentorship Program <br> 2016-2017</h6>
+            <p class="project-desc">Sole manager of a student & professional mentorship program,
+              connecting technology students in UBC's tech community with
+              local professionals in the technology sector.
+            </p>
           </div>
         </div>
+
+        <div class="small-buttons-container">
+          <button_hover>AWARDS & ACHIEVEMENTS</button_hover>
+        </div>
+
+        <div class="small-tile-info">
+          <p>○ 🧑🏻‍🤝‍🧑🏽 Scaled membership from 32 to a total of 74 members <br>
+          ○ 📋 Organized, managed, and led 2 program meetings with 95%+ program attendance <br>
+          ○ 🏅 One of BizTech's best rated programs of the year, with many positive testimonials 
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -479,34 +505,34 @@
       <textbox class="js-scroll">
         <p>To give my top three reasons:</p>
         <p>1. From my years of experience studying, interning, and working in the tech sector, I've become
-          familiar with the life and work of software developers. I believe my personality and 
+          familiar with the life and work of software developers. I believe my personality and
           work-style matches very well with this line of work.
         </p>
-        <p>2. Having worked in IT helpdesk and SAAS technical support, I have an intimate insight 
+        <p>2. Having worked in IT helpdesk and SAAS technical support, I have an intimate insight
           into the behavior, goals, and struggles of the technology end-user. <br>
-          I'm also familiar with the many difficulties and bugs that users and 
+          I'm also familiar with the many difficulties and bugs that users and
           developers deal with in complex pieces of software.<br>
           I believe this customer focus and software development insight
           I've built and demonstrated throughout my career will
-          give me an edge in developing usable and functional software. 
+          give me an edge in developing usable and functional software.
         </p>
-        <p>3. Though I'm still relatively early in the stages of building a career in technology, 
-          my long-term goal is to become the best technology professional I can be. 
+        <p>3. Though I'm still relatively early in the stages of building a career in technology,
+          my long-term goal is to become the best technology professional I can be.
           Working as a software developer is my next step in that long-term goal.
 
         </p>
       </textbox>
     </textcontainer>
-    
-
-<!-- CONTACT -->
-
-<section class="subheader">
-  <h3>CONTACT ME</h3>
-</section>
 
 
-<!-- WEBSITE FAKE END -->
+    <!-- CONTACT -->
+
+    <section class="subheader">
+      <h3>CONTACT ME</h3>
+    </section>
+
+
+    <!-- WEBSITE FAKE END -->
     <textbox>
       <br><br><br><br>
     </textbox>
@@ -519,7 +545,7 @@
         <br><br><br><br>
       </h4>
     </textbox>
-<!-- WEBSITE FAKE END -->
+    <!-- WEBSITE FAKE END -->
 
     <textbox class="js-scroll">
       <h4 class="js-scroll">
