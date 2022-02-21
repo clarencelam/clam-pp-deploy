@@ -129,31 +129,6 @@ function stickyNav(){
 }
 
 
-// Function to apply auto-scroll until navbar sticks to top, upon loading the page
-
-function scrollPage(){
-  window.scrollBy(0, 1);
-}
-
-function stopScroll(){
-    clearTimeout(delayScroll)
-}
-
-var scrolldone = false; // changes to true once page is loaded, lets the settimeout run. var exists so we only trigger the scroll setTimeout once, when the page loads
-
-function autoScroll(){
-  if(scrolldone === true){
-  // do nothing, auto scroll is done
-  console.log("scroll done!")
-   }
-  else if(window.pageYOffset < sticky && scrolldone === false ){
-    // window is above navbar, start autoscroll
-    delayScroll = setTimeout(scrollPage, 20);
-    scrolldone = true; 
-  }
-}
-
-
 
 // Function to accumulate functions that need to occur on scroll
 
@@ -177,7 +152,6 @@ function animate(){
   // controls.update();
 
   renderer.render(scene,camera);
-  autoScroll()
 }
 animate();
 

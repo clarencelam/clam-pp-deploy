@@ -215,6 +215,7 @@ background: var(--shadowColor)
 grid-column: 2 / span 10;
 text-align: center;
 background: var(--transColor);
+margin-top: 40px;
 margin-bottom: 40px;
 border-top: 5px solid var(--shadowColor);
 border-bottom: 5px solid var(--shadowColor);
@@ -245,7 +246,9 @@ textbox {
   grid-column: 2 / span 10  ;
   background: var(--transColor);
 
-  margin-bottom: 50px;
+  margin: 0px;
+  padding:0px;
+  margin-bottom: 25px;
   text-align: center;
   font-size: 1rem;
 
@@ -347,12 +350,12 @@ textbox h6, paragbox h6{
 textbox button{
   color: var(--lightText);
   font-size: 1.5rem;
-  line-height: 1.1;
+  line-height: 1;
   --outlinecolor: black;
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 
+  margin:0px;
   padding: 10px;
-  padding-right: 10px;
   background-color: darkslategray;
   border-radius: 0.5em;
 
@@ -373,7 +376,19 @@ borderspace {
  top: -300%; 
  /* setting left = 200% pushes text off-screen. Javascript in index.html brings the text back.
  setting top =100% prevents an issue with infinite scrolling at the bottom of screen*/
+ transition: all .5s ease;
+
 }
+
+#more100,#more101,#more102 {
+  /* styling for FAQ section buttons */
+  position: absolute; 
+  top: -50%; 
+  color:white;
+  transition: all .5s ease;
+  opacity: 0;
+}
+
 
 /*
 textcontainer will be used to hold hidden text
@@ -381,6 +396,8 @@ textcontainer will be used to hold hidden text
 
 textcontainer {
 
+  margin: 0px;
+  padding: 0px;
   grid-column: 2 / span 10  ;
   background: var(--transColor);
   align-items: center;
@@ -390,8 +407,9 @@ textcontainer {
 
 
 
-/* STYLING 3 COLUMN CONTAINER FOR GENERAL USE */
+/* STYLING 3 COLUMN CONTAINER FOR GENERAL USE
 
+NO LONGER IN USE
 
 .column-container{
   grid-column: 4 / span 6;
@@ -418,6 +436,7 @@ textcontainer {
   grid-row-start: 2;
   grid-row-end: 3;
 }
+ */
 
 /* STYLING SMALL TILES FOR OTHER PROJECTS */
 
@@ -437,6 +456,7 @@ textcontainer {
 .small-tile{
   border: var(--borderSize) solid var(--borderColor);
 }
+
 
 
 /* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
@@ -557,7 +577,7 @@ opacity: 1;
   display:block;
   width: 100%;
   height: 280px;
-  object-fit: cover;
+  object-fit:scale-down;
 }
 .project-body{
 padding:20px;
@@ -600,35 +620,11 @@ padding:20px;
   text-align: center;
 }
 
-.timeline-container{
-  grid-column: 2 / span 10;
 
-  color: white;
-  background-color: var(--transColor);
 
-  margin-bottom: 10px;
-  font-size: 1rem;
 
-  display:grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: var(--borderSize);
-}
 
-.timeline-yr{
-  background: var(--darkBgColor);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timeline-content{
-  background: var(--darkBgColor);
-  display: flex;
-  align-items: start;
-  justify-content: left;
-  color:white;
-}
 
 
 /* STYLING BLOCKQUOTE FOR LARGE TEXT */
