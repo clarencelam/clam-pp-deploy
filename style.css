@@ -565,18 +565,32 @@ button_hover{
 }
 
 .buttons-container{
-  display:inline;
-  font-size: 0.8rem;
+  display:flex;
+  flex-wrap:wrap;
 
-
-  color: var(--lightText);
   font-size: 1.2rem;
   line-height: 1;
   --outlinecolor: black;
   text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
 
-  margin:0px;
+  border-radius: 0.5em;
+
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+  transition: all 0.5s;
+
+  margin: auto;
+
+}
+.proj_button {
+  display: inline;
+  text-decoration: none;
+  background: var(--transColor);
+  cursor: pointer;
+  transition: all .5s ease;
   padding: 10px;
+  margin-right: 20px;
+  background-color: var(--borderColor);
   border-radius: 0.5em;
 }
 
@@ -627,6 +641,7 @@ button_hover{
   background: var(--darkBgColorSolid);
   padding:20px;  
   transition: all 0.5s ease;
+  
 }
 
 .project-leftside:hover + .project-rightside{
@@ -642,6 +657,14 @@ opacity: 1;
 .project-leftside:hover + .project-rightside>*{
   transform: translateX(0);
   }
+
+  .project-pic-big{
+    display:block;
+    width: 100%;
+    height: 280px;
+    object-fit:cover;
+  }
+  
 
 /* Code for right-aligned project tiles*/
 
