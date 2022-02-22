@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, strong, blockquote {
   
 }
 
-p,li,span,label,input,textarena {
+p,li,span {
   font-family: new-order, sans-serif;
   font-weight: 400;
   color: var(--secondaryText);
@@ -312,6 +312,13 @@ textbox:hover{
   object-fit:contain;
 }
 
+.textbox-lilpic{
+  display:inline;
+  width: 20%;
+  height: 80px;
+  object-fit:contain;
+}
+
 
 textbox p{
   color: var(--lightText);
@@ -393,7 +400,6 @@ textcontainer will be used to hold hidden text
 */
 
 textcontainer {
-
   margin: 0px;
   padding: 0px;
   grid-column: 2 / span 10  ;
@@ -403,7 +409,70 @@ textcontainer {
 
 }
 
+/*
+formcontainer will be used to hold form
+*/
 
+form {
+  margin: 0px;
+  padding: 0px;
+  background: var(--transColor);
+
+  transition: all .5s ease;
+
+  display:grid;
+  grid-column: 4 / span 6;
+  width:auto;
+  background-color: var(--darkBgColorTrans);
+  font-size: 1.2rem;
+
+  margin-bottom:3em;
+}
+
+form:hover{
+  background-color: var(--darkBgColorTrans);
+  transform: scale(1.04)
+}
+
+
+fieldset{
+  align-items: center; 
+  padding: 10px;
+  border: 0px solid var(--borderColor);
+}
+
+label, input, textarea {
+  margin:10px;
+}
+
+label {
+  padding-left: 5px;
+  color: white;
+  width:8em;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+input, textarea {
+  color: white;
+  background-color: black;
+  width:95%;
+  padding:10px;
+  border: 1px solid var(--borderColor);
+
+}
+
+input[type="submit"] {
+  font-size: 1.2rem;
+  color: white;
+  --outlinecolor: black;
+  text-shadow: 1px 1px 0 var(--outlinecolor), 1px -1px 0 var(--outlinecolor), -1px 1px 0 var(--outlinecolor), -1px -1px 0 var(--outlinecolor), 1px 0px 0 var(--outlinecolor), 0px 1px 0 var(--outlinecolor), -1px 0px 0 var(--outlinecolor), 0px -1px 0 var(--outlinecolor);
+  width:8em;
+  background-color: darkslategray;
+  cursor: pointer;
+  border-radius: 0.5em;
+
+}
 
 
 /* STYLING SMALL TILES FOR OTHER PROJECTS */
@@ -616,7 +685,6 @@ button_hover{
 /* Code for left-aligned project tiles*/
 
 .project-tile{
-  background: var(--transColor);
   display:grid;
   grid-template-columns:  4fr 5fr;
   
@@ -629,6 +697,8 @@ button_hover{
 }
 
 .project-leftside{
+  background: var(--darkBgColorTrans);
+
     transition: all 0.5s ease;
 }
 
@@ -675,6 +745,7 @@ opacity: 1;
   
   margin-bottom: var(--tile-margins);
   transition: all .5s ease;
+  
 }
 
 .R-project-tile:hover{
@@ -685,10 +756,13 @@ opacity: 1;
     transition: all 0.5s ease;
     grid-column-start: 2;
     grid-row: 1;
+    background: var(--darkBgColorTrans);
+
 }
 
 .R-project-leftside:hover{
   background: rgb(47, 79, 79);
+
 }
 
 .R-project-rightside{
