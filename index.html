@@ -200,29 +200,19 @@
     <section class="subheader">
       <h3>💼 PORTFOLIO</h3>
     </section>
-    <textbox>
-      
-      <p>
-        🚧👷 REMAINDER OF SITE IS UNDER CONSTRUCTION 🚧👷
-      </p>
-    </textbox>
 
-    <blockquotecenter>
+    <blockquotecenter class="js-scroll">
       <p><br>The live demos of the projects below are hosted on free web hosting platforms, so you may experience
         longer-than-usual load times.
         Thanks for waiting!</p>
-    </blockquotecenter>
-
-    <blockquotecenter>
-      <p>Ordered by recency. Hover for more details.</p>
     </blockquotecenter>
 
     <section class="project-container">
       <addtenthspace></addtenthspace>
       <!-- CLAMGAME ENTRY -->
 
-      <div class="project-tile">
-        <div class="project-leftside">
+      <project-tile class="js-scroll">
+        <project-leftside>
           <img class="project-pic-big" src="clamgame.JPG" loading="lazy">
           <div class="project-body">
             <h4 class="project-title">A Foodstand Clam</h4>
@@ -235,9 +225,9 @@
                 CODE</a>
             </div>
           </div>
+        </project-leftside>
 
-        </div>
-        <div class="project-rightside">
+        <project-rightside>
           <h6 class="project-title">Tech Stack</h6>
           <ul class="project-details">
             <li>Built with Javascript, HTML, and CSS</li>
@@ -256,12 +246,13 @@
               time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), and going to other
               gamestates changes elements like the background image, active functions, etc.</li>
           </ul>
-        </div>
-      </div>
+        </project-rightside>
+
+      </project-tile>
 
       <!-- LEARNINGLOG ENTRY -->
-      <div class="R-project-tile">
-        <div class="R-project-leftside">
+      <r-project-tile class="js-scroll">
+        <r-project-leftside>
           <img class="project-pic-big" src="learninglog.JPG" loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Learning Log</h4>
@@ -274,9 +265,9 @@
                 class="proj_button">SOURCE CODE</a>
             </div>
           </div>
-        </div>
+        </r-project-leftside>
 
-        <div class="R-project-rightside">
+        <r-project-rightside>
           <h6 class="project-title">Tech Stack</h6>
           <ul class="R-project-details">
             <li>Built with Python and the Django framework.</li>
@@ -292,49 +283,15 @@
               respective user account.
             </li><br>
           </ul>
-        </div>
+        </r-project-rightside>
 
 
-      </div>
+      </r-project-tile>
 
 
-
-      <div class="project-tile">
-        <div class="project-leftside">
-          <img class="project-pic-big" src="learninglog.JPG" loading="lazy">
-          <div class="project-body">
-            <h4 class="project-title">Blog Site with CMS</h4>
-            <p class="project-desc">A web based learning journal / note taking application. This project was built with
-              guidance from the amazing book Python Crash Course, Project #3</p>
-            <div class="buttons-container">
-              <a href="https://clarences-learninglog.herokuapp.com/" target="_blank" class="proj_button">LIVE
-                DEMO</a>
-              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank"
-                class="proj_button">SOURCE CODE</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-rightside">
-          <h6 class="project-title">Tech Stack</h6>
-          <ul class="project-details">
-            <li>Built with Python and the Django framework.</li>
-            <li>Database created with SQLite</li>
-            <li>Styled with Bootstrap4</li>
-            <li>Version control with Git</li>
-            <li>Deployment with Heroku</li>
-          </ul>
-          <h6 class="project-title">Technical Achievments</h6>
-          <ul class="project-details">
-            <li>
-              Implemented user registration and authentication with Django, and tied each user's content to their
-              respective user account.
-            </li><br>
-          </ul>
-        </div>
-      </div>
-
-      <div class="R-project-tile">
-        <div class="R-project-leftside">
+      <!-- Personal portfolio entry -->
+      <project-tile>
+        <project-leftside>
           <img class="project-pic-big" src="https://i.imgur.com/ci4v7wa.jpg" loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Personal Portfolio</h4>
@@ -347,9 +304,9 @@
                 class="proj_button">SOURCE CODE</a>
             </div>
           </div>
+        </project-leftside>
 
-        </div>
-        <div class="R-project-rightside">
+        <project-rightside>
           <h6 class="project-title">Tech Stack</h6>
           <ul class="project-details">
             <li>Built with Python and the Django framework.</li>
@@ -365,8 +322,47 @@
               respective user account.
             </li><br>
           </ul>
-        </div>
-      </div>
+        </project-rightside>
+      </project-tile>
+
+      <!-- Blogsite ENTRY -->
+      <r-project-tile class="js-scroll">
+        <r-project-leftside>
+          <img class="project-pic-big" src="https://i.imgur.com/SGpi37q.gif" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">Blog Site with CMS</h4>
+            <p class="project-desc">A web based learning journal / note taking application. This project was built with
+              guidance from the amazing book Python Crash Course, Project #3</p>
+            <div class="buttons-container">
+              <a href="https://clarences-learninglog.herokuapp.com/" target="_blank" class="proj_button">LIVE
+                DEMO</a>
+              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank"
+                class="proj_button">SOURCE CODE</a>
+            </div>
+          </div>
+        </r-project-leftside>
+
+        <r-project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="project-details">
+            <li>Built with Python and the Django framework.</li>
+            <li>Database created with SQLite</li>
+            <li>Styled with Bootstrap4</li>
+            <li>Version control with Git</li>
+            <li>Deployment with Heroku</li>
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>
+              Implemented user registration and authentication with Django, and tied each user's content to their
+              respective user account.
+            </li><br>
+          </ul>
+        </r-project-rightside>
+
+      </r-project-tile>
+
+
     </section>
 
 

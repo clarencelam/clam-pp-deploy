@@ -666,8 +666,8 @@ button_hover{
 
 /* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
 :root {
-  --tile-margins: 30px;
-  --popout-scale: scale(1.04)
+  --tile-margins: 10em;
+  --popout-scale: scale(1.05)
 }
 
 .project-container{
@@ -684,49 +684,58 @@ button_hover{
 
 /* Code for left-aligned project tiles*/
 
-.project-tile{
+project-tile{
   display:grid;
-  grid-template-columns:  4fr 5fr;
-  
+  grid-auto-flow: column; 
+  grid-template-columns:  1fr 1fr;
+
   margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+
+  overflow: hidden;
+}
+
+project-tile:hover{
+  transform: var(--popout-scale);
   transition: all .5s ease;
 }
 
-.project-tile:hover{
-  transform: var(--popout-scale);
-}
-
-.project-leftside{
-  background: var(--darkBgColorTrans);
-
-    transition: all 0.5s ease;
-}
-
-.project-leftside:hover{
+project-tile:hover project-leftside{
+  transition: all .5s ease;
   background: rgb(47, 79, 79);
 }
 
-.project-rightside{
+project-tile:hover project-rightside{
+  transition: all .5s ease;
+  background: var(--darkBgColorSolid);
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+project-leftside{
+  background: var(--darkBgColorTrans);
+  transition: all 0.5s ease;
+}
+
+project-rightside{
   opacity: 0;
   background: var(--darkBgColorSolid);
   padding:20px;  
   transition: all 0.5s ease;
-  
 }
 
-.project-leftside:hover + .project-rightside{
-display: block;
-opacity: 1;
-}
-
-.project-rightside >*{
+project-rightside >*{
   transform: translateX(-30px);
-  transition: transform 0.5s;
+  transition: all .5s ease;
+
 }
 
-.project-leftside:hover + .project-rightside>*{
+project-tile:hover project-rightside >*{
+  transition: all .5s ease;
   transform: translateX(0);
-  }
+}
+
 
   .project-pic-big{
     display:block;
@@ -738,21 +747,31 @@ opacity: 1;
 
 /* Code for right-aligned project tiles*/
 
-.R-project-tile{
+r-project-tile{
   background: var(--transColor);
   display:grid;
-  grid-template-columns:  5fr 4fr;
+  grid-template-columns:  1fr 1fr;
   
   margin-bottom: var(--tile-margins);
   transition: all .5s ease;
-  
 }
 
-.R-project-tile:hover{
+r-project-tile:hover{
   transform: var(--popout-scale);
 }
 
-.R-project-leftside{
+r-project-tile:hover r-project-leftside{
+  background: rgb(47, 79, 79);
+
+}
+
+r-project-tile:hover r-project-rightside{
+  opacity:1;
+
+}
+
+
+r-project-leftside{
     transition: all 0.5s ease;
     grid-column-start: 2;
     grid-row: 1;
@@ -760,12 +779,7 @@ opacity: 1;
 
 }
 
-.R-project-leftside:hover{
-  background: rgb(47, 79, 79);
-
-}
-
-.R-project-rightside{
+r-project-rightside{
   opacity: 0;
   background: var(--darkBgColorSolid);
   padding:20px;  
@@ -775,23 +789,13 @@ opacity: 1;
 
 }
 
-.R-project-leftside:hover + .R-project-rightside{
-display: block;
-opacity: 1;
-}
-
-.R-project-rightside >*{
+r-project-rightside >*{
   transform: translateX(30px);
   transition: transform 0.5s;
 }
-
-.R-project-leftside:hover + .R-project-rightside>*{
+r-project-tile:hover r-project-rightside>*{
   transform: translateX(0);
-  }
-
-
-
-
+}
 
 
 /* STYLING BLOCKQUOTE FOR LARGE TEXT */
