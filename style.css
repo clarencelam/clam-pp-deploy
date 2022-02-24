@@ -10,6 +10,8 @@ canvas{
   --darkBgColor: rgba(34, 34, 34, 0.795);
   --darkBgColorTrans: rgba(34, 34, 34, 0.301);
   --darkBgColorSolid: rgb(34, 34, 34);
+  --lightBgColorSolid: rgb(200, 200, 200);
+  --lightBgColorTrans: rgba(200, 200, 200, 0.1);
   --transColor: rgba(255, 255, 255, 0);
   --blockquoteOutlineColor: #3b3b3b;
   
@@ -257,7 +259,7 @@ footer ul li{
 grid-column: 2 / span 10;
 text-align: center;
 background: var(--transColor);
-margin-top: 5em;
+margin-top: 1em;
 margin-bottom: 5em;
 border-top: 5px solid var(--shadowColor);
 border-bottom: 5px solid var(--shadowColor);
@@ -289,7 +291,7 @@ textbox {
 
   margin: 0px;
   padding:0px;
-  margin-bottom: 25px;
+  margin-bottom: 3em;
   text-align: center;
   font-size: 1rem;
 
@@ -531,7 +533,7 @@ input[type="submit"] {
   justify-content: center;
 }
 
-.small-tile{
+small-tile{
   display:flex; /* best solution I found to center the contents */ 
   width: auto;
   flex-wrap: wrap;
@@ -567,14 +569,12 @@ input[type="submit"] {
 
 }
 
-.small-tile:hover{
+small-tile:hover,:focus{
   border: var(--borderSize) solid var(--transColor);
   background-color: var(--darkBgColorTrans);
   transform: scale(1.04)
 }
 
-.small-tile-info:hover {
-}
 
 .small-tile-info p{
   /* -- visibility:hidden + max-height: 0 is great for
@@ -783,7 +783,8 @@ project-tile:hover project-rightside >*{
     height: 25em;
     object-fit:cover;
   }
-  
+
+
 
 /* Code for right-aligned project tiles*/
 
@@ -836,6 +837,123 @@ r-project-rightside >*{
 r-project-tile:hover r-project-rightside>*{
   transform: translateX(0);
 }
+
+/* ---- Code for education tiles ---------*/
+
+project-tile-ed{
+  display:grid;
+  grid-auto-flow: column; 
+  grid-template-columns:  1fr 1fr;
+
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+
+  overflow: hidden;
+  border-radius: .8em;
+}
+
+project-tile-ed:hover{
+  transform: var(--popout-scale);
+  transition: all .5s ease;
+}
+
+project-tile-ed:hover project-leftside-ed{
+  transition: all .5s ease;
+  background: var(--darkBgColorTrans);
+}
+project-tile-ed:hover project-leftside-ed img{
+  transition: all 2s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+project-tile-ed:hover project-rightside-ed{
+  transition: all .5s ease;
+  background: var(--darkBgColorSolid);
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+project-leftside-ed{
+  background: var(--darkBgColorTrans);
+  transition: all 2s ease;
+  text-align  : center;
+
+}
+
+project-leftside-ed img{
+  transition: all .5s ease;
+
+}
+
+project-rightside-ed{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+}
+
+project-rightside-ed >*{
+  transform: translateX(-30px);
+  transition: all .5s ease;
+
+}
+
+project-rightside-ed p{
+  color:white;
+  line-height: 1;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+
+project-rightside-ed li{
+  color:white;
+  line-height: 1;
+  font-size: 1.1  rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+}
+
+.project-title-ed{
+  margin:0;
+  margin-bottom:0.5em;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+  align-content: center;
+}
+
+project-tile-ed:hover project-rightside-ed >*{
+  transition: all .5s ease;
+  transform: translateX(0);
+}
+
+.highlights-ed{
+  margin-bottom: 2em;
+}
+  
+  .project-pic-fit{
+    display:block;
+    width: 100%;
+    height: 20em;
+    object-fit:contain;
+  }
+
+  .project-desc-ed{
+    color:var(--lightText);
+    text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  }
+  
+  .project-details-ed{
+    position:relative;
+  }
+  .project-details-ed li{
+ margin:0;
+  }
+  
 
 
 /* STYLING BLOCKQUOTE FOR LARGE TEXT */
