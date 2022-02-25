@@ -25,29 +25,6 @@
 
 
     <!-- INTRO ANIMATION CONTENT-->
-    <div class="footercontainer">
-      <footer>
-        <ul id="menu">
-          <button onclick="startScroll()">
-            <li class="tooltip">🔽<span class="tooltiptext">
-                note: press "S" key to toggle scroll</span></li>
-          </button>
-          <button>
-            <li onclick="startDoubleScroll()">⏬</li>
-          </button>
-          <button>
-            <li onclick="stopScroll()">🛑</li>
-          </button>
-          <a href="">
-            <button>
-              <li>🔄
-              </li>
-            </button>
-          </a>
-
-        </ul>
-      </footer>
-    </div>
 
     <addhalfspace></addhalfspace>
     <blockquotecenter>
@@ -109,67 +86,6 @@
     </blockquote>
 
 
-    <!-- JAVASCRIPT TO HANDLE SCROLLING FUNCTIONALITY -->
-
-    <script>
-      scrolling = false;
-
-      //begin scrolling upon pageload
-
-      function pageScrollonLoad() {
-        window.scrollBy(0, 1);
-        scrolldelay = setTimeout(pageScrollonLoad, 10)
-        if (window.pageYOffset >= navbar.offsetTop) {
-          stopScroll();
-        }
-        scrolling = true;
-        console.log("triedscroll")
-      }
-      pageScrollonLoad();
-
-      // functions to handle scrolling buttons
-
-      function pageScroll() {
-        window.scrollBy(0, 1);
-        scrolldelay = setTimeout(pageScroll, 20)
-        scrolling = true;
-      }
-      function doublePageScroll() {
-        window.scrollBy(0, 1);
-        scrolldelay = setTimeout(doublePageScroll, 5)
-        scrolling = true;
-      }
-      function startScroll() {
-        if (typeof scrolldelay !== 'undefined') {
-          clearTimeout(scrolldelay);
-        }
-        pageScroll();
-      }
-      function startDoubleScroll() {
-        if (typeof scrolldelay !== 'undefined') {
-          clearTimeout(scrolldelay);
-        }
-        doublePageScroll();
-      }
-      function stopScroll() {
-        clearTimeout(scrolldelay)
-        scrolling = false;
-      }
-
-      document.addEventListener('keyup', event => {
-
-        if (event.code === 'KeyS' && scrolling === false) {
-          startScroll();
-        }
-        else if (event.code === 'KeyX' && scrolling === false) {
-          startDoubleScroll();
-        } else {
-          stopScroll();
-        }
-      })
-
-    </script>
-
 
     <!-- NAVBAR -->
 
@@ -212,6 +128,97 @@
       </nav>
     </div>
 
+<!-- FOOTER CODE -->
+<div class="footercontainer">
+  <footer>
+    <ul id="menu">
+      <button onclick="startScroll()">
+        <li class="tooltip">🔽<span class="tooltiptext">
+            note: press "S" key to toggle scroll</span></li>
+      </button>
+      <button onclick="startDoubleScroll()">
+        <li>⏬</li>
+      </button>
+      <button onclick="stopScroll()">
+        <li>🛑</li>
+      </button>
+      <a href="">
+        <button>
+          <li>🔄
+          </li>
+        </button>
+      </a>
+
+    </ul>
+  </footer>
+</div>
+
+
+    <!-- JAVASCRIPT TO HANDLE SCROLLING FUNCTIONALITY -->
+
+    <script>
+      var scrolling = false;
+
+      //begin scrolling upon pageload
+
+      function pageScrollonLoad() {
+        window.scrollBy(0, 1);
+
+
+        if(scrolling==false){
+          scrolldelay = setTimeout(pageScrollonLoad, 10); // If scroll hasn't started, start it
+        } 
+
+        if(window.pageYOffset >= navbar.offsetTop) {
+          stopScroll();
+        }
+      }
+      pageScrollonLoad();
+      
+      function stopScroll() {
+        clearTimeout(scrolldelay)
+        scrolling = false;
+      }
+
+      // functions to handle scrolling buttons
+
+      function pageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(pageScroll, 20)
+        scrolling = true;
+      }
+      function doublePageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(doublePageScroll, 5)
+        scrolling = true;
+      }
+      function startScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        pageScroll();
+      }
+      function startDoubleScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        doublePageScroll();
+      }
+
+      document.addEventListener('keyup', event => {
+
+        if (event.code === 'KeyS' && scrolling === false) {
+          startScroll();
+        }
+        else if (event.code === 'KeyX' && scrolling === false) {
+          startDoubleScroll();
+        } else {
+          stopScroll();
+        }
+      })
+
+      
+    </script>
 
 
     <!-- PORTFOLIO INTRO -->
@@ -1784,11 +1791,9 @@
     var menu = document.getElementById("menu");
 
     window.onscroll = function () {
-      console.log("heyo")
 
       if (window.pageYOffset >= menu.offsetTop) {
         navbar.classList.add("sticky");
-        console.log("heyo")
       }
       else {
         navbar.classList.remove("sticky")
