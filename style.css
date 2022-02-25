@@ -569,9 +569,9 @@ small-tile{
 
 }
 
-small-tile:hover,:focus{
+small-tile:hover{
   border: var(--borderSize) solid var(--transColor);
-  background-color: var(--darkBgColorTrans);
+  background-color: var(--darkBgColor);
   transform: scale(1.04)
 }
 
@@ -954,6 +954,65 @@ project-tile-ed:hover project-rightside-ed >*{
  margin:0;
   }
   
+/* STYLING SKILLS & TECHS LOGOS */
+gallery-container {
+  padding-left:10em;
+  padding-right:10em;
+  padding-top:3em;
+  padding-bottom:3em;
+  margin-bottom: 3em;
+  grid-column: 2 / span 10;
+  transition: all 0.5s ease;
+  border-radius: 1em;
+}
+
+.gallerypics{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap; 
+  align-items: auto;
+  justify-content:space-between;
+
+}
+
+.gallerypics2{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content:space-around;
+}
+
+
+gallery-container:hover{
+  transition: all .5s ease;
+  background-color: var(--lightBgColorTrans);
+}
+
+.skills-logos{
+  display:block;
+  max-height: 10em;
+  max-width: 15em;
+  object-fit:contain;
+  transition: all .5s ease;
+}
+
+.skills-logos:hover{
+  transition: all 0.5s ease;
+  transform:scale(1.2);
+}
+
+.resume-logos{
+  display:block;
+  max-height: 20em;
+  max-width: 12em;
+  object-fit:contain;
+  transition: all .5s ease;
+}
+.resume-logos:hover{
+  transition: all 0.5s ease;
+  transform:scale(1.2);
+}
 
 
 /* STYLING BLOCKQUOTE FOR LARGE TEXT */

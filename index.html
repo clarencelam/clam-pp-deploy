@@ -38,6 +38,13 @@
           <button>
             <li onclick="stopScroll()">🛑</li>
           </button>
+          <a href="">
+            <button>
+              <li>🔄
+              </li>
+            </button>
+          </a>
+
         </ul>
       </footer>
     </div>
@@ -170,19 +177,9 @@
     <div class="header">
       <nav id="navbar">
         <ul id="menu">
-          <a href="">
-            <button>
-              <li>TOP</li>
-            </button>
-          </a>
           <a href="#PORTFOLIO">
             <button>
               <li>PORTFOLIO</li>
-            </button>
-          </a>
-          <a href="#PROFHISTORY">
-            <button>
-              <li>PROFESSIONAL HISTORY</li>
             </button>
           </a>
           <a href="#PROJECTS">
@@ -190,6 +187,27 @@
               <li>OTHER PROJECTS</li>
             </button>
           </a>
+          <a href="#EDUCATION">
+            <button>
+              <li>EDUCATION</li>
+            </button>
+          </a>
+          <a href="#PROFHISTORY">
+            <button>
+              <li>RESUME</li>
+            </button>
+          </a>
+          <a href="#SKILLS">
+            <button>
+              <li>SKILLS</li>
+            </button>
+          </a>
+          <a href="#CONTACT">
+            <button>
+              <li>CONTACT</li>
+            </button>
+          </a>
+
         </ul>
       </nav>
     </div>
@@ -377,9 +395,8 @@
 
 
 
-    <a id="PROJECTS"></a>
-
     <section class="subheader">
+      <a id="PROJECTS"></a>
       <h3>⌨️ OTHER PROJECTS I'M PROUD OF:</h3>
     </section>
 
@@ -440,20 +457,10 @@
       </small-tile>
         </section>
 
-    <section class="subheader">
-      <h3>PROFESSIONAL HISTORY</h3>
-    </section>
-
-    <textbox class="js-scroll">
-      <p>Check out my resume
-        <a href="https://drive.google.com/file/d/15lj9PBFboEyfPKW5ClbULJ8014fYydRl/view?usp=sharing"
-          target="_blank">here</a>.
-      </p>
-    </textbox>
 
           <!---------------------- EDUCATION SECTION ---------------------->
-
-    <section class="subheader">
+          <a id="EDUCATION"></a>
+          <section class="subheader">
       <h3>EDUCATION</h3>
     </section>
 
@@ -518,16 +525,97 @@
 
       </section>
 
-          <!---------------------- SKILLS SECTION ---------------------->
+          <!---------------------- RESUME ---------------------->
+      <a id="PROFHISTORY"></a>
+      <section class="subheader">
+        <h3>RESUME & LINKEDIN</h3>
+      </section>
+      <gallery-container class="js-scroll">
+        <div class="gallerypics2">
+        <a href="https://drive.google.com/file/d/15lj9PBFboEyfPKW5ClbULJ8014fYydRl/view?usp=sharing" target="_blank" loading="lazy" 
+        ><img class="resume-logos" src="https://i.imgur.com/IBKmDGY.png"></a>  
 
+        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy" 
+        ><img class="resume-logos" src="https://i.imgur.com/FMZIFiD.png"></a>  
+      </div>
+      </gallery-container>  
+
+
+      <addtenthspace>&nbsp;</addtenthspace>
+      <addtenthspace>&nbsp;</addtenthspace>
+
+          <!---------------------- SKILLS SECTION ---------------------->
+          <a id="SKILLS"></a>
     <section class="subheader">
       <h3>SKILLS & TECHNOLOGIES</h3>
     </section>
 
     <textbox class="js-scroll">
-      <p>Here are the programming languages and frameworks I'm most experienced with:
+      <p>Here are the programming languages/frameworks/tools I'm most experienced with:
       </p>
     </textbox>
+
+    <gallery-container class="js-scroll">
+      <div class="gallerypics">
+      <img class="skills-logos" src="https://i.imgur.com/m1TQIfK.png" loading="lazy">
+      <img class="skills-logos" src="https://i.imgur.com/yzRkSTk.png?1" loading="lazy">
+      <img class="skills-logos" src="https://i.imgur.com/YM5RhPA.png" loading="lazy">
+      <img class="skills-logos" src="https://i.imgur.com/5NENFGS.png" loading="lazy">
+      <img class="skills-logos" src="https://i.imgur.com/X5LGNcR.png" loading="lazy">
+      </div>
+    </gallery-container>
+
+    <gallery-container class="js-scroll">
+      <div class="gallerypics2">
+        <textbox>
+          <p>And I'm in the process of learning these right now:
+          </p>
+        </textbox>
+      
+      <img class="skills-logos" src="https://i.imgur.com/XAocEvR.png" loading="lazy">
+      <img class="skills-logos" src="https://i.imgur.com/D1DIF97.png" loading="lazy">
+      </div>
+    </gallery-container>
+
+
+
+
+    <!-------------------- CONTACT -------------------->
+    <a id="CONTACT"></a>
+    <section class="subheader">
+      <h3>CONTACT ME</h3>
+    </section>
+
+    <textbox class="js-scroll">
+      <p>If you'd like to contact me, you can fire off an email to me with this form:
+      </p>
+    </textbox>
+
+    <!-- contact form built with formspree api handling backend -->
+
+      <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
+        <fieldset class="form-inputs">
+
+          <label>Name:</label><br>
+          <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
+
+          <label>Email Address:</label><br>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+
+          <label>Message:</label><br>
+          <textarea rows="5" name="message" id="message" 
+          placeholder="Type your message here." required=""></textarea>
+          
+          <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          <input type="submit" value="SUBMIT"></button>
+        </fieldset>
+      </form>
+
+
+    <!-- WEBSITE FAKE END -->
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
 
     <section class="subheader">
       <h3>FAQ</h3>
@@ -600,54 +688,14 @@
     </textcontainer>
 
 
-    <!-------------------- CONTACT -------------------->
-
-    <section class="subheader">
-      <h3>CONTACT ME</h3>
-    </section>
-
-    <textbox class="js-scroll">
-      <p>If you'd like to contact me, you can fire off an email to me with this form:
-      </p>
-    </textbox>
-
-    <!-- contact form built with formspree api handling backend -->
-
-      <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
-        <fieldset class="form-inputs">
-
-          <label>Name:</label><br>
-          <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
-
-          <label>Email Address:</label><br>
-          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
-
-          <label>Message:</label><br>
-          <textarea rows="5" name="message" id="message" 
-          placeholder="Type your message here." required=""></textarea>
-          
-          <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-          <input type="submit" value="SUBMIT"></button>
-        </fieldset>
-      </form>
-
-
-      <textbox class="js-scroll">
-        <p>Or, feel free to connect with me on LinkedIn:
-        </p>
-      </textbox>  
-
-      <textbox class="js-scroll">
-        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy" 
-        ><img class="textbox-lilpic" src="https://i.imgur.com/FMZIFiD.png"></a>  
-      </textbox>  
-
-
-    <!-- WEBSITE FAKE END -->
     <addtenthspace>&nbsp;</addtenthspace>
     <addtenthspace>&nbsp;</addtenthspace>
     <addtenthspace>&nbsp;</addtenthspace>
 
+
+    <!------------------- WEBSITE END ------------------>
+
+    
     <section class="subheader">
         <h3>
           THE END.
@@ -659,9 +707,7 @@
 
     <addtenthspace></addtenthspace>
     <addtenthspace></addtenthspace>
-
-    <!-- WEBSITE FAKE END -->
-
+<!--
     <textbox class="js-scroll">
       <h4 class="js-scroll">
         Unless...
@@ -679,34 +725,8 @@
       <button onclick="toggleShow()" id="myBtn">I'm interested. Let's read it.</button>
       <br><br>
     </textbox>
-
-
-    <a id="PROFHISTORY"></a>
-
-    <!--------  Temp place to put unused content
-    <textbox >
-      <h4 class="js-scroll">
-        By now, you might be wondering: Who is this guy?</h4>
-      <br><br>
-    </textbox>
-    <textbox class="js-scroll">
-      <h4 class="js-scroll">
-        How did he get here?</h4>
-      <br><br>
-    </textbox>
-    <textbox class="js-scroll">
-      <h4 class="js-scroll">
-        And why does he want to be a dev?
-      </h4>
-      <br><br>
-    </textbox>
-    <textbox class="js-scroll">
-      <h4 class="js-scroll">
-        If you're interested in a (fairly long-winded) answer to these questions, keep reading.
-      </h4>
-      <br><br><br><br>
-    </textbox>
 -->
+
 
     <!----------------------------- PROFESSIONAL HISTORY ------------------------------->
 
