@@ -428,13 +428,14 @@ borderspace {
  transition: all .5s ease;
 }
 
-#more100,#more101,#more102 {
+#more100,#more101,#more102,#more103,#more104,#more105 {
   /* styling for FAQ section buttons */
   position: absolute; 
   top: -50%; 
   color:white;
   transition: all .5s ease;
   opacity: 0;
+  z-index: -1;
 }
 
 

@@ -174,7 +174,7 @@
         }
       }
       pageScrollonLoad();
-      
+
       function stopScroll() {
         clearTimeout(scrolldelay)
         scrolling = false;
@@ -196,7 +196,7 @@
         if (typeof scrolldelay !== 'undefined') {
           clearTimeout(scrolldelay);
         }
-        pageScroll();
+        pageScroll(); 
       }
       function startDoubleScroll() {
         if (typeof scrolldelay !== 'undefined') {
@@ -628,27 +628,51 @@
       <h3>FAQ</h3>
     </section>
 
-    <!-- FAQ 1 -->
+    <!-- FAQ 1: WHO ARE YOU -->
     <textbox>
       <button onclick="toggleShow100()" id="showBtn100">⬇ Who are you? ⬇</button>
     </textbox>
 
     <textcontainer id="more100">
-      <textbox class="js-scroll">
-        <p>I'm a tech professional, born and raised in Vancouver, Canada, looking to
+      <textbox>
+        <p>I'm a tech professional, born + raised + currently based out of in Vancouver, Canada. looking to
           find work as a developer.
-          <br><br>
-          As I mentioned in the website intro, I've never formally worked as a software engineer,
-          but I've been self-study programming full-time since July 2021.
         </p>
         <p>
-          More specifically, I've focused on learning object-oriented programming in Python, and web development with
-          HTML + CSS + Javascript.
+          Prior to pursuing a developer role, I've worked as a Technical Support Analyst for two years,
+          using my technical acumen to support
+          <a href="https://www.visier.com/" 
+          target="_blank">Visier's</a> SAAS data analytics web application
         </p>
+        </textbox>
+        <textbox>
+        <p>
+          But I was always a technologist, even before joining Visier. 
+        </p>          
+        <p>
+          In my university days, I worked in IT help-desk on campus at
+          <a href="https://psych.ubc.ca/" 
+          target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty + students + staff
+          all had exactly what they needed IT-wise to perform their research and classes.
+        </p>
+        <p>
+          I also interned for 12 months in a Pre-sales role at <a href="https://www.appnovation.com/" 
+          target="_blank">Appnovation</a>, a Technology Services company
+          specializing in open source technologies. 
+        </p>
+        <p>And had a 4-month summer internship as a Jr. Business Analyst for 
+          BC's healthcare's <a href="https://cstproject.ca/"
+          target="_blank">Clinical & Systems Transformation (CST)</a> project.
+        </p> 
       </textbox>
+      <textbox>
+        <p>
+        Now, I’m making the next step in my career, transitioning from being a support technician, to becoming a software developer 
+      </p>
+    </textbox>
     </textcontainer>
 
-    <!-- FAQ 2 -->
+    <!-- FAQ 2: EDUCATION BACKGROUND -->
 
     <textbox>
       <br><br>
@@ -656,22 +680,102 @@
     </textbox>
 
     <textcontainer id="more101">
-      <textbox class="js-scroll">
-        <p>I hold a degree in Commerce from UBC.
+      <textbox>
+        <p>
+          In 2019, I graduated from the University of British Columbia (UBC)
         </p>
         <p>
+          I earned a Bachelor's of Commerce in Business Technology Management. 
+          <br>
+          Despite getting a business degree, I had my sights set on working in the tech industry going into this degree.
+          <br>
+          This is reflected in the major I chose, the computer science electives I took, and the extra-curriculars I got
+          involved with throughout my university career.
         </p>
       </textbox>
+
+            <!-- Nested FAQ: Why didn't you study comp sci -->
+
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow104()" id="showBtn104">⬇ Why didn't you study Computer Science? ⬇</button>      
+    </textbox>
+
+      <textcontainer id="more104">
+        <textbox>
+          <p>
+            There are a few reasons:
+          </p>
+          </textbox>
+          <textbox>
+          <p>
+            The first would be that business disciplines (particularly entrepreneurship, finance,
+            and business analysis) interest me greatly.<br>
+            I'd consider myself a business person just as much as I am a technologist.
+          </p>
+          <p>
+            Second, I've been lucky enough to have a great mentor in my youth who's a businessman. 
+            He influenced me greatly and piqued my interest in entrepreneurship and finance.
+          </p>
+          <p>
+            Three, I figured going into a business degree would be good for building my soft-skills.
+          </p>
+        </textbox>
+        <textbox>
+          <p>
+            Between these factors, it just felt natural to into a business program.
+          </p>
+        </textbox>
+
+        <textbox>
+        <!-- Nested FAQ: Would you go back? -->
+
+          <textbox>
+            <br><br>
+            <button onclick="toggleShow105()" id="showBtn105">⬇ If you could go back, would you change your degree? ⬇</button>      
+        </textbox>
+    
+          <textcontainer id="more105">
+            <textbox>
+              <p>
+                Maybe. 
+              </p>
+              <p>
+              </p>
+              </textbox>
+          </textcontainer>  
+        </textbox>
+      </textcontainer>  
+
     </textcontainer>
 
     <!-- FAQ 3 -->
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow102()" id="showBtn102">⬇ Why are you entering software development? ⬇</button>
+      <button onclick="toggleShow102()" id="showBtn102">⬇ When did you start learning to code? ⬇</button>
     </textbox>
 
     <textcontainer id="more102">
+      <textbox class="js-scroll">
+        <p>I've actually tried learning to code many times throughout my life.</p>
+        <p>1. From my years of experience studying, interning, and working in the tech sector, I've become
+          familiar with the life and work of software developers. I believe my personality and
+          work-style matches very well with this line of work.
+        </p>
+
+      </textbox>
+    </textcontainer>
+
+
+        <!-- FAQ 4-->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow103()" id="showBtn103">⬇ Why are you entering software development? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more103">
       <textbox class="js-scroll">
         <p>To give my top three reasons:</p>
         <p>1. From my years of experience studying, interning, and working in the tech sector, I've become
@@ -1762,6 +1866,30 @@
       var moreText = document.getElementById("more102");
       var button = document.getElementById("showBtn102");
 
+      if (button.innerHTML === "⬇ When did you start learning to code? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ When did you start learning to code? ⬆"
+      } else {
+        button.innerHTML = "⬇ When did you start learning to code? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+
+    function toggleShow103() {
+      var moreText = document.getElementById("more103");
+      var button = document.getElementById("showBtn103");
+
       if (button.innerHTML === "⬇ Why are you entering software development? ⬇") {
         moreText.style.position = "relative";
         moreText.style.opacity = "1";
@@ -1780,6 +1908,53 @@
         button.style.color = "white"
       }
     }
+
+    function toggleShow104() {
+      var moreText = document.getElementById("more104");
+      var button = document.getElementById("showBtn104");
+
+      if (button.innerHTML === "⬇ Why didn't you study Computer Science? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ Why didn't you study Computer Science? ⬆"
+      } else {
+        button.innerHTML = "⬇ Why didn't you study Computer Science? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow105() {
+      var moreText = document.getElementById("more105");
+      var button = document.getElementById("showBtn105");
+
+      if (button.innerHTML === "⬇ If you could go back, would you change your degree? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ If you could go back, would you change your degree? ⬆"
+      } else {
+        button.innerHTML = "⬇ If you could go back, would you change your degree? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
 
   </script>
 
