@@ -682,10 +682,12 @@
     <textcontainer id="more101">
       <textbox>
         <p>
-          In 2019, I graduated from the University of British Columbia (UBC)
+          In 2019, I graduated from the <a href="https://cstproject.ca/"
+          target="_blank">University of British Columbia</a> (UBC)
         </p>
         <p>
-          I earned a Bachelor's of Commerce in Business Technology Management. 
+          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/"
+          target="_blank">Business Technology Management</a>. 
           <br>
           Despite getting a business degree, I had my sights set on working in the tech industry going into this degree.
           <br>
@@ -738,9 +740,25 @@
           <textcontainer id="more105">
             <textbox>
               <p>
-                Maybe. 
+                Well, I often think about how much easier it'd be to get my first Dev role if
+                I completed a formal education in computer science/programming. 
               </p>
               <p>
+                But ultimately, though it might make me harder to hire for some companies,
+                I do take pride in self-learning development.
+              </p>
+              <p>
+                I think being a self-taught developer
+                is a powerful demonstration of my intrinsic motivation towards continuous, life-long learning.
+              </p>
+              <p>
+                And at the end of the day, I believe that all devs have to be "self taught" to some degree--<br>
+                Web technologies grow and mutate so quickly that it seems the learning never stops in this profession.
+              </p>
+              <p>
+                So I can confidently say I'm happy with being a business school grad trying to be a Dev;
+                and having a sharp business acumen and strong customer focus will make me a very well-rounded
+                developer in the end.
               </p>
               </textbox>
           </textcontainer>  
@@ -758,12 +776,21 @@
 
     <textcontainer id="more102">
       <textbox class="js-scroll">
-        <p>I've actually tried learning to code many times throughout my life.</p>
-        <p>1. From my years of experience studying, interning, and working in the tech sector, I've become
-          familiar with the life and work of software developers. I believe my personality and
-          work-style matches very well with this line of work.
+        <p>
+          I've tried to "learn to code" many times throughout my life. I think this is a relatable experience.
         </p>
-
+        <p>
+          I'd always get through a few Python tutorials, learn syntax, and even make a simple Pong game or Sodoku solver--
+        </p>
+        <p>
+          But I never stayed the course long enough to build a complicated piece of software from scratch.
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          It wasn't until my last role with Visier ended in June 2021, when I decided to try to "learn to code" for the last
+          time, and pursue a Developer role
+        </p>
       </textbox>
     </textcontainer>
 
@@ -772,28 +799,27 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow103()" id="showBtn103">⬇ Why are you entering software development? ⬇</button>
+      <button onclick="toggleShow103()" id="showBtn103">⬇ Why are you making this switch into becoming a Dev? ⬇</button>
     </textbox>
 
     <textcontainer id="more103">
-      <textbox class="js-scroll">
-        <p>To give my top three reasons:</p>
-        <p>1. From my years of experience studying, interning, and working in the tech sector, I've become
-          familiar with the life and work of software developers. I believe my personality and
-          work-style matches very well with this line of work.
+      <textbox>
+        <p>I would categorize my reasons for pursuing a Development role can be broadly categorized into three themes:</p>
+      </textbox>
+      <textbox>
+        <p>
+          1. Professional growth & progression
         </p>
-        <p>2. Having worked in IT helpdesk and SAAS technical support, I have an intimate insight
-          into the behavior, goals, and struggles of the technology end-user. <br>
-          I'm also familiar with the many difficulties and bugs that users and
-          developers deal with in complex pieces of software.<br>
-          I believe this customer focus and software development insight
-          I've built and demonstrated throughout my career will
-          give me an edge in developing usable and functional software.
+        <p>
+          After working in IT helpdesk and SAAS application support
         </p>
-        <p>3. Though I'm still relatively early in the stages of building a career in technology,
-          my long-term goal is to become the best technology professional I can be.
-          Working as a software developer is my next step in that long-term goal.
-
+        <p>
+          
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          2. Alignment with personal & professional values
         </p>
       </textbox>
     </textcontainer>
@@ -1890,16 +1916,16 @@
       var moreText = document.getElementById("more103");
       var button = document.getElementById("showBtn103");
 
-      if (button.innerHTML === "⬇ Why are you entering software development? ⬇") {
+      if (button.innerHTML === "⬇ When did you start learning to code? ⬇") {
         moreText.style.position = "relative";
         moreText.style.opacity = "1";
         moreText.style.left = "0%";
         moreText.style.top = "0%";
         button.style.backgroundColor = "grey";
         button.style.color = "darkgrey"
-        button.innerHTML = "⬆ Why are you entering software development? ⬆"
+        button.innerHTML = "⬆ When did you start learning to code? ⬆"
       } else {
-        button.innerHTML = "⬇ Why are you entering software development? ⬇";
+        button.innerHTML = "⬇ When did you start learning to code? ⬇";
         moreText.style.position = "absolute";
         moreText.style.left = "0%";
         moreText.style.top = "-50%";
