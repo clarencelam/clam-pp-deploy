@@ -133,7 +133,7 @@ button:hover{
 
 
 button:active {
-  transform: scale(.8);
+  transform: scale(.9);
 }
 
 /* HIGHLIGHTER CLASS */
