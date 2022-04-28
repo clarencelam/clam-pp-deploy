@@ -58,7 +58,7 @@
       <button class="tooltip">
         <h1 onclick="startScroll()">🔽</h1>
         <span class="tooltiptext">
-          <h6>Press space to stop auto-scroll</h6>
+          <p>Press space to stop auto-scroll</p>
         </span>
       </button>
 
@@ -79,8 +79,6 @@
       <h6>But I was never somebody who wrote scripts or committed code 😔</h6>
     </blockquote>
 
-    <addhalfspace></addhalfspace>
-
     <blockquoteright class="js-scroll">
       <h6>😤 About 9 months ago, I decided to change that</h6>
     </blockquoteright>
@@ -93,8 +91,6 @@
       <h6> 🤦‍♂️ And it hasn't been easy. </h6>
     </blockquoteright>
 
-    <addquarterspace></addquarterspace>
-
     <blockquote class="js-scroll">
       <h6>But it has been extremely interesting 🤔 and mentally stimulating 💡</h6>
     </blockquote>
@@ -102,8 +98,6 @@
     <blockquoteright class="js-scroll">
       <h6>💚 and improving as a developer has been beyond rewarding</h6>
     </blockquoteright>
-
-    <addhalfspace></addhalfspace>
 
     <blockquote class="js-scroll">
       <h6>Right now, I'm looking for work as a Junior Developer in the Greater Vancouver area 💼</h6>
@@ -118,47 +112,6 @@
     </blockquote>
 
 
-
-    <!-- NAVBAR -->
-
-
-    <div class="header">
-      <nav id="navbar">
-        <ul id="menu">
-          <a href="#PORTFOLIO">
-            <button>
-              <li>PORTFOLIO</li>
-            </button>
-          </a>
-          <a href="#PROJECTS">
-            <button>
-              <li>OTHER PROJECTS</li>
-            </button>
-          </a>
-          <a href="#EDUCATION">
-            <button>
-              <li>EDUCATION</li>
-            </button>
-          </a>
-          <a href="#PROFHISTORY">
-            <button>
-              <li>RESUME + LINKS</li>
-            </button>
-          </a>
-          <a href="#SKILLS">
-            <button>
-              <li>SKILLS</li>
-            </button>
-          </a>
-          <a href="#CONTACT">
-            <button>
-              <li>CONTACT</li>
-            </button>
-          </a>
-
-        </ul>
-      </nav>
-    </div>
 
     <!-- FOOTER CODE
     <div class="footercontainer">
@@ -253,6 +206,47 @@
     </script>
 
 
+    <!-- NAVBAR -->
+
+
+    <div class="header">
+      <nav id="navbar">
+        <ul id="menu">
+          <a href="#PORTFOLIO">
+            <button>
+              <li>PORTFOLIO</li>
+            </button>
+          </a>
+          <a href="#PROJECTS">
+            <button>
+              <li>OTHER PROJECTS</li>
+            </button>
+          </a>
+          <a href="#EDUCATION">
+            <button>
+              <li>EDUCATION</li>
+            </button>
+          </a>
+          <a href="#PROFHISTORY">
+            <button>
+              <li>RESUME + LINKS</li>
+            </button>
+          </a>
+          <a href="#SKILLS">
+            <button>
+              <li>SKILLS</li>
+            </button>
+          </a>
+          <a href="#CONTACT">
+            <button>
+              <li>CONTACT</li>
+            </button>
+          </a>
+
+        </ul>
+      </nav>
+    </div>
+
     <!-- PORTFOLIO INTRO -->
     <addtenthspace></addtenthspace>
 
@@ -272,6 +266,43 @@
 
     <section class="project-container">
       <addtenthspace></addtenthspace>
+
+            <!-- Blogsite ENTRY -->
+            <r-project-tile class="js-scroll">
+              <r-project-leftside>
+                <img class="project-pic-big" src="https://i.imgur.com/SGpi37q.gif" loading="lazy">
+                <div class="project-body">
+                  <h4 class="project-title">Todo Productivity App</h4>
+                  <p class="project-desc">
+                    A To-do web app built with a React front-end and a Django back-end, communicating via API. API built with the Django REST framework.
+                  </p>
+                  <div class="buttons-container">
+                    <a href="#" target="_blank" class="proj_button">[IN PROGRESS]</a>
+                    <a href="https://github.com/clarencelam/rest_todo_v2" target="_blank" class="proj_button">SOURCE CODE</a>
+                  </div>
+                </div>
+              </r-project-leftside>
+      
+              <r-project-rightside>
+                <h6 class="project-title">Tech Stack</h6>
+                <ul class="project-details">
+                  <li>Front-end built with the React.js Javascript framework</li>
+                  <li>Back-end built with the Django Python framework</li>
+                  <li>API connection built with the Django REST framework</li>
+
+                </ul>
+                <h6 class="project-title">Technical Achievments</h6>
+                <ul class="project-details">
+                  <li>
+                    IN PROGRESS
+                  </li><br>
+                </ul>
+              </r-project-rightside>
+      
+            </r-project-tile>
+      
+
+
       <!-- CLAMGAME ENTRY -->
 
       <project-tile class="js-scroll">
@@ -392,36 +423,6 @@
           </ul>
         </project-rightside>
       </project-tile>
-
-      <!-- Blogsite ENTRY -->
-      <r-project-tile class="js-scroll">
-        <r-project-leftside>
-          <img class="project-pic-big" src="https://i.imgur.com/SGpi37q.gif" loading="lazy">
-          <div class="project-body">
-            <h4 class="project-title">Blog Site with CMS</h4>
-            <p class="project-desc">IN PROGRESS</p>
-            <div class="buttons-container">
-              <a href="#" target="_blank" class="proj_button">[IN PROGRESS]</a>
-              <a href="https://github.com/clarencelam/api_blog" target="_blank" class="proj_button">SOURCE CODE</a>
-            </div>
-          </div>
-        </r-project-leftside>
-
-        <r-project-rightside>
-          <h6 class="project-title">Tech Stack</h6>
-          <ul class="project-details">
-            <li>Building a full-stack Blog Site with the Django REST framework and a React front-end.</li>
-          </ul>
-          <h6 class="project-title">Technical Achievments</h6>
-          <ul class="project-details">
-            <li>
-              IN PROGRESS
-            </li><br>
-          </ul>
-        </r-project-rightside>
-
-      </r-project-tile>
-
 
     </section>
 
