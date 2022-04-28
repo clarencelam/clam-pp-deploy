@@ -23,13 +23,45 @@
     <script type="module" src="/main.js">
     </script>
 
+    <div class="footercontainer">
+      <footer>
+        <ul id="menu">
+          <button onclick="startScroll()">
+            <li class="tooltip">🔽<span class="tooltiptext">
+                note: press "S" key to toggle scroll</span></li>
+          </button>
+          <button onclick="startDoubleScroll()">
+            <li>⏬</li>
+          </button>
+          <button onclick="stopScroll()">
+            <li>🛑</li>
+          </button>
+          <a href="">
+            <button>
+              <li>🔄
+              </li>
+            </button>
+          </a>
+
+        </ul>
+      </footer>
+    </div>
+
+
 
     <!-- INTRO ANIMATION CONTENT-->
-
-    <addhalfspace></addhalfspace>
+    <addquarterspace></addquarterspace>
+    <addquarterspace></addquarterspace>
     <blockquotecenter>
+      
       <p>👇 scroll 👇 </p>
-      <p>⚠️ If you encounter issues, please try using Google Chrome ⚠️</p>
+      <button class="tooltip">
+        <h1 onclick="startScroll()">🔽</h1>
+        <span class="tooltiptext">
+          <h6>Press space to stop auto-scroll</h6>
+        </span>
+      </button>
+
     </blockquotecenter>
 
     <addhalfspace></addhalfspace>
@@ -128,30 +160,30 @@
       </nav>
     </div>
 
-<!-- FOOTER CODE -->
-<div class="footercontainer">
-  <footer>
-    <ul id="menu">
-      <button onclick="startScroll()">
-        <li class="tooltip">🔽<span class="tooltiptext">
-            note: press "S" key to toggle scroll</span></li>
-      </button>
-      <button onclick="startDoubleScroll()">
-        <li>⏬</li>
-      </button>
-      <button onclick="stopScroll()">
-        <li>🛑</li>
-      </button>
-      <a href="">
-        <button>
-          <li>🔄
-          </li>
-        </button>
-      </a>
+    <!-- FOOTER CODE
+    <div class="footercontainer">
+      <footer>
+        <ul id="menu">
+          <button onclick="startScroll()">
+            <li class="tooltip">🔽<span class="tooltiptext">
+                note: press "S" key to toggle scroll</span></li>
+          </button>
+          <button onclick="startDoubleScroll()">
+            <li>⏬</li>
+          </button>
+          <button onclick="stopScroll()">
+            <li>🛑</li>
+          </button>
+          <a href="">
+            <button>
+              <li>🔄
+              </li>
+            </button>
+          </a>
 
-    </ul>
-  </footer>
-</div>
+        </ul>
+      </footer>
+    </div> -->
 
 
     <!-- JAVASCRIPT TO HANDLE SCROLLING FUNCTIONALITY -->
@@ -165,15 +197,15 @@
         window.scrollBy(0, 1);
 
 
-        if(scrolling==false){
+        if (scrolling == false) {
           scrolldelay = setTimeout(pageScrollonLoad, 10); // If scroll hasn't started, start it
-        } 
+        }
 
-        if(window.pageYOffset >= navbar.offsetTop) {
+        if (window.pageYOffset >= navbar.offsetTop) {
           stopScroll();
         }
       }
-      pageScrollonLoad();
+      // pageScrollonLoad();
 
       function stopScroll() {
         clearTimeout(scrolldelay)
@@ -196,7 +228,7 @@
         if (typeof scrolldelay !== 'undefined') {
           clearTimeout(scrolldelay);
         }
-        pageScroll(); 
+        pageScroll();
       }
       function startDoubleScroll() {
         if (typeof scrolldelay !== 'undefined') {
@@ -217,7 +249,7 @@
         }
       })
 
-      
+
     </script>
 
 
@@ -292,8 +324,8 @@
             <div class="buttons-container">
               <a href="https://clarences-learninglog.herokuapp.com/" target="_blank" class="proj_button">LIVE
                 DEMO</a>
-              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank"
-                class="proj_button">SOURCE CODE</a>
+              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank" class="proj_button">SOURCE
+                CODE</a>
             </div>
           </div>
         </r-project-leftside>
@@ -326,14 +358,15 @@
           <img class="project-pic-big" src="https://media.giphy.com/media/5AmPaMdlGLyX7QH07D/giphy.gif" loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Personal Portfolio</h4>
-            <p class="project-desc">A personal 1-page website built to showcase my programming portfolio and professional qualifications. 
+            <p class="project-desc">A personal 1-page website built to showcase my programming portfolio and
+              professional qualifications.
               Built with an emphasis on interactivity and user engagement.
             </p>
             <div class="buttons-container">
               <a href="#" target="_blank" class="proj_button">LIVE
                 DEMO</a>
-              <a href="https://github.com/clarencelam/clam-pp-deploy" target="_blank"
-                class="proj_button">SOURCE CODE</a>
+              <a href="https://github.com/clarencelam/clam-pp-deploy" target="_blank" class="proj_button">SOURCE
+                CODE</a>
             </div>
           </div>
         </project-leftside>
@@ -348,7 +381,8 @@
           <h6 class="project-title">Technical Achievments</h6>
           <ul class="project-details">
             <li>
-              Created a scroll-interactive "starry background" feature in Javascript by generating a 3d scene with randomized dots and scrolling the camera through the scene,
+              Created a scroll-interactive "starry background" feature in Javascript by generating a 3d scene with
+              randomized dots and scrolling the camera through the scene,
               with the help of the three.js library.
 
               Implemented Javascript + CSS clickable content-activating buttons.
@@ -368,8 +402,7 @@
             <p class="project-desc">IN PROGRESS</p>
             <div class="buttons-container">
               <a href="#" target="_blank" class="proj_button">[IN PROGRESS]</a>
-              <a href="https://github.com/clarencelam/api_blog" target="_blank"
-                class="proj_button">SOURCE CODE</a>
+              <a href="https://github.com/clarencelam/api_blog" target="_blank" class="proj_button">SOURCE CODE</a>
             </div>
           </div>
         </r-project-leftside>
@@ -425,10 +458,11 @@
         </div>
 
         <div class="small-tile-info">
-          <p>○ 🥇 Placed first at UBC's 2019 Innovation OnBoard start-up competition 
+          <p>○ 🥇 Placed first at UBC's 2019 Innovation OnBoard start-up competition
             (a UBC-wide dragons-den type pitch competition)<br>
             ○ 🏆 Awarded funding from the RBC Get Seeded funding program<br>
-            ○ 🏅 Awarded the Glympse Internet of Things prize at the 2019 University of Washington Dempsey Startup Competition
+            ○ 🏅 Awarded the Glympse Internet of Things prize at the 2019 University of Washington Dempsey Startup
+            Competition
           </p>
         </div>
       </small-tile>
@@ -452,18 +486,18 @@
 
         <div class="small-tile-info">
           <p>○ 🧑🏻‍🤝‍🧑🏽 Scaled membership from 32 to a total of 74 members <br>
-          ○ 📋 Organized, managed, and led 2 program meetings with 95%+ program attendance <br>
-          ○ 🏅 One of BizTech's best rated programs of the year, with many positive testimonials 
+            ○ 📋 Organized, managed, and led 2 program meetings with 95%+ program attendance <br>
+            ○ 🏅 One of BizTech's best rated programs of the year, with many positive testimonials
           </p>
         </div>
 
       </small-tile>
-        </section>
+    </section>
 
 
-          <!---------------------- EDUCATION SECTION ---------------------->
-          <a id="EDUCATION"></a>
-          <section class="subheader">
+    <!---------------------- EDUCATION SECTION ---------------------->
+    <a id="EDUCATION"></a>
+    <section class="subheader">
       <h3>EDUCATION</h3>
     </section>
 
@@ -482,10 +516,10 @@
         <project-rightside-ed>
           <div class="highlights-ed">
             <h6 class="project-title-ed">🎖️ Awarded the Chancellor's Scholar designation</h6>
-              <li>
-                A prestigious distinction to students who enter
-                the university with an outstanding academic background  
-              </li>
+            <li>
+              A prestigious distinction to students who enter
+              the university with an outstanding academic background
+            </li>
             <h6 class="project-title-ed">🎓 Graduated with Honors</h6>
             <li>A distinction for students who
               score an excellent average GPA in senior-level courses
@@ -521,40 +555,40 @@
             <li>
               COMM 335 - Information Systems Technology and Development (77%)
             </li>
-            </div>
+          </div>
         </project-rightside-ed>
 
       </project-tile-ed>
 
-      </section>
+    </section>
 
-          <!---------------------- RESUME ---------------------->
-      <section class="subheader">
-        <a id="PROFHISTORY"></a>
+    <!---------------------- RESUME ---------------------->
+    <section class="subheader">
+      <a id="PROFHISTORY"></a>
 
-        <h3>RESUME & OTHER LINKS</h3>
-        
-      </section>
-      <gallery-container class="js-scroll">
-        <div class="gallerypics2">
-        <a href="https://drive.google.com/file/d/1zltRyda7E0AjEpVCdI8Vil8aAiGcaPcx/view?usp=sharing" target="_blank" loading="lazy" 
-        ><img class="resume-logos" src="https://i.imgur.com/IBKmDGY.png"></a>  
+      <h3>RESUME & OTHER LINKS</h3>
 
-        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy" 
-        ><img class="resume-logos" src="https://i.imgur.com/FMZIFiD.png"></a>  
+    </section>
+    <gallery-container class="js-scroll">
+      <div class="gallerypics2">
+        <a href="https://drive.google.com/file/d/1zltRyda7E0AjEpVCdI8Vil8aAiGcaPcx/view?usp=sharing" target="_blank"
+          loading="lazy"><img class="resume-logos" src="https://i.imgur.com/IBKmDGY.png"></a>
 
-        <a href="https://github.com/clarencelam/" target="_blank" loading="lazy" 
-        ><img class="resume-logos" src="https://i.imgur.com/QfHI9AR.png"></a>  
+        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
+            src="https://i.imgur.com/FMZIFiD.png"></a>
+
+        <a href="https://github.com/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
+            src="https://i.imgur.com/QfHI9AR.png"></a>
 
       </div>
-      </gallery-container>  
+    </gallery-container>
 
 
-      <addtenthspace>&nbsp;</addtenthspace>
-      <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
 
-          <!---------------------- SKILLS SECTION ---------------------->
-          <a id="SKILLS"></a>
+    <!---------------------- SKILLS SECTION ---------------------->
+    <a id="SKILLS"></a>
     <section class="subheader">
       <h3>SKILLS & TECHNOLOGIES</h3>
     </section>
@@ -566,11 +600,11 @@
 
     <gallery-container class="js-scroll">
       <div class="gallerypics">
-      <img class="skills-logos" src="https://i.imgur.com/m1TQIfK.png" loading="lazy">
-      <img class="skills-logos" src="https://i.imgur.com/yzRkSTk.png?1" loading="lazy">
-      <img class="skills-logos" src="https://i.imgur.com/YM5RhPA.png" loading="lazy">
-      <img class="skills-logos" src="https://i.imgur.com/5NENFGS.png" loading="lazy">
-      <img class="skills-logos" src="https://i.imgur.com/X5LGNcR.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/m1TQIfK.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/yzRkSTk.png?1" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/YM5RhPA.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/5NENFGS.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/X5LGNcR.png" loading="lazy">
       </div>
     </gallery-container>
 
@@ -580,9 +614,9 @@
           <p>And I'm in the process of learning these right now:
           </p>
         </textbox>
-      
-      <img class="skills-logos" src="https://i.imgur.com/XAocEvR.png" loading="lazy">
-      <img class="skills-logos" src="https://i.imgur.com/D1DIF97.png" loading="lazy">
+
+        <img class="skills-logos" src="https://i.imgur.com/XAocEvR.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/D1DIF97.png" loading="lazy">
       </div>
     </gallery-container>
 
@@ -602,23 +636,22 @@
 
     <!-- contact form built with formspree api handling backend -->
 
-      <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
-        <fieldset class="form-inputs">
+    <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
+      <fieldset class="form-inputs">
 
-          <label>Name:</label><br>
-          <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
+        <label>Name:</label><br>
+        <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
 
-          <label>Email Address:</label><br>
-          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+        <label>Email Address:</label><br>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
 
-          <label>Message:</label><br>
-          <textarea rows="5" name="message" id="message" 
-          placeholder="Type your message here." required=""></textarea>
-          
-          <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        <label>Message:</label><br>
+        <textarea rows="5" name="message" id="message" placeholder="Type your message here." required=""></textarea>
+
+        <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
           <input type="submit" value="SUBMIT"></button>
-        </fieldset>
-      </form>
+      </fieldset>
+    </form>
 
 
     <!-- WEBSITE FAKE END -->
@@ -643,35 +676,35 @@
         <p>
           Prior to pursuing a developer role, I've worked as a Technical Support Analyst for two years,
           using my technical acumen to support
-          <a href="https://www.visier.com/" 
-          target="_blank">Visier's</a> SAAS data analytics web application
+          <a href="https://www.visier.com/" target="_blank">Visier's</a> SAAS data analytics web application
         </p>
-        </textbox>
-        <textbox>
-        <p>
-          But I was always a technologist, even before joining Visier. 
-        </p>          
-        <p>
-          In my university days, I worked in IT help-desk on campus at
-          <a href="https://psych.ubc.ca/" 
-          target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty + students + staff
-          all had exactly what they needed IT-wise to perform their research and classes.
-        </p>
-        <p>
-          I also interned for 12 months in a Pre-sales role at <a href="https://www.appnovation.com/" 
-          target="_blank">Appnovation</a>, a Technology Services company
-          specializing in open source technologies. 
-        </p>
-        <p>And had a 4-month summer internship as a Jr. Business Analyst for 
-          BC's healthcare's <a href="https://cstproject.ca/"
-          target="_blank">Clinical & Systems Transformation (CST)</a> project.
-        </p> 
       </textbox>
       <textbox>
         <p>
-        Now, I’m making the next step in my career, transitioning from being a support technician, to becoming a software developer 
-      </p>
-    </textbox>
+          But I was always a technologist, even before joining Visier.
+        </p>
+        <p>
+          In my university days, I worked in IT help-desk on campus at
+          <a href="https://psych.ubc.ca/" target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty +
+          students + staff
+          all had exactly what they needed IT-wise to perform their research and classes.
+        </p>
+        <p>
+          I also interned for 12 months in a Pre-sales role at <a href="https://www.appnovation.com/"
+            target="_blank">Appnovation</a>, a Technology Services company
+          specializing in open source technologies.
+        </p>
+        <p>And had a 4-month summer internship as a Jr. Business Analyst for
+          BC's healthcare's <a href="https://cstproject.ca/" target="_blank">Clinical & Systems Transformation (CST)</a>
+          project.
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          Now, I’m making the next step in my career, transitioning from being a support technician, to becoming a
+          software developer
+        </p>
+      </textbox>
     </textcontainer>
 
     <!-- FAQ 2: EDUCATION BACKGROUND -->
@@ -684,12 +717,12 @@
     <textcontainer id="more101">
       <textbox>
         <p>
-          In 2019, I graduated from the <a href="https://cstproject.ca/"
-          target="_blank">University of British Columbia</a> (UBC)
+          In 2019, I graduated from the <a href="https://cstproject.ca/" target="_blank">University of British
+            Columbia</a> (UBC)
         </p>
         <p>
-          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/"
-          target="_blank">Business Technology Management</a>. 
+          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/" target="_blank">Business Technology
+            Management</a>.
           <br>
           Despite getting a business degree, I had my sights set on working in the tech industry going into this degree.
           <br>
@@ -698,27 +731,27 @@
         </p>
       </textbox>
 
-            <!-- Nested FAQ: Why didn't you study comp sci -->
+      <!-- Nested FAQ: Why didn't you study comp sci -->
 
       <textbox>
         <br><br>
-        <button onclick="toggleShow104()" id="showBtn104">Why didn't you study Computer Science?</button>      
-    </textbox>
+        <button onclick="toggleShow104()" id="showBtn104">Why didn't you study Computer Science?</button>
+      </textbox>
 
       <textcontainer id="more104">
         <textbox>
           <p>
             There are a few reasons:
           </p>
-          </textbox>
-          <textbox>
+        </textbox>
+        <textbox>
           <p>
             The first would be that business disciplines (particularly entrepreneurship, finance,
             and business analysis) interest me greatly.<br>
             I'd consider myself a business person just as much as I am a technologist.
           </p>
           <p>
-            Second, I've been lucky enough to have a great mentor in my youth who's a businessman. 
+            Second, I've been lucky enough to have a great mentor in my youth who's a businessman.
             He influenced me greatly and piqued my interest in entrepreneurship and finance.
           </p>
           <p>
@@ -733,18 +766,18 @@
 
         <!-- Nested FAQ: Would you go back? -->
 
-        
-      </textcontainer>  
+
+      </textcontainer>
       <textbox>
         <br><br>
-        <button onclick="toggleShow105()" id="showBtn105">If you could go back, would you change your degree?</button>      
-    </textbox>
+        <button onclick="toggleShow105()" id="showBtn105">If you could go back, would you change your degree?</button>
+      </textbox>
 
       <textcontainer id="more105">
         <textbox>
           <p>
             Well, I often think about how much easier it'd be to get my first Dev role if
-            I completed a formal education in computer science/programming. 
+            I completed a formal education in computer science/programming.
           </p>
           <p>
             But ultimately, though it might make me harder to hire for some companies,
@@ -763,8 +796,8 @@
             and having a sharp business acumen and strong customer focus will make me a very well-rounded
             developer in the end.
           </p>
-          </textbox>
-      </textcontainer>  
+        </textbox>
+      </textcontainer>
 
     </textcontainer>
 
@@ -781,7 +814,8 @@
           I've tried to "learn to code" many times throughout my life. I think this is a relatable experience.
         </p>
         <p>
-          I'd always get through a few Python tutorials, learn syntax, and even make a simple Pong game or Sodoku solver--
+          I'd always get through a few Python tutorials, learn syntax, and even make a simple Pong game or Sodoku
+          solver--
         </p>
         <p>
           But I never stayed the course long enough to build a complicated piece of software from scratch.
@@ -789,14 +823,15 @@
       </textbox>
       <textbox>
         <p>
-          It wasn't until my last role with Visier ended in June 2021, when I decided to try to "learn to code" for the last
+          It wasn't until my last role with Visier ended in June 2021, when I decided to try to "learn to code" for the
+          last
           time, and pursue a Developer role
         </p>
       </textbox>
     </textcontainer>
 
 
-        <!-- FAQ 4-->
+    <!-- FAQ 4-->
 
     <textbox>
       <br><br>
@@ -804,10 +839,11 @@
     </textbox>
     <textcontainer id="more103">
       <textbox>
-        <p>I would categorize my reasons for pursuing a Development role can be broadly categorized into three themes:</p>
+        <p>I would categorize my reasons for pursuing a Development role can be broadly categorized into three themes:
+        </p>
       </textbox>
 
-            <!-- FAQ 4.1-->
+      <!-- FAQ 4.1-->
       <textbox>
         <br><br>
         <button onclick="toggleShow106()" id="showBtn106">1. Professional Goals and Progression</button>
@@ -820,22 +856,22 @@
           </p>
           <p>
             More specifically, competent developers are powerful. Every company I've worked at seems
-            to have at least one top-tier developer who knows everything and can do anything. 
+            to have at least one top-tier developer who knows everything and can do anything.
           </p>
           <p>
             Now that I've paid my dues on the front lines in Support roles, I'm now professionally confident
-            enough to know I can be a great asset to a company as a developer. 
+            enough to know I can be a great asset to a company as a developer.
           </p>
           <p>
             And one day I hope to one of those indespensible, "knows everything", wizard-level Developers
           </p>
-          <p> 
-            Right now, that's my ultimate professional goal. 
+          <p>
+            Right now, that's my ultimate professional goal.
           </p>
-        </textbox>  
+        </textbox>
       </textcontainer>
 
-        <!-- FAQ 4.2-->
+      <!-- FAQ 4.2-->
       <textbox>
         <br><br>
         <button onclick="toggleShow107()" id="showBtn107">2. Alignment with personal and professional values</button>
@@ -849,53 +885,55 @@
             But I've realized that I brought the same personal/professional values to each role:
           </p>
           <p>
-            One of those values is lifetime learning. I feel most accomplished when I'm improving in something, or learning something new.
+            One of those values is lifetime learning. I feel most accomplished when I'm improving in something, or
+            learning something new.
           </p>
           <p>
             This translates well to the field of software development, where the learning never ceases.
           </p>
           <p>
-            Another of those values is that I take a lot of pride in my work. When I'm responsible for a piece of work, I'm
-            often not satisfied unless it's completed to a standard of quality at which I can be proud of my work. 
+            Another of those values is that I take a lot of pride in my work. When I'm responsible for a piece of work,
+            I'm
+            often not satisfied unless it's completed to a standard of quality at which I can be proud of my work.
           </p>
           <p>
             Even though this has made me slower to finish tickets in my Support days,
             I believe it's much more beneficial as a Dev, where quality & organized code
-            is, from what I think, infitely better than quick hacky fixes. 
+            is, from what I think, infitely better than quick hacky fixes.
           </p>
           <p>
-            
+
           </p>
-        </textbox>  
+        </textbox>
       </textcontainer>
 
-              <!-- FAQ 4.3-->
+      <!-- FAQ 4.3-->
       <textbox>
-      <br><br>
-      <button onclick="toggleShow108()" id="showBtn108">3. Alignment with work style</button>
+        <br><br>
+        <button onclick="toggleShow108()" id="showBtn108">3. Alignment with work style</button>
       </textbox>
       <textcontainer id="more108">
-      <textbox>
-        <p>
-          Over the years, I've developed a deep knowledge of how I work best,
-          when my best thinking occurs, and what type of work environment I’m most happy + productive in.
-        </p>
-        <p>
-          I've found that my best work comes out of long, concentrated work sessions where I can
-          thrash away at a problem/project for hours. Once I hit my stride and enter a flow state,
-          my motivation is highest and my mind is sharpest.
-        </p>
-        <p>
-          This work style has served me very well while learning to program. 
-It undoubtedly can be mentally strenuous to be staring at a text editor
-for hours on end. However, once I hit my stride, I can't stop.
-I'll often end up hacking away at features all night. 
-        </p>
-      </textbox>
+        <textbox>
+          <p>
+            Over the years, I've developed a deep knowledge of how I work best,
+            when my best thinking occurs, and what type of work environment I’m most happy + productive in.
+          </p>
+          <p>
+            I've found that my best work comes out of long, concentrated work sessions where I can
+            thrash away at a problem/project for hours. Once I hit my stride and enter a flow state,
+            my motivation is highest and my mind is sharpest.
+          </p>
+          <p>
+            This work style has served me very well while learning to program.
+            It undoubtedly can be mentally strenuous to be staring at a text editor
+            for hours on end. However, once I hit my stride, I can't stop.
+            I'll often end up hacking away at features all night.
+          </p>
+        </textbox>
       </textcontainer>
     </textcontainer>
 
-                  <!-- FAQ 5-->
+    <!-- FAQ 5-->
 
     <textbox>
       <br><br>
@@ -923,7 +961,7 @@ I'll often end up hacking away at features all night.
       </textbox>
     </textcontainer>
 
-                      <!-- FAQ 7 -->
+    <!-- FAQ 7 -->
 
     <textbox>
       <br><br>
@@ -948,39 +986,40 @@ I'll often end up hacking away at features all night.
           So right now, I believe I’d fit best in a Front End Developer role, or a Web Developer role.
         </p>
         <p>
-          That said, I’m currently practicing implementing the REST API tech stack, in order to code full-stack applications. 
-          I would absolutely love the challenge of a Jr. Full Stack Dev role. 
+          That said, I’m currently practicing implementing the REST API tech stack, in order to code full-stack
+          applications.
+          I would absolutely love the challenge of a Jr. Full Stack Dev role.
         </p>
       </textbox>
     </textcontainer>
 
-        <!-- FAQ 6-->
+    <!-- FAQ 6-->
 
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow110()" id="showBtn110">⬇ What are your other interests aside from coding? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more110">
+      <textbox>
+        <p>
+          My current hobbies include:
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          1. Old Automobile Enthusiast
+        </p>
+        <p>
+        </p>
         <textbox>
-          <br><br>
-          <button onclick="toggleShow110()" id="showBtn110">⬇ What are your other interests aside from coding? ⬇</button>
+          <p>
+            2. Personal Finance Enthusiast
+          </p>
         </textbox>
-    
-        <textcontainer id="more110">
-          <textbox>
-            <p>
-              My current hobbies include:
-            </p>
-          </textbox>
-          <textbox>
-            <p>
-              1. Old Automobile Enthusiast
-            </p>
-            <p>
-            </p>
-          <textbox>
-            <p>
-              2. Personal Finance Enthusiast
-            </p>
-          </textbox>
-          </textbox>
-        </textcontainer>
-    
+      </textbox>
+    </textcontainer>
+
 
 
     <addtenthspace>&nbsp;</addtenthspace>
@@ -990,19 +1029,19 @@ I'll often end up hacking away at features all night.
 
     <!------------------- WEBSITE END ------------------>
 
-    
+
     <section class="subheader">
-        <h3>
-          THE END.
-        </h3>
-        <h4>
-          THANK YOU SO MUCH FOR VISITING...
-          </h4>  
+      <h3>
+        THE END.
+      </h3>
+      <h4>
+        THANK YOU SO MUCH FOR VISITING...
+      </h4>
     </section>
 
     <addtenthspace></addtenthspace>
     <addtenthspace></addtenthspace>
-<!--
+    <!--
     <textbox class="js-scroll">
       <h4 class="js-scroll">
         Unless...

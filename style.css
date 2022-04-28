@@ -205,12 +205,49 @@ nav.sticky{
   width:100%;
   overflow: hidden;
 display:block;
-margin-bottom: 40px;  
+margin-top: 45px;  
 text-align: center;
 z-index: 9;
 background: darkslategray;
 border-bottom: 2px solid black  ;
 }
+
+scrollbar{
+  z-index: 9;
+  transition: all .5s ease;
+  
+    position: fixed;
+    top:0;
+    width:100%;
+    overflow: hidden;
+  display:block;
+  text-align: center;
+  z-index: 9;
+  background: var(--shadowColor)
+  }
+  
+  scrollbar ul{
+    background: transparent;
+    width:100%;
+    margin: 0px;
+  }
+  
+  scrollbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    margin-bottom: 18px;
+    margin-top:18px;
+  
+    text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+    color: var(--lightText);
+    font-size: 1.5rem;
+    line-height: 1;
+  
+  }
+
+  /* STYLING FOOTER */
+
 
 
 .footercontainer{
@@ -224,7 +261,7 @@ border-bottom: 2px solid black  ;
 
 footer{
   position: fixed;
-  bottom:0;
+  top:0;
   width:100%;
 display:block;
 text-align: center;
