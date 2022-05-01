@@ -155,7 +155,7 @@ highlight:hover{
   background-position: center;
   background-size: cover;
 
-  margin-top: 80px;
+  margin-top: ;
 
 }
 
@@ -1056,7 +1056,7 @@ gallery-container:hover{
 /* STYLING BLOCKQUOTE FOR LARGE TEXT */
 
 :root{
-  --blockquotespacing: 10px
+  --blockquotespacing: 0px
 }
 
 blockquote {
@@ -1123,6 +1123,22 @@ blockquotecenter{
 
 }
 
+blockquotecenter p{
+  color: var(--lightText);
+  font-size: 1;
+  line-height: 1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+blockquotecenter h4{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+  
+}
+
 /* BLOCKQUOTE HOVER ACTIONS */
 
 blockquote h6:hover, blockquoteright h6:hover{
@@ -1143,7 +1159,7 @@ blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4
 }
 
 
-blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p, blockquotecenter p{
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p{
   color: var(--lightText);
   font-size: 1.5rem;
   line-height: 1;
@@ -1187,7 +1203,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   z-index: 1;
 
   width: 300px;
-  bottom: 150%;
+  bottom: 100%;
   left: 50%;
   margin-left: -150px;
   transition: all .5s ease;
