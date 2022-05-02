@@ -270,17 +270,17 @@
     <section class="project-container">
       <addtenthspace></addtenthspace>
 
-            <!-- Blogsite ENTRY -->
+            <!-- TODO ENTRY -->
             <r-project-tile class="js-scroll">
               <r-project-leftside>
-                <img class="project-pic-big" src="https://i.imgur.com/SGpi37q.gif" loading="lazy">
+                <img class="project-pic-big" src="https://media.giphy.com/media/3zAZ0Oncl4I4Wwmi3y/giphy.gif" loading="lazy">
                 <div class="project-body">
                   <h4 class="project-title">Todo Productivity App</h4>
                   <p class="project-desc">
                     A To-do web app with a growing suite of productivity features. Built with React front-end and a Django back-end, communicating via REST API. 
                   </p>
                   <div class="buttons-container">
-                    <a href="#" target="_blank" class="proj_button">[IN PROGRESS]</a>
+                    <a href="#" target="_blank" class="proj_button">🚧 LIVE DEMO IN CONSTRUCTION 🚧</a>
                     <a href="https://github.com/clarencelam/rest_todo_v2" target="_blank" class="proj_button">SOURCE CODE</a>
                   </div>
                 </div>
@@ -297,8 +297,12 @@
                 <h6 class="project-title">Technical Achievments</h6>
                 <ul class="project-details">
                   <li>
-                    IN PROGRESS
-                  </li><br>
+                    Used Django REST API framework to connect a React frontend with a Python/Django backend
+                  </li>
+                  <li>Developed this app with a emphasis on employing React best practices, ensuring states are set for key variables, and are updated correctly</li>
+                  <li>Implemented bootstrap for styling, alongside custom CSS</li>
+                  <li>Implemented a modal pop-up feature to "Focus" on each individual task, giving additional options such as editing the Todo entry</li>
+                  <li>Implemented a timer feature in the Focus Modal, so the user can use it as a Pomodoro-style timer for productivity</li>
                 </ul>
               </r-project-rightside>
       
@@ -327,21 +331,30 @@
         <project-rightside>
           <h6 class="project-title">Tech Stack</h6>
           <ul class="project-details">
-            <li>Built with Javascript, HTML, and CSS</li>
+            <li>Built with Javascript, HTML, and CSS.</li>
+            <li>Obects drawn to screen with HTML canvas, and game logic + event handling is handled with Javascript</li> 
             <li>Version control and deployment with Git</li>
           </ul>
           <h6 class="project-title">Technical Achievments</h6>
           <ul class="project-details">
+            <li>Used empty arrays to represent game objects like bullets, coins, npcs, etc.
+              Interactions between these gameobjects, collision handling, as well as input handling from the user, are handled with Javascript functions.
+              Game variables are 'upgradable', so the user can increase the "food" spawn rate, and decrease the "enemy" spawn rate with in-game upgrades.
+              User "lives" are tracked to end the game after sufficient losses. 
+              </li>
+              <li>
+              Simulated random "enemy" generation and movement by using a random integer function, and performing actions according to the random integer generated 
+            </li>
             <li>
               Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. Did this by
               implementing a gameloop which ingests the current timestamp, and checks the difference between the last
-              timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. As a new frame is
-              loaded 100 times a second, the game framerate is cemented at 100 frames per second regardless of the
+              timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. This means a new frame is
+              loaded 100 times a second, so the game framerate is cemented at 100 frames per second regardless of the
               user's browser speed.
-            </li><br>
+            </li>
             <li>Implemented a simple gamestate design pattern to manage the different phases of the game. At any given
-              time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), and going to other
-              gamestates changes elements like the background image, active functions, etc.</li>
+              time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), which controls
+               elements like the background image, active functions, etc.</li>
           </ul>
         </project-rightside>
 
@@ -418,11 +431,13 @@
               Created a scroll-interactive "starry background" feature in Javascript by generating a 3d scene with
               randomized dots and scrolling the camera through the scene,
               with the help of the three.js library.
-
-              Implemented Javascript + CSS clickable content-activating buttons.
-
-              Implemented CSS on-hover animations.
-            </li><br>
+            </li>
+            <li>
+              Used Javascript to manipulate CSS upon click, in order to create buttons which show hidden content upon being clicked (in the FAQ section)
+            </li>
+            <li>Implemented custom CSS on-hover animations to preserve a minimal look, while giving additional info when certain modules are hovered-over
+              (such as the Portfolio section cards)
+            </li>
           </ul>
         </project-rightside>
       </project-tile>

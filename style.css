@@ -155,7 +155,7 @@ highlight:hover{
   background-position: center;
   background-size: cover;
 
-  margin-top: ;
+  margin-top: 10em;
 
 }
 
@@ -741,6 +741,17 @@ button_hover{
   background-color: var(--borderColor);
   border-radius: 0.5em;
 }
+
+.proj_button:hover{
+  transform: scale(1.1);
+
+}
+
+.proj_button:active{
+  transform: scale(0.9);
+
+}
+
 
 
 /* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
