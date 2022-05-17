@@ -654,6 +654,13 @@ small-tile:hover{
   transition: all 0.5s;
 }
 
+.small-buttons-container:focus + .small-tile-info{
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+
 .small-buttons-container:hover {
   background-color: var(--borderColor);
   transition: all 0.5s;
@@ -1211,12 +1218,12 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
  
   /* Position the tooltip text! */
   position: absolute;
-  z-index: 1;
+  z-index: 999;
 
-  width: 300px;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -150px;
+  width: 14em;
+  top: 0%;
+  right: 0px;
+  margin-left: 0em;
   transition: all .5s ease;
   opacity:0;
 }
