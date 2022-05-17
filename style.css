@@ -1220,9 +1220,9 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   position: absolute;
   z-index: 999;
 
-  width: 14em;
+  width: max-content;
   top: 0;
-  right: 5em;
+  right: 2em;
   transition: all .5s ease;
   opacity:0;
 }
@@ -1243,6 +1243,7 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   width: 30em;
   bottom: 0;
   left: 0%;
+  margin-left: 10em;
   transition: all .5s ease;
   opacity:0;
 }
