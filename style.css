@@ -1379,7 +1379,7 @@ addquarterspace{
 }
 
 addtenthspace{
-  height:5em; /* Note: em units work better than vh for mobile responsiveness */
+  height:10em; /* Note: em units work better than vh for mobile responsiveness */
 }
 
 
