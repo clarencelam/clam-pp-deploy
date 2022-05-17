@@ -163,7 +163,7 @@ nav{
 overflow: hidden;
 display:block;
 
-padding:0;
+margin-bottom: 10em;
 
 text-align: center;
 border-top: 5px solid var(--shadowColor);
@@ -296,7 +296,7 @@ footer ul li{
 grid-column: 2 / span 10;
 text-align: center;
 background: var(--transColor);
-margin-top: 1em;
+margin-top: 5em;
 margin-bottom: 5em;
 border-top: 5px solid var(--shadowColor);
 border-bottom: 5px solid var(--shadowColor);
@@ -1221,12 +1221,32 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   z-index: 999;
 
   width: 14em;
-  top: 0%;
-  right: 0px;
-  margin-left: 0em;
+  top: 0;
+  right: 5em;
   transition: all .5s ease;
   opacity:0;
 }
+
+.tooltip .tooltiptextaligned {
+  visibility: hidden;
+  padding:0;
+  
+  background-color: #2F3F4F;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 999;
+
+  width: 30em;
+  bottom: 0;
+  left: 0%;
+  transition: all .5s ease;
+  opacity:0;
+}
+
 
 .tooltip-pic{
   color:white;
@@ -1296,6 +1316,12 @@ blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace 
   visibility: visible;
   opacity:1;
 }
+
+.tooltip:hover .tooltiptextaligned{
+  visibility: visible;
+  opacity:1;
+}
+
 
 .tooltip-wide:hover .tooltip-widetext{
   visibility: visible;
