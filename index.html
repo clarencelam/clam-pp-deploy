@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLAM'S PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body style="background-color:black;" background="felt.jpg">
+  <canvas id="bg"></canvas>
+
+  <main>
+    <script type="module" src="/main.js"></script>
+
+    <div class="footercontainer">
+      <footer>
+        <ul id="menu">
+          <button onclick="startScroll()">
+            <li class="tooltip">🔽<span class="tooltiptext">
+                Auto-Scroll x1 Speed. Press "S" key to toggle scroll</span></li>
+          </button>
+
+          <button onclick="startDoubleScroll()">
+            <li class="tooltip">⏬<span class="tooltiptext">
+                Auto-Scroll x2 Speed</span></li>
+          </button>
+
+          <button onclick="stopScroll()">
+            <li class="tooltip">🛑<span class="tooltiptext">
+                Stop Autoscroll</span></li>
+          </button>
+
+          <a href="">
+            <button>
+              <li class="tooltip">🔄<span class="tooltiptext">
+                  Re-load page</span></li>
+            </button>
+          </a>
+
+        </ul>
+      </footer>
+    </div>
+
+
+
+    <!-- INTRO ANIMATION CONTENT-->
+    <addquarterspace></addquarterspace>
+    <addquarterspace></addquarterspace>
+    <blockquotecenter>
+
+      <button class="tooltip">
+        <h6 onclick="startScroll()">🔽 click here to scroll through my story 🔽</h6>
+        <span class="tooltiptextaligned">
+          <p>tip: use 's' key to toggle auto-scroll</p>
+        </span>
+      </button>
+      <br>
+      <a href="#PORTFOLIO">
+        <button>
+          <p>Or click here to skip</p>
+        </button>
+      </a>
+
+    </blockquotecenter>
+
+    <addhalfspace></addhalfspace>
+
+    <a id="top"></a>
+    <blockquote class="js-scroll">
+      <h6>Hi! I'm Clarence 👋</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6>👨‍💼 I'm a technology professional with years of experience in IT Support + SAAS Support roles</h6>
+    </blockquoteright>
+
+    <blockquote class="js-scroll">
+      <h6>But I was never somebody who wrote scripts or committed code 😔</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6>😤 In mid-2021, I decided to change that</h6>
+    </blockquoteright>
+
+    <blockquote class="js-scroll">
+      <h6>I took the plunge and started learning to code full-time 👨‍💻</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6> 🤦‍♂️ And it hasn't been easy. </h6>
+    </blockquoteright>
+
+    <blockquote class="js-scroll">
+      <h6>But it has been extremely interesting 🤔 and mentally stimulating 💡</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6>💚 and building applications has been so fun, & beyond rewarding</h6>
+    </blockquoteright>
+
+    <blockquote class="js-scroll">
+      <h6>In 2022, I joined Sauce Labs as a Support Engineer, and learned a ton 💼</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6>🔧 Now I'm looking for my next role in Application Support Engineering</h6>
+    </blockquoteright>
+
+    <blockquote class="js-scroll">
+      <h6>👇 So feel free to scroll on to learn more about me & the stuff I've coded</h6>
+    </blockquote>
+
+    <blockquoteright class="js-scroll">
+      <h6>And don't hesitate to reach out if you need someone like me on your team 👨‍🔧</h6>
+    </blockquoteright>
+
+
+
+    <!-- JAVASCRIPT TO HANDLE SCROLLING FUNCTIONALITY -->
+
+    <script>
+      var scrolling = false;
+
+      //begin scrolling upon pageload
+
+      function pageScrollonLoad() {
+        window.scrollBy(0, 1);
+
+
+        if (scrolling == false) {
+          scrolldelay = setTimeout(pageScrollonLoad, 10); // If scroll hasn't started, start it
+        }
+
+        if (window.pageYOffset >= navbar.offsetTop) {
+          stopScroll();
+        }
+      }
+      // pageScrollonLoad();
+
+      function stopScroll() {
+        clearTimeout(scrolldelay)
+        scrolling = false;
+      }
+
+      // functions to handle scrolling buttons
+
+      function pageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(pageScroll, 20)
+        scrolling = true;
+      }
+      function doublePageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(doublePageScroll, 5)
+        scrolling = true;
+      }
+      function startScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        pageScroll();
+      }
+      function startDoubleScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        doublePageScroll();
+      }
+
+      document.addEventListener('keyup', event => {
+
+        if (event.code === 'KeyS' && scrolling === false) {
+          startScroll();
+        }
+        else if (event.code === 'KeyX' && scrolling === false) {
+          startDoubleScroll();
+        } else {
+          stopScroll();
+        }
+      })
+
+
+    </script>
+
+
+    <!-- NAVBAR -->
+
+
+    <div class="header">
+      <nav id="navbar">
+        <ul id="menu">
+          <a href="#PORTFOLIO">
+            <button>
+              <li>PORTFOLIO</li>
+            </button>
+          </a>
+          <a href="#PROJECTS">
+            <button>
+              <li>OTHER PROJECTS</li>
+            </button>
+          </a>
+          <a href="#EDUCATION">
+            <button>
+              <li>EDUCATION</li>
+            </button>
+          </a>
+          <a href="#PROFHISTORY">
+            <button>
+              <li>RESUME + LINKS</li>
+            </button>
+          </a>
+          <a href="#SKILLS">
+            <button>
+              <li>SKILLS</li>
+            </button>
+          </a>
+          <a href="#CONTACT">
+            <button>
+              <li>CONTACT</li>
+            </button>
+          </a>
+
+        </ul>
+      </nav>
+    </div>
+
+    <!-- PORTFOLIO INTRO -->
+    <a id="PORTFOLIO"></a>
+
+    <addtenthspace></addtenthspace>
+
+    <section class="subheader">
+      <h3>💼 PORTFOLIO</h3>
+    </section>
+
+    <blockquotecenter class="js-scroll">
+      <h4>The live demos of the projects below are hosted on free web hosting platforms, so you may experience
+        longer-than-usual load times.
+        Thanks for waiting!</h4>
+    </blockquotecenter>
+
+    <section class="project-container">
+      <addtenthspace></addtenthspace>
+
+      <!-- TODO ENTRY -->
+      <r-project-tile class="js-scroll">
+        <r-project-leftside>
+          <img class="project-pic-big" src="https://media.giphy.com/media/3zAZ0Oncl4I4Wwmi3y/giphy.gif" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">Todo Productivity App</h4>
+            <p class="project-desc">
+              A To-do web app with a growing suite of productivity features. Built with React front-end and a Django
+              back-end, communicating via REST API.
+            </p>
+            <div class="buttons-container">
+              <a href="#" target="_blank" class="proj_button">🚧 LIVE DEMO IN CONSTRUCTION 🚧</a>
+              <a href="https://github.com/clarencelam/rest_todo_v2" target="_blank" class="proj_button">SOURCE CODE</a>
+            </div>
+          </div>
+        </r-project-leftside>
+
+        <r-project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="project-details">
+            <li>Front-end built with the React.js Javascript framework</li>
+            <li>Back-end built with the Django Python framework</li>
+            <li>API connection built with the Django REST framework</li>
+
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>
+              Used Django REST API framework to connect a React frontend with a Python/Django backend
+            </li>
+            <li>Developed this app with a emphasis on employing React best practices, ensuring states are set for key
+              variables, and are updated correctly</li>
+            <li>Implemented bootstrap for styling, alongside custom CSS</li>
+            <li>Implemented a modal pop-up feature to "Focus" on each individual task, giving additional options such as
+              editing the Todo entry</li>
+            <li>Implemented a timer feature in the Focus Modal, so the user can use it as a Pomodoro-style timer for
+              productivity</li>
+          </ul>
+        </r-project-rightside>
+
+      </r-project-tile>
+
+
+
+      <!-- CLAMGAME ENTRY -->
+
+      <project-tile class="js-scroll">
+        <project-leftside>
+          <img class="project-pic-big" src="https://media.giphy.com/media/Azn76GDOV7wDG3xJMq/giphy.gif" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">A Foodstand Clam</h4>
+            <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the
+              purpose of learning to code in vanilla Javascript. Built from scratch.</p>
+            <div class="buttons-container">
+              <a href="https://clamgamebeta.netlify.app/" target="_blank" class="proj_button">LIVE DEMO</a>
+
+              <a href="https://github.com/clarencelam/clamgame_beta" target="_blank" class="proj_button">SOURCE
+                CODE</a>
+            </div>
+          </div>
+        </project-leftside>
+
+        <project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="project-details">
+            <li>Built with Javascript, HTML, and CSS.</li>
+            <li>Obects drawn to screen with HTML canvas, and game logic + event handling is handled with Javascript</li>
+            <li>Version control and deployment with Git</li>
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>Used empty arrays to represent game objects like bullets, coins, npcs, etc.
+              Interactions between these gameobjects, collision handling, as well as input handling from the user, are
+              handled with Javascript functions.
+              Game variables are 'upgradable', so the user can increase the "food" spawn rate, and decrease the "enemy"
+              spawn rate with in-game upgrades.
+              User "lives" are tracked to end the game after sufficient losses.
+            </li>
+            <li>
+              Simulated random "enemy" generation and movement by using a random integer function, and performing
+              actions according to the random integer generated
+            </li>
+            <li>
+              Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. Did this by
+              implementing a gameloop which ingests the current timestamp, and checks the difference between the last
+              timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. This means a new frame
+              is
+              loaded 100 times a second, so the game framerate is cemented at 100 frames per second regardless of the
+              user's browser speed.
+            </li>
+            <li>Implemented a simple gamestate design pattern to manage the different phases of the game. At any given
+              time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), which controls
+              elements like the background image, active functions, etc.</li>
+          </ul>
+        </project-rightside>
+
+      </project-tile>
+
+      <!-- LEARNINGLOG ENTRY -->
+      <r-project-tile class="js-scroll">
+        <r-project-leftside>
+          <img class="project-pic-big" src="https://media.giphy.com/media/U3dO5oAw91QDIgtvml/giphy.gif" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">Learning Log</h4>
+            <p class="project-desc">A web based learning journal / note taking application. This project was built with
+              guidance from the amazing book Python Crash Course, Project #3</p>
+            <div class="buttons-container">
+              <a href="https://clarences-learninglog.herokuapp.com/" target="_blank" class="proj_button">LIVE
+                DEMO</a>
+              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank" class="proj_button">SOURCE
+                CODE</a>
+            </div>
+          </div>
+        </r-project-leftside>
+
+        <r-project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="R-project-details">
+            <li>Built with Python and the Django framework.</li>
+            <li>Database created with SQLite</li>
+            <li>Styled with Bootstrap4</li>
+            <li>Version control with Git</li>
+            <li>Deployment with Heroku</li>
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>
+              Implemented user registration and authentication with Django, and tied each user's content to their
+              respective user account.
+            </li><br>
+          </ul>
+        </r-project-rightside>
+
+
+      </r-project-tile>
+
+
+      <!-- Personal portfolio entry -->
+      <project-tile>
+        <project-leftside>
+          <img class="project-pic-big" src="https://media.giphy.com/media/5AmPaMdlGLyX7QH07D/giphy.gif" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">Personal Portfolio</h4>
+            <p class="project-desc">A personal 1-page website built to showcase my programming portfolio and
+              professional qualifications.
+              Built with an emphasis on interactivity and user engagement.
+            </p>
+            <div class="buttons-container">
+              <a href="#" target="_blank" class="proj_button">LIVE
+                DEMO</a>
+              <a href="https://github.com/clarencelam/clam-pp-deploy" target="_blank" class="proj_button">SOURCE
+                CODE</a>
+            </div>
+          </div>
+        </project-leftside>
+
+        <project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="project-details">
+            <li>Built with HTML, CSS, Javascript, and the three.js library</li>
+            <li>Version control with Git</li>
+            <li>Deployment with Netlify</li>
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>
+              Created a scroll-interactive "starry background" feature in Javascript by generating a 3d scene with
+              randomized dots and scrolling the camera through the scene,
+              with the help of the three.js library.
+            </li>
+            <li>
+              Used Javascript to manipulate CSS upon click, in order to create buttons which show hidden content upon
+              being clicked (in the FAQ section)
+            </li>
+            <li>Implemented custom CSS on-hover animations to preserve a minimal look, while giving additional info when
+              certain modules are hovered-over
+              (such as the Portfolio section cards)
+            </li>
+          </ul>
+        </project-rightside>
+      </project-tile>
+
+    </section>
+
+
+
+
+
+
+
+    <section class="subheader">
+      <a id="PROJECTS"></a>
+      <h3>⌨️ OTHER PROJECTS I'M PROUD OF:</h3>
+    </section>
+
+
+    <section class="small-tile-container">
+
+      <small-tile class="js-scroll">
+        <div class="small-tile-main">
+          <img class="project-pic" src="https://i.imgur.com/aTC9cbV.png" loading="lazy">
+          <div class="project-body">
+            <h6 class="project-title">Zense <br> 2018-2019</h6>
+            <p class="project-desc">Cofounded Zense along with
+              5 other UBC Business / Engineering students.
+              We created an award-winning start-up project
+              with the goal of creating an IoT product to ensure safer
+              and longer independent living for seniors.
+            </p>
+          </div>
+        </div>
+
+        <div class="small-buttons-container">
+          <button_hover>AWARDS & ACHIEVEMENTS</button_hover>
+        </div>
+
+        <div class="small-tile-info">
+          <p>○ 🥇 Placed first at UBC's 2019 Innovation OnBoard start-up competition
+            (a UBC-wide dragons-den type pitch competition)<br>
+            ○ 🏆 Awarded funding from the RBC Get Seeded funding program<br>
+            ○ 🏅 Awarded the Glympse Internet of Things prize at the 2019 University of Washington Dempsey Startup
+            Competition
+          </p>
+        </div>
+      </small-tile>
+
+
+      <small-tile class="js-scroll">
+        <div class="small-tile-main">
+          <img class="project-pic" src="https://i.imgur.com/Gx69VXy.png" loading="lazy">
+          <div class="project-body">
+            <h6 class="project-title">UBC Biztech Mentorship Program <br> 2016-2017</h6>
+            <p class="project-desc">Sole manager of a student & professional mentorship program,
+              connecting technology students in UBC's tech community with
+              local professionals in the technology sector.
+            </p>
+          </div>
+        </div>
+
+        <div class="small-buttons-container">
+          <button_hover>AWARDS & ACHIEVEMENTS</button_hover>
+        </div>
+
+        <div class="small-tile-info">
+          <p>○ 🧑🏻‍🤝‍🧑🏽 Scaled membership from 32 to a total of 74 members <br>
+            ○ 📋 Organized, managed, and led 2 program meetings with 95%+ program attendance <br>
+            ○ 🏅 One of BizTech's best rated programs of the year, with many positive testimonials
+          </p>
+        </div>
+
+      </small-tile>
+    </section>
+
+
+    <!---------------------- EDUCATION SECTION ---------------------->
+    <a id="EDUCATION"></a>
+    <section class="subheader">
+      <h3>EDUCATION</h3>
+    </section>
+
+    <section class="project-container">
+
+      <project-tile-ed class="js-scroll">
+        <project-leftside-ed>
+          <img class="project-pic-fit" src="https://i.imgur.com/sLyDeQC.png" loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">University of British Columbia <br>2015-2019</h4>
+            <p class="project-desc-ed">Bachelors of Commerce with honors,<br>
+              Business Technology Management Co-op</p>
+          </div>
+        </project-leftside-ed>
+
+        <project-rightside-ed>
+          <div class="highlights-ed">
+            <h6 class="project-title-ed">🎖️ Awarded the Chancellor's Scholar designation</h6>
+            <li>
+              A prestigious distinction to students who enter
+              the university with an outstanding academic background
+            </li>
+            <h6 class="project-title-ed">🎓 Graduated with Honors</h6>
+            <li>A distinction for students who
+              score an excellent average GPA in senior-level courses
+            </li>
+          </div>
+
+          <div class="project-details-ed">
+            <h6 class="project-title-ed">📋 Relevant Courses:</h6>
+            <li>
+              CPSC 110 - Computation, Programs, and Programming (82%)
+            </li>
+            <li>
+              COMM 437 - Database Technology (88%)
+            </li>
+            <li>
+              COMM 439 - Business Telecommunications (85%)
+            </li>
+            <li>
+              COMM 337 - Business Programming and Analytics (84%)
+            </li>
+            <li>
+              COMM 205 - Introduction to Management Information Systems (84%)
+            </li>
+            <li>
+              COMM 336 - Intro to Digital Business (83%)
+            </li>
+            <li>
+              COMM 436 - Information Systems Analysis and Design (82%)
+            </li>
+            <li>
+              COMM 438 - Management of Information Systems (80%)
+            </li>
+            <li>
+              COMM 335 - Information Systems Technology and Development (77%)
+            </li>
+          </div>
+        </project-rightside-ed>
+
+      </project-tile-ed>
+
+    </section>
+
+    <!---------------------- RESUME ---------------------->
+    <section class="subheader">
+      <a id="PROFHISTORY"></a>
+
+      <h3>RESUME & OTHER LINKS</h3>
+
+    </section>
+    <gallery-container class="js-scroll">
+      <div class="gallerypics2">
+        <a href="https://drive.google.com/file/d/1sYAhQVP_XOGyy6qkdmLtaawnaZyrXr9N/view?usp=sharing" target="_blank"
+          loading="lazy"><img class="resume-logos" src="https://i.imgur.com/IBKmDGY.png"></a>
+
+        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
+            src="https://i.imgur.com/FMZIFiD.png"></a>
+
+        <a href="https://github.com/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
+            src="https://i.imgur.com/QfHI9AR.png"></a>
+
+      </div>
+    </gallery-container>
+
+
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+
+    <!---------------------- SKILLS SECTION ---------------------->
+    <a id="SKILLS"></a>
+    <section class="subheader">
+      <h3>SKILLS & TECHNOLOGIES</h3>
+    </section>
+
+    <textbox class="js-scroll">
+      <p>Here are the programming languages/frameworks/tools I'm most experienced with:
+      </p>
+    </textbox>
+
+    <gallery-container class="js-scroll">
+      <div class="gallerypics">
+        <img class="skills-logos" src="https://i.imgur.com/m1TQIfK.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/yzRkSTk.png?1" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/5NENFGS.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/X5LGNcR.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/YM5RhPA.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/XAocEvR.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/D1DIF97.png" loading="lazy">
+
+      </div>
+    </gallery-container>
+
+    <gallery-container class="js-scroll">
+      <div class="gallerypics2">
+        <textbox>
+          <p>And I'm in the process of learning these right now:
+          </p>
+        </textbox>
+        <img class="skills-logos" src="https://i.imgur.com/EzCoyUj.png" loading="lazy">
+        <img class="skills-logos" src="https://i.imgur.com/xt12IR4.png" loading="lazy">
+      </div>
+    </gallery-container>
+
+
+
+
+    <!-------------------- CONTACT -------------------->
+    <a id="CONTACT"></a>
+    <section class="subheader">
+      <h3>CONTACT ME</h3>
+    </section>
+
+    <textbox class="js-scroll">
+      <p>If you'd like to contact me, you can fire off an email to me with this form:
+      </p>
+    </textbox>
+
+    <!-- contact form built with formspree api handling backend -->
+
+    <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
+      <fieldset class="form-inputs">
+
+        <label>Name:</label><br>
+        <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
+
+        <label>Email Address:</label><br>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+
+        <label>Message:</label><br>
+        <textarea rows="5" name="message" id="message" placeholder="Type your message here." required=""></textarea>
+
+        <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          <input type="submit" value="SUBMIT"></button>
+      </fieldset>
+    </form>
+
+
+    <!-- WEBSITE FAKE END -->
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+
+    <section class="subheader">
+      <h3>FAQ</h3>
+    </section>
+
+    <!-- FAQ 1: WHO ARE YOU -->
+    <textbox>
+      <button onclick="toggleShow100()" id="showBtn100">⬇ Who are you? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more100">
+      <textbox>
+        <p>I'm a tech professional, born + raised + currently based out of in Vancouver, Canada. 
+        </p>
+        <p>
+          Prior to pursuing a developer role, I've worked as a Technical Support Analyst for two years,
+          using my technical acumen to support
+          <a href="https://www.visier.com/" target="_blank">Visier's</a> SAAS data analytics web application
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          But I was always a technologist, even before joining Visier.
+        </p>
+        <p>
+          In my university days, I worked in IT help-desk on campus at
+          <a href="https://psych.ubc.ca/" target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty +
+          students + staff
+          all had exactly what they needed IT-wise to perform their research and classes.
+        </p>
+        <p>
+          I also interned for 12 months in a Pre-sales role at <a href="https://www.appnovation.com/"
+            target="_blank">Appnovation</a>, a Technology Services company
+          specializing in open source technologies.
+        </p>
+        <p>And had a 4-month summer internship as a Jr. Business Analyst for
+          BC's healthcare's <a href="https://cstproject.ca/" target="_blank">Clinical & Systems Transformation (CST)</a>
+          project.
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          Now, I’m making the next step in my career, looking to find a role where I can leverage my SAAS Support background with my growing passion for development
+        </p>
+      </textbox>
+    </textcontainer>
+
+    <!-- FAQ 2: EDUCATION BACKGROUND -->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow101()" id="showBtn101">⬇ What's your educational background? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more101">
+      <textbox>
+        <p>
+          In 2019, I graduated from the <a href="https://cstproject.ca/" target="_blank">University of British
+            Columbia</a> (UBC)
+        </p>
+        <p>
+          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/" target="_blank">Business Technology
+            Management</a>.
+          <br>
+          Despite getting a business degree, I had my sights set on working in the tech industry going into this degree.
+          <br>
+          This is reflected in the major I chose, the computer science electives I took, and the extra-curriculars I got
+          involved with throughout my university career.
+        </p>
+      </textbox>
+
+      <!-- Nested FAQ: Why didn't you study comp sci -->
+
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow104()" id="showBtn104">Why didn't you study Computer Science?</button>
+      </textbox>
+
+      <textcontainer id="more104">
+        <textbox>
+          <p>
+            There are a few reasons:
+          </p>
+        </textbox>
+        <textbox>
+          <p>
+            The first would be that business disciplines (particularly entrepreneurship, finance,
+            and business analysis) interest me greatly.
+                    </p>
+          <p>
+            Second, I've been lucky enough to have a great mentor in my youth who's an entrepreneur.
+            He influenced me greatly and piqued my interest in entrepreneurship and finance.
+          </p>
+          <p>
+            Three, I figured going into a business degree would be good for building my soft-skills.
+          </p>
+        </textbox>
+        <textbox>
+          <p>
+            Between these factors, it just felt natural to into a business program.
+          </p>
+        </textbox>
+
+        <!-- Nested FAQ: Would you go back? -->
+
+
+      </textcontainer>
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow105()" id="showBtn105">If you could go back, would you change your degree?</button>
+      </textbox>
+
+      <textcontainer id="more105">
+        <textbox>
+          <p>
+            Although I think a computer science degree would've been incredibly valuable, I do take pride in self-learning development.
+          </p>
+          <p>
+            I think being a self-taught developer
+            is a powerful demonstration of my intrinsic motivation towards continuous, life-long learning.
+          </p>
+          <p>
+            And at the end of the day, I believe that all technical professionals have to be "self taught" to some degree--<br>
+            Web technologies grow and mutate so quickly that it seems the learning never stops in this profession.
+          </p>
+          <p>
+            So I can confidently say I'm happy with being a business school grad trying to be a Dev;
+            and having a sharp business acumen and strong customer focus will make me a very well-rounded tech professional in the end.
+          </p>
+        </textbox>
+      </textcontainer>
+
+    </textcontainer>
+
+    <!-- FAQ 3 -->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow102()" id="showBtn102">⬇ When did you start learning to code? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more102">
+      <textbox class="js-scroll">
+        <p>
+          I've tried to "learn to code" many times throughout my life. I think this is a relatable experience.
+        </p>
+        <p>
+          I'd always get through a few Python tutorials, learn syntax, and even make a simple Pong game or Sodoku
+          solver--
+        </p>
+        <p>
+          But I never stayed the course long enough to build a complicated piece of software from scratch.
+        </p>
+      </textbox>
+      <textbox>
+        <p>
+          It wasn't until my last role with Visier ended in June 2021, when I decided to try to "learn to code" for the
+          last
+          time, and actually build 100% custom software applications from beginning to end.
+        </p>
+      </textbox>
+    </textcontainer>
+
+
+    <!-- FAQ 4-->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow103()" id="showBtn103">⬇ Why are you learning development? ⬇</button>
+    </textbox>
+    <textcontainer id="more103">
+      <textbox>
+        <p>I would categorize my reasons for learning Development can be broadly categorized into three themes:
+        </p>
+      </textbox>
+
+      <!-- FAQ 4.1-->
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow106()" id="showBtn106">1. Professional Goals and Progression</button>
+      </textbox>
+      <textcontainer id="more106">
+        <textbox>
+          <p>
+            After working in a variety of different roles and companies in the technology industry,
+            I've noticed a universal truth in this business: knowledge of code is powerful.
+          </p>
+          <p>
+            I know that the hours I've spent debugging code, and racking my brain setting up my project environment, will pay off in
+            any role I undertake in the IT field. In a nutshell, this development experience would add a ton of value to what I offer as a tech professional.
+          </p>
+        </textbox>
+      </textcontainer>
+
+      <!-- FAQ 4.2-->
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow107()" id="showBtn107">2. Alignment with personal and professional values</button>
+      </textbox>
+      <textcontainer id="more107">
+        <textbox>
+          <p>
+            My biggest professional/life value is lifetime learning. I feel most accomplished when I'm improving in something, or
+            learning something new.
+          </p>
+          <p>
+            This translates well to the field of technology, where the learning never ceases. Learning to develop applications is a natural 
+            result of my pursuit of learning and improving as a professional.
+          </p>
+          <p>
+            Another of those values is that I take a lot of pride in my work. When I'm responsible for a piece of work,
+            I'm
+            often not satisfied unless it's completed to a standard of quality at which I can be proud of my work.
+          </p>
+          <p>
+            Even though this has made me slower to finish tickets in my as an Application Support professional, 
+            I think a dedication to quality results in robust and readable code. 
+          </p>
+          <p>
+
+          </p>
+        </textbox>
+      </textcontainer>
+
+      <!-- FAQ 4.3-->
+      <textbox>
+        <br><br>
+        <button onclick="toggleShow108()" id="showBtn108">3. Alignment with work style</button>
+      </textbox>
+      <textcontainer id="more108">
+        <textbox>
+          <p>
+            Over the years, I've developed a deep knowledge of how I work best,
+            when my best thinking occurs, and what type of work environment I’m most happy + productive in.
+          </p>
+          <p>
+            I've found that my best work comes out of long, concentrated work sessions where I can
+            thrash away at a problem/project for hours. Once I hit my stride and enter a flow state,
+            my motivation is highest and my mind is sharpest.
+          </p>
+          <p>
+            This work style has served me very well while learning to program.
+            It undoubtedly can be mentally strenuous to be staring at a text editor
+            for hours on end. However, once I hit my stride, I can't stop.
+            I'll often end up hacking away at features all night.
+          </p>
+        </textbox>
+      </textcontainer>
+    </textcontainer>
+
+    <!-- FAQ 5-->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow109()" id="showBtn109">⬇ What tools are you using to learn development? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more109">
+      <textbox>
+        <p>
+          In terms of the tools and learning resources I’ve been using:
+        </p>
+        <p>
+          - Started with books (Python Crash Course) <br>
+          - Youtube videos to start projects in Javascript and web development <br>
+          - Stack overflow and computer science blogs <br>
+        </p>
+        <p>
+          However, the absolutely most important element of my learning has been a
+          project-based mindset.
+        </p>
+        <p>
+          With a project-based learning mentality, I learn only what I need to get started with
+          a new language, and then start projects, and continue learning by building and committing code.
+        </p>
+      </textbox>
+    </textcontainer>
+
+    <!-- FAQ 7 -->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow111()" id="showBtn111">⬇ What type of roles are you looking for? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more111">
+      <textbox>
+        <p>
+          I'm at a stage in my career where I'm 100% focused on professional growth. 
+          The role I'm looking for reflects that-- I want to be somewhere where I'm growing my 
+          technical knowledge in enterprise-level technologies.
+        </p>
+        <p>
+          In a perfect world, I'd love to be in a role where I can leverage my user support background, while 
+          touching codebases, and refining my ability to work with enterprise-level technologies/code-bases.
+        </p>
+      </textbox>
+    </textcontainer>
+
+    <!-- FAQ 6-->
+
+    <textbox>
+      <br><br>
+      <button onclick="toggleShow110()" id="showBtn110">⬇ What are your other interests aside from coding? ⬇</button>
+    </textbox>
+
+    <textcontainer id="more110">
+      <textbox>
+        <p>
+          In the past few years, I've been spending many weekends working on my old project cars, and
+          keeping them on the road. I'm particularly fond of 90's german cars!
+          I also keep in touch with my cultural roots by performing lion dance, and practicing often, to impress crowds 
+          on Chinese New Year and at weddings and other ceremonies.
+        </p>
+      </textbox>
+    </textcontainer>
+
+
+
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+    <addtenthspace>&nbsp;</addtenthspace>
+
+
+    <!------------------- WEBSITE END ------------------>
+
+
+    <section class="subheader">
+      <h3>
+        THE END.
+      </h3>
+      <h4>
+        THANK YOU SO MUCH FOR VISITING...
+      </h4>
+    </section>
+
+    <addtenthspace></addtenthspace>
+    <addtenthspace></addtenthspace>
+
+
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+
+
+  <!----------------------------- Script to handle Hidden Text Showing Buttons ------------------------------->
+  <script>
+
+    /* ----- Buttons for FAQ section ----- */
+    function toggleShow100() {
+      var moreText = document.getElementById("more100");
+      var button = document.getElementById("showBtn100");
+
+      if (button.innerHTML === "⬇ Who are you? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ Who are you? ⬆"
+      } else {
+        button.innerHTML = "⬇ Who are you? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow101() {
+      var moreText = document.getElementById("more101");
+      var button = document.getElementById("showBtn101");
+
+      if (button.innerHTML === "⬇ What's your educational background? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ What's your educational background? ⬆"
+      } else {
+        button.innerHTML = "⬇ What's your educational background? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow102() {
+      var moreText = document.getElementById("more102");
+      var button = document.getElementById("showBtn102");
+
+      if (button.innerHTML === "⬇ When did you start learning to code? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ When did you start learning to code? ⬆"
+      } else {
+        button.innerHTML = "⬇ When did you start learning to code? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+
+    function toggleShow103() {
+      var moreText = document.getElementById("more103");
+      var button = document.getElementById("showBtn103");
+
+      if (button.innerHTML === "⬇ Why are you learning development? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ Why are you learning development? ⬆"
+      } else {
+        button.innerHTML = "⬇ Why are you learning development? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow104() {
+      var moreText = document.getElementById("more104");
+      var button = document.getElementById("showBtn104");
+
+      if (button.innerHTML === "Why didn't you study Computer Science?") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ Why didn't you study Computer Science? ⬆"
+      } else {
+        button.innerHTML = "Why didn't you study Computer Science?";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow105() {
+      var moreText = document.getElementById("more105");
+      var button = document.getElementById("showBtn105");
+
+      if (button.innerHTML === "If you could go back, would you change your degree?") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ If you could go back, would you change your degree? ⬆"
+      } else {
+        button.innerHTML = "If you could go back, would you change your degree?";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow106() {
+      var moreText = document.getElementById("more106");
+      var button = document.getElementById("showBtn106");
+
+      if (button.innerHTML === "1. Professional Goals and Progression") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ 1. Professional Goals and Progression ⬆"
+      } else {
+        button.innerHTML = "1. Professional Goals and Progression";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow107() {
+      var moreText = document.getElementById("more107");
+      var button = document.getElementById("showBtn107");
+
+      if (button.innerHTML === "2. Alignment with personal and professional values") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ 2. Alignment with personal and professional values ⬆"
+      } else {
+        button.innerHTML = "2. Alignment with personal and professional values";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+    function toggleShow108() {
+      var moreText = document.getElementById("more108");
+      var button = document.getElementById("showBtn108");
+
+      if (button.innerHTML === "3. Alignment with work style") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ 3. Alignment with work style ⬆"
+      } else {
+        button.innerHTML = "3. Alignment with work style";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow109() {
+      var moreText = document.getElementById("more109");
+      var button = document.getElementById("showBtn109");
+
+      if (button.innerHTML === "⬇ What tools are you using to learn development? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ What tools are you using to learn development? ⬆"
+      } else {
+        button.innerHTML = "⬇ What tools are you using to learn development? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow110() {
+      var moreText = document.getElementById("more110");
+      var button = document.getElementById("showBtn110");
+
+      if (button.innerHTML === "⬇ What are your other interests aside from coding? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ What are your other interests aside from coding? ⬆"
+      } else {
+        button.innerHTML = "⬇ What are your other interests aside from coding? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+    function toggleShow111() {
+      var moreText = document.getElementById("more111");
+      var button = document.getElementById("showBtn111");
+
+      if (button.innerHTML === "⬇ What type of roles are you looking for? ⬇") {
+        moreText.style.position = "relative";
+        moreText.style.opacity = "1";
+        moreText.style.left = "0%";
+        moreText.style.top = "0%";
+        button.style.backgroundColor = "grey";
+        button.style.color = "darkgrey"
+        button.innerHTML = "⬆ What type of roles are you looking for? ⬆"
+      } else {
+        button.innerHTML = "⬇ What type of roles are you looking for? ⬇";
+        moreText.style.position = "absolute";
+        moreText.style.left = "0%";
+        moreText.style.top = "-50%";
+        moreText.style.opacity = "0";
+        button.style.backgroundColor = "darkslategrey"
+        button.style.color = "white"
+      }
+    }
+
+
+  </script>
+
+
+  <!----------------------------- Script to handle sticky navbar ------------------------------->
+
+  <script>
+    var navbar = document.getElementById("navbar");
+    var menu = document.getElementById("menu");
+
+    window.onscroll = function () {
+
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      }
+      else {
+        navbar.classList.remove("sticky")
+      }
+    }
+  </script>
+
+
+
+
+
+</body>
+
+</html>

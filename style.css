@@ -1,0 +1,1478 @@
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+:root {
+  --mainColor: rgba(228, 228, 228, 0.85);
+  --secondaryColor:rgba(255, 255, 255, 0.8);
+  --darkBgColor: rgba(34, 34, 34, 0.795);
+  --darkBgColorTrans: rgba(34, 34, 34, 0.301);
+  --darkBgColorSolid: rgb(34, 34, 34);
+  --lightBgColorSolid: rgb(200, 200, 200);
+  --lightBgColorTrans: rgba(200, 200, 200, 0.1);
+  --transColor: rgba(255, 255, 255, 0);
+  --blockquoteOutlineColor: #3b3b3b;
+  
+  --mainText:black;
+  --secondaryText:rgb(39, 39, 39);
+  --lightText:rgb(255, 255, 255);
+
+
+  --borderSize: 10px;
+  --borderColor:#272727;
+  --borderColorTrans:#272727d0;
+
+  --bottomSpacing: 100px;
+
+  --shadowColor: darkslategray;
+
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darkBgColor)
+}
+
+body::-webkit-scrollbar-thumb {
+  background: darkslategray;
+}
+
+/* need this line to eliminate left whitespace */
+body {
+  margin: 0;
+  }
+  
+
+main {
+  width: 100vw;
+  color: var(--mainText);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+}
+
+/* ---------- DEFINING TEXT FORMATTING ----------*/
+
+h1, h2, h3, h4, h5, h6, strong, blockquote {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+p,li,span {
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  color: var(--secondaryText);
+  font-style: normal;
+}
+
+li{
+  color:white;
+}
+
+a{
+  text-decoration:none;
+  color: rgb(129, 230, 255);
+}
+
+ul{
+  padding-left: 20px;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+.s1 {
+  grid-column: 2 / span 6;
+  background: var(--mainColor);
+
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin-bottom: var(--bottomSpacing);
+  border: var(--borderSize) solid var(--transColor);
+  
+  box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -webkit-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -moz-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+}
+
+/* STYLING BUTTONS */
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: var(--transColor);
+  cursor: pointer;
+  transition: all .5s ease;
+
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+
+button:active {
+  transform: scale(.9);
+}
+
+/* HIGHLIGHTER CLASS */
+highlight {
+  transition: all .5s ease;
+}
+
+highlight:hover{
+  background-color: black;
+}
+
+/* STYLING NAVBAR */
+
+.header{
+  grid-column: 1 / -1;
+
+  width:100%;
+  height: 10vh;
+  background-position: center;
+  background-size: cover;
+
+  margin-top: 10em;
+
+}
+
+nav{
+overflow: hidden;
+display:block;
+
+margin-bottom: 10em;
+
+text-align: center;
+border-top: 5px solid var(--shadowColor);
+border-bottom: 5px solid var(--shadowColor);
+z-index: 9;
+
+transition: all .5s ease;
+}
+
+nav:hover{
+  background-color: var(--shadowColor);
+}
+
+nav ul{
+  background: transparent;
+  width:100%;
+  margin: 0px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+  margin-bottom: 18px;
+  margin-top:18px;
+
+  text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+
+}
+
+
+
+nav.sticky{
+  position: fixed;
+  top:0;
+  width:100%;
+  overflow: hidden;
+display:block;
+margin-top: 45px;  
+text-align: center;
+z-index: 9;
+background: darkslategray;
+border-bottom: 2px solid black  ;
+}
+
+scrollbar{
+  z-index: 9;
+  transition: all .5s ease;
+  
+    position: fixed;
+    top:0;
+    width:100%;
+    overflow: hidden;
+  display:block;
+  text-align: center;
+  z-index: 9;
+  background: var(--shadowColor)
+  }
+  
+  scrollbar ul{
+    background: transparent;
+    width:100%;
+    margin: 0px;
+  }
+  
+  scrollbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    margin-bottom: 18px;
+    margin-top:18px;
+  
+    text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+    color: var(--lightText);
+    font-size: 1.5rem;
+    line-height: 1;
+  
+  }
+
+  /* STYLING FOOTER */
+
+
+
+.footercontainer{
+  grid-column: 1 / -1;
+
+  width:100%;
+  background-position: center;
+  background-size: cover;
+
+}
+
+footer{
+  position: fixed;
+  top:0;
+  width:100%;
+display:block;
+text-align: center;
+z-index: 9;
+background: var(--borderColorTrans);
+border-top: 2px solid black;
+}
+
+footer ul{
+  background: transparent;
+  width:100%;
+  margin: 0px;
+}
+
+footer ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 1em;
+  margin-top:0.4em;
+  margin-bottom:.5em;
+
+  text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  color: var(--lightText);
+  font-size: 1.4rem;
+  line-height: 1;
+
+}
+
+/* STYLING SUBHEADER */
+
+.subheader {
+grid-column: 2 / span 10;
+text-align: center;
+background: var(--transColor);
+margin-top: 5em;
+margin-bottom: 5em;
+border-top: 5px solid var(--shadowColor);
+border-bottom: 5px solid var(--shadowColor);
+
+color: var(--lightText);
+text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+transition: all .5s ease;
+}
+
+.subheader:hover{
+  background-color: var(--shadowColor);
+}
+
+/* testing a hoverbox div */
+hoverbox{
+  transition: all .5s ease;
+}
+hoverbox:hover{
+  transform: scale(1.1);
+}
+
+/* STYLING TEXTBOX */
+
+textbox {
+  display: block;
+  grid-column: 2 / span 10  ;
+  background: var(--transColor);
+
+  margin: 0px;
+  padding:0px;
+  margin-bottom: 3em;
+  text-align: center;
+  font-size: 1rem;
+
+/*
+  box-shadow: 11px 11px 0px 3px black;
+  -webkit-box-shadow: 11px 11px 0px 3px black;
+  -moz-box-shadow: 11px 11px 0px 3px black;
+*/
+  transition: all .5s ease;
+
+}
+
+paragbox {
+
+  grid-column: 4 / span 4  ;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-align: left;
+  font-size: 1rem;
+
+  transition: all .5s ease;
+}
+
+centerbox {
+  display:block;
+  grid-column: 5 / span 2  ;
+  background: var(--transColor);
+
+  text-align: center;
+  font-size: 1rem;
+
+  transition: all .5s ease;
+}
+
+paragbox:hover{
+  transform:scale(1.05)
+}
+
+textbox:hover{
+  transform:scale(1.05)
+}
+
+.textbox-pic{
+  display:inline;
+  width: 50%;
+  height: 200px;
+  object-fit:contain;
+}
+.textbox-widepic{
+  display:inline;
+  width: 50%;
+  height: 300px;
+  object-fit:contain;
+}
+
+.textbox-superwidepic{
+  display:inline;
+  width: 60%;
+  height: 360px;
+  object-fit:contain;
+}
+
+.textbox-lilpic{
+  display:inline;
+  width: 20%;
+  height: 80px;
+  object-fit:contain;
+}
+
+
+textbox p{
+  color: var(--lightText);
+  font-size: 1.3rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+paragbox p{
+  color: var(--lightText);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+textbox h4, paragbox h4{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+}
+
+textbox h6, paragbox h6{
+  color: var(--lightText);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  --outlinecolor: black;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+
+textbox button{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+  margin:0px;
+  padding: 10px;
+  background-color: darkslategray;
+  border-radius: 0.5em;
+}
+
+
+borderspace {
+  grid-column: 5 / span 4  ;
+  border-top: 2px solid grey;
+  margin-bottom: 50px;
+}
+
+/* CSS FOR HIDDEN ELEMENTS */
+
+#more, #more2, #more3, #more4, #more5, #more6,#more7,#more8,#more9,#more10,#more11,#more12,#more13,#more14,#more15 {
+ position: absolute; 
+ left: -600%;
+ top: -300%; 
+  /* setting left = 200% pushes text off-screen. Javascript in index.html brings the text back.
+ setting top =100% prevents an issue with infinite scrolling at the bottom of screen*/
+ transition: all .5s ease;
+}
+
+#more100,#more101,#more102,#more103,#more104,#more105,#more106,#more107,#more108,#more109,#more110,#more111 {
+  /* styling for FAQ section buttons */
+  position: absolute; 
+  top: -50%; 
+  color:white;
+  transition: all .5s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+
+/*
+textcontainer will be used to hold hidden text
+*/
+
+textcontainer {
+  margin: 0px;
+  padding: 0px;
+  grid-column: 2 / span 10  ;
+  background: var(--transColor);
+  align-items: center;
+  transition: all .5s ease;
+
+}
+
+/*
+formcontainer will be used to hold form
+*/
+
+form {
+  margin: 0px;
+  padding: 0px;
+  background: var(--transColor);
+
+  transition: all .5s ease;
+
+  display:grid;
+  grid-column: 4 / span 6;
+  width:auto;
+  background-color: var(--darkBgColorTrans);
+  font-size: 1.2rem;
+
+  margin-bottom:3em;
+}
+
+form:hover{
+  background-color: var(--darkBgColorTrans);
+  transform: scale(1.04)
+}
+
+
+fieldset{
+  align-items: center; 
+  padding: 10px;
+  border: 0px solid var(--borderColor);
+}
+
+label, input, textarea {
+  margin:10px;
+}
+
+label {
+  padding-left: 5px;
+  color: white;
+  width:8em;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+input, textarea {
+  color: white;
+  background-color: black;
+  width:95%;
+  padding:10px;
+  border: 1px solid var(--borderColor);
+
+}
+
+input[type="submit"] {
+  font-size: 1.2rem;
+  color: white;
+  --outlinecolor: black;
+  text-shadow: 1px 1px 0 var(--outlinecolor), 1px -1px 0 var(--outlinecolor), -1px 1px 0 var(--outlinecolor), -1px -1px 0 var(--outlinecolor), 1px 0px 0 var(--outlinecolor), 0px 1px 0 var(--outlinecolor), -1px 0px 0 var(--outlinecolor), 0px -1px 0 var(--outlinecolor);
+  width:8em;
+  background-color: darkslategray;
+  cursor: pointer;
+  border-radius: 0.5em;
+
+}
+
+
+/* STYLING SMALL TILES FOR OTHER PROJECTS */
+
+.small-tile-container{
+  grid-column: 2 / span 10;
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  gap:40px;
+  justify-content: center;
+}
+
+small-tile{
+  display:flex; /* best solution I found to center the contents */ 
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: var(--borderSize) solid var(--transColor);
+
+  background-color: var(--darkBgColorTrans);
+  transition: all 0.5s;
+  padding: 0px;
+}
+
+.small-tile-main{
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+}
+
+.small-tile-info{
+  /* -- visibility:hidden + max-height: 0 is great for
+  hidden content without taking space */
+  color:white;
+  display:inline;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.5s;
+
+  padding:20px;
+  padding-top: 0px;
+  font-size: 1.2rem;
+
+}
+
+small-tile:hover{
+  border: var(--borderSize) solid var(--transColor);
+  background-color: var(--darkBgColor);
+  transform: scale(1.04)
+}
+
+
+.small-tile-info p{
+  /* -- visibility:hidden + max-height: 0 is great for
+  hidden content without taking space */
+  color:white;
+  margin:0px;
+  padding: 10px;
+  background-color: #2F3F4F;
+  border-radius: 0.5em;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+.small-buttons-container{
+  display:inline;
+  font-size: 0.8rem;
+  max-height: min-content;
+
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+
+  padding: 10px;
+  background-color: #2F3F4F;
+  border-radius: 0.5em;
+
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+  transition: all 0.5s;
+
+  margin: auto;
+
+}
+
+.small-buttons-container:hover + .small-tile-info{
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.small-buttons-container:focus + .small-tile-info{
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+
+.small-buttons-container:hover {
+  background-color: var(--borderColor);
+  transition: all 0.5s;
+}
+
+/* small tile inner content formatting */
+
+.project-pic{
+  display:block;
+  width: 100%;
+  height: 280px;
+  object-fit:scale-down;
+}
+.project-body{
+  padding:20px;
+  background: var(--transColor);
+  font-size: 1.2rem;
+
+}
+.project-title{
+  margin:0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+  align-content: center;
+}
+.project-desc{
+  color:var(--lightText);
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  text-align: left;
+
+}
+.project-details{
+  font-size: 0.95rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+
+
+
+.project-livedemo{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+.project-sourcecode{
+  background-color: var(--borderColor);
+  border: 2px solid var(--borderColor);
+  text-align: center;
+}
+
+button_hover{
+  font-size: 1.2rem;
+  display: inline;
+  max-height: min-content;
+
+}
+
+.buttons-container{
+  display:flex;
+  flex-wrap:wrap;
+
+  font-size: 1.2rem;
+  line-height: 1;
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+  border-radius: 0.5em;
+
+  --outlinecolor: black;
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+  transition: all 0.5s;
+
+  margin: auto;
+
+}
+.proj_button {
+  display: inline;
+  text-decoration: none;
+  background: var(--transColor);
+  cursor: pointer;
+  transition: all .5s ease;
+  padding: 10px;
+  margin-right: 20px;
+  background-color: var(--borderColor);
+  border-radius: 0.5em;
+}
+
+.proj_button:hover{
+  transform: scale(1.1);
+
+}
+
+.proj_button:active{
+  transform: scale(0.9);
+
+}
+
+
+
+/* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
+:root {
+  --tile-margins: 10em;
+  --popout-scale: scale(1.05)
+}
+
+.project-container{
+  grid-column: 2 / span 10;
+
+  line-height: 1.5;
+
+  display:grid;
+  grid-template-columns: 1fr;
+  
+  justify-content: left;
+}
+
+/* Code for left-aligned project tiles*/
+
+project-tile{
+  display:grid;
+  grid-auto-flow: column; 
+  grid-template-columns:  1fr 1fr;
+
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+
+  overflow: hidden;
+}
+
+project-tile:hover{
+  transform: var(--popout-scale);
+  transition: all .5s ease;
+}
+
+project-tile:hover project-leftside{
+  transition: all .5s ease;
+  background: rgb(47, 79, 79);
+}
+
+project-tile:hover project-rightside{
+  transition: all .5s ease;
+  background: var(--darkBgColorSolid);
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+project-leftside{
+  background: var(--darkBgColorTrans);
+  transition: all 0.5s ease;
+}
+
+project-rightside{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+}
+
+project-rightside >*{
+  transform: translateX(-30px);
+  transition: all .5s ease;
+
+}
+
+project-tile:hover project-rightside >*{
+  transition: all .5s ease;
+  transform: translateX(0);
+}
+
+
+  .project-pic-big{
+    display:block;
+    width: 100%;
+    height: 25em;
+    object-fit:cover;
+  }
+
+
+
+/* Code for right-aligned project tiles*/
+
+r-project-tile{
+  background: var(--transColor);
+  display:grid;
+  grid-template-columns:  1fr 1fr;
+  
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+}
+
+r-project-tile:hover{
+  transform: var(--popout-scale);
+}
+
+r-project-tile:hover r-project-leftside{
+  background: rgb(47, 79, 79);
+
+}
+
+r-project-tile:hover r-project-rightside{
+  opacity:1;
+
+}
+
+
+r-project-leftside{
+    transition: all 0.5s ease;
+    grid-column-start: 2;
+    grid-row: 1;
+    background: var(--darkBgColorTrans);
+
+}
+
+r-project-rightside{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+  grid-column-start: 1;
+  grid-row: 1;
+
+}
+
+r-project-rightside >*{
+  transform: translateX(30px);
+  transition: transform 0.5s;
+}
+r-project-tile:hover r-project-rightside>*{
+  transform: translateX(0);
+}
+
+/* ---- Code for education tiles ---------*/
+
+project-tile-ed{
+  display:grid;
+  grid-auto-flow: column; 
+  grid-template-columns:  1fr 1fr;
+
+  margin-bottom: var(--tile-margins);
+  transition: all .5s ease;
+
+  overflow: hidden;
+  border-radius: .8em;
+}
+
+project-tile-ed:hover{
+  transform: var(--popout-scale);
+  transition: all .5s ease;
+}
+
+project-tile-ed:hover project-leftside-ed{
+  transition: all .5s ease;
+  background: var(--darkBgColorTrans);
+}
+project-tile-ed:hover project-leftside-ed img{
+  transition: all 2s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+project-tile-ed:hover project-rightside-ed{
+  transition: all .5s ease;
+  background: var(--darkBgColorSolid);
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+project-leftside-ed{
+  background: var(--darkBgColorTrans);
+  transition: all 2s ease;
+  text-align  : center;
+
+}
+
+project-leftside-ed img{
+  transition: all .5s ease;
+
+}
+
+project-rightside-ed{
+  opacity: 0;
+  background: var(--darkBgColorSolid);
+  padding:20px;  
+  transition: all 0.5s ease;
+}
+
+project-rightside-ed >*{
+  transform: translateX(-30px);
+  transition: all .5s ease;
+
+}
+
+project-rightside-ed p{
+  color:white;
+  line-height: 1;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+}
+
+project-rightside-ed li{
+  color:white;
+  line-height: 1;
+  font-size: 1.1  rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+}
+
+.project-title-ed{
+  margin:0;
+  margin-bottom:0.5em;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
+  align-content: center;
+}
+
+project-tile-ed:hover project-rightside-ed >*{
+  transition: all .5s ease;
+  transform: translateX(0);
+}
+
+.highlights-ed{
+  margin-bottom: 2em;
+}
+  
+  .project-pic-fit{
+    display:block;
+    width: 100%;
+    height: 20em;
+    object-fit:contain;
+  }
+
+  .project-desc-ed{
+    color:var(--lightText);
+    text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+  }
+  
+  .project-details-ed{
+    position:relative;
+  }
+  .project-details-ed li{
+ margin:0;
+  }
+  
+/* STYLING SKILLS & TECHS LOGOS */
+gallery-container {
+  padding-left:10em;
+  padding-right:10em;
+  padding-top:3em;
+  padding-bottom:3em;
+  margin-bottom: 3em;
+  grid-column: 2 / span 10;
+  transition: all 0.5s ease;
+  border-radius: 1em;
+}
+
+.gallerypics{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap; 
+  align-items: auto;
+  justify-content:space-between;
+
+}
+
+.gallerypics2{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content:space-around;
+}
+
+
+gallery-container:hover{
+  transition: all .5s ease;
+  background-color: var(--lightBgColorTrans);
+}
+
+.skills-logos{
+  display:block;
+  max-height: 10em;
+  max-width: 15em;
+  object-fit:contain;
+  transition: all .5s ease;
+}
+
+.skills-logos:hover{
+  transition: all 0.5s ease;
+  transform:scale(1.2);
+}
+
+.resume-logos{
+  display:block;
+  max-height: 20em;
+  max-width: 12em;
+  object-fit:contain;
+  transition: all .5s ease;
+}
+.resume-logos:hover{
+  transition: all 0.5s ease;
+  transform:scale(1.2);
+}
+
+
+/* STYLING BLOCKQUOTE FOR LARGE TEXT */
+
+:root{
+  --blockquotespacing: 0px
+}
+
+blockquote {
+  margin: 0;
+  grid-column: 2 / span 9;
+  margin-top: var(--blockquotespacing);
+  line-height: 1;
+  text-align: left;
+  transition: all .5s ease;
+
+}
+
+blockquoteright {
+  margin: 0;
+  grid-column: 3 / span 9;
+  margin-top: var(--blockquotespacing);
+  line-height: 1;
+  text-align: right;
+  transition: all .5s ease;
+}
+
+blockquoterightsmall {
+  margin: 0;
+  padding: 0;
+  
+  grid-column: 8 / span 4;
+  margin-top: var(--bottomSpacing);
+  text-align: right;
+}
+
+blockquotesmall {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  text-align: left;
+}
+
+blockquotenospace {
+  margin: 0;
+  padding-left:15px;
+  grid-column: 2 / span 9;
+  line-height: 1;
+  text-align: left;
+  transition: all .5s ease;
+
+}
+
+blockquotenospaceright {
+  margin: 0;
+  padding-right: 15px;
+  grid-column: 3 / span 9;
+  line-height: 1;
+  text-align: right;
+  transition: all .5s ease;
+
+}
+
+blockquotecenter{
+  grid-column: 2 / span 10;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  transition: all .5s ease;
+
+}
+
+blockquotecenter p{
+  color: var(--lightText);
+  font-size: 1;
+  line-height: 1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+
+}
+
+blockquotecenter h4{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+  
+}
+
+/* BLOCKQUOTE HOVER ACTIONS */
+
+blockquote h6:hover, blockquoteright h6:hover{
+  transform: scale(1.05);
+}
+
+blockquotenospace:hover, blockquotenospaceright:hover, blockquotecenter:hover{
+  transform: scale(1.07);
+}
+
+/* Blockquote text styling */
+
+blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
+  color: var(--lightText);
+  font-size: 1.6rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  --outlinecolor: var(--blockquoteOutlineColor);
+  text-shadow: 2px 2px 0 var(--outlinecolor), 2px -2px 0 var(--outlinecolor), -2px 2px 0 var(--outlinecolor), -2px -2px 0 var(--outlinecolor), 2px 0px 0 var(--outlinecolor), 0px 2px 0 var(--outlinecolor), -2px 0px 0 var(--outlinecolor), 0px -2px 0 var(--outlinecolor);
+}
+
+
+blockquote h6, blockquote button, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6, blockquotecenter h6 {
+  color: var(--lightText);
+  font-size: 2rem;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace h6{
+  transition: all .5s ease;
+  padding:20px;  
+}
+
+/* TOOLTIP STYLING */
+
+.tooltip, .tooltip-wide, .tooltip-pic {
+  position: relative;
+}
+
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: #2F3F4F;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 999;
+
+  width: max-content;
+  top: 0;
+  right: 2em;
+  transition: all .5s ease;
+  opacity:0;
+}
+
+.tooltip .tooltiptextaligned {
+  visibility: hidden;
+  padding:0;
+  
+  background-color: #2F3F4F;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 999;
+
+  width: 30em;
+  bottom: 0;
+  left: 0%;
+  margin-left: 10em;
+  transition: all .5s ease;
+  opacity:0;
+}
+
+
+.tooltip-pic{
+  color:white;
+  --tooltipcolor: black;
+  text-shadow: 2px 2px 0 var(--tooltipcolor), 2px -2px 0 var(--tooltipcolor), -2px 2px 0 var(--tooltipcolor), -2px -2px 0 var(--tooltipcolor), 2px 0px 0 var(--tooltipcolor), 0px 2px 0 var(--tooltipcolor), -2px 0px 0 var(--tooltipcolor), 0px -2px 0 var(--tooltipcolor);
+  transition: all .5s ease; 
+}
+
+.tooltip-pictext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: #2f3f4f6b;
+  color: white;
+  text-align: center;
+  
+  font-size: 1rem;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 1;
+
+  width: 400px;
+  bottom: 25%;
+  left: 50%;
+  margin-left: -200px;
+  transition: all .5s ease;
+  opacity:0;
+  
+}
+
+
+.tooltip-wide {
+  color:white;
+  background-color:  #2f3f4f;
+  transition: all .5s ease; 
+}
+
+ .tooltip-widetext {
+  visibility: hidden;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: #2f3f4fea;
+  color: #fff;
+  text-align: center;
+  
+  font-size: 1.2rem;
+ 
+  /* Position the tooltip text! */
+  position: absolute;
+  z-index: 1;
+
+  width: 300px;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -150px;
+  transition: all .5s ease;
+  opacity:0;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+  opacity:1;
+}
+
+.tooltip:hover .tooltiptextaligned{
+  visibility: visible;
+  opacity:1;
+}
+
+
+.tooltip-wide:hover .tooltip-widetext{
+  visibility: visible;
+  opacity:1;
+}
+.tooltip-wide:hover {
+  background-color:var(--borderColor);
+}
+
+
+.tooltip-pic:hover .tooltip-pictext{
+  visibility: visible;
+  opacity:1;
+}
+
+.tooltip p{
+  color: white;
+  font-size: 1.2rem;
+  line-height: .8;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+
+/* FADE IN FEATURE */
+.js-scroll {
+  transition: all .5s ease;
+  opacity: 0;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+
+/* Divs for whitespace */
+
+addspace {
+  margin: 0;
+  grid-column: 2 / span 9;
+  line-height: 1;
+  text-align: left;
+}
+
+addbigspace{
+  height: 90vh;
+}
+
+addhalfspace{
+  height:40vh;
+}
+
+addquarterspace{
+  height:20vh;
+}
+
+addtenthspace{
+  height:10em; /* Note: em units work better than vh for mobile responsiveness */
+}
+
+
+/* --------- OLD CODE FOR REFERENCE ----------*/
+/*
+
+OLD SUBHEADER BOX SHADOW:
+/*
+box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-moz-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+
+
+  .column-container-3{
+  grid-column: 2 / span 10;
+  background: var(--lightBgColor);
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--bottomSpacing);
+
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+
+  grid-template-areas:
+  'column-one column-two column-three'
+  ;
+}
+
+*/
+
+
