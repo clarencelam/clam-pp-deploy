@@ -4,7 +4,7 @@ A personal portfolio website to showcase my development projects. 100% custom bu
 **Live website can be viewed at https://www.clarencelam.ca/ **
 
 ARCHITECTURE BASICS:
-- Built with HTML. Styled with CSS. On-hover animations created with CSS. On-click functions created with Javascript.
+- Built with HTML. Styled with CSS. Backend with NodeJS. Animations and On-click functions created with Javascript and CSS.
 - Scrolling 'starry' background created with three.js library
 - Built with an emphasis on interactivity, user engagement, and visual cleanliness. Users can toggle a cinematic auto-scroll (using website UI) to scroll through this 1-page website.
 
