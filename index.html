@@ -270,15 +270,14 @@
                src="https://media.giphy.com/media/KUyoysafG8hO46OteD/giphy.gif"
                loading="lazy">
           <div class="project-body">
-            <h4 class="project-title">Maple </h4>
-            <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the
-              purpose of learning to code in vanilla Javascript. Built from scratch.</p>
+            <h4 class="project-title">Web-Based Maplestory Mini-game</h4>
+            <p class="project-desc">Remaking the mechanics of the popular MMO Maplestory, translating it into a web-based game. Built form scratch with vanilla Javascript.</p>
             <div class="buttons-container">
-              <a href="https://clamgamebeta.netlify.app/"
+              <a href="https://mapleclam.netlify.app/"
                  target="_blank"
                  class="proj_button">LIVE DEMO</a>
 
-              <a href="https://github.com/clarencelam/clamgame_beta"
+              <a href="https://github.com/clarencelam/mapleclamgame"
                  target="_blank"
                  class="proj_button">SOURCE
                 CODE</a>
@@ -291,31 +290,21 @@
           <ul class="project-details">
             <li>Built with Javascript, HTML, and CSS.</li>
             <li>Obects drawn to screen with HTML canvas, and game logic + event handling is handled with Javascript</li>
-            <li>Version control and deployment with Git</li>
+            <li>Version control with GitHub, Hosted with Netlify</li>
           </ul>
           <h6 class="project-title">Technical Achievments</h6>
           <ul class="project-details">
-            <li>Used empty arrays to represent game objects like bullets, coins, npcs, etc.
-              Interactions between these gameobjects, collision handling, as well as input handling from the user, are
-              handled with Javascript functions.
-              Game variables are 'upgradable', so the user can increase the "food" spawn rate, and decrease the "enemy"
-              spawn rate with in-game upgrades.
-              User "lives" are tracked to end the game after sufficient losses.
+            <li>Implemented collision detection, gravity, & platforming logic whereby the player can move and interact with objects on a 2d plain, jump, travel on platforms at various heights on the map
             </li>
             <li>
-              Simulated random "enemy" generation and movement by using a random integer function, and performing
+              Simulated random "enemy" movement by regularly calling a random integer function, and performing
               actions according to the random integer generated
             </li>
             <li>
-              Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. Did this by
-              implementing a gameloop which ingests the current timestamp, and checks the difference between the last
-              timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. This means a new frame
-              is
-              loaded 100 times a second, so the game framerate is cemented at 100 frames per second regardless of the
-              user's browser speed.
+              Animates character sprite sheets with varying numbers of frames and varying animation types
             </li>
             <li>Implemented a simple gamestate design pattern to manage the different phases of the game. At any given
-              time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), which controls
+              time, one gamestate is active, which controls
               elements like the background image, active functions, etc.</li>
           </ul>
         </project-rightside>
