@@ -3,22 +3,33 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" type="text/css" href="/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg" />
+  <link rel="stylesheet"
+        type="text/css"
+        href="/style.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
   <title>CLAM'S PORTFOLIO</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap"
+        rel="stylesheet">
 
 
 </head>
 
-<body style="background-color:black;" background="felt.jpg">
+<body style="background-color:black;"
+      background="felt.jpg">
   <canvas id="bg"></canvas>
 
   <main>
-    <script type="module" src="/main.js"></script>
+    <script type="module"
+            src="/main.js"></script>
 
     <div class="footercontainer">
       <footer>
@@ -107,7 +118,8 @@
     </blockquoteright>
 
     <blockquote class="js-scroll">
-      <h6>I learned a ton about test script automation and helped many QA professionals fix and run their test script code 💼</h6>
+      <h6>I learned a ton about test script automation and helped many QA professionals fix and run their test script
+        code 💼</h6>
     </blockquote>
 
     <blockquoteright class="js-scroll">
@@ -250,10 +262,72 @@
     <section class="project-container">
       <addtenthspace></addtenthspace>
 
+      <!-- MAPLE CLAM ENTRY -->
+
+      <project-tile class="js-scroll">
+        <project-leftside>
+          <img class="project-pic-big"
+               src="https://media.giphy.com/media/KUyoysafG8hO46OteD/giphy.gif"
+               loading="lazy">
+          <div class="project-body">
+            <h4 class="project-title">Maple </h4>
+            <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the
+              purpose of learning to code in vanilla Javascript. Built from scratch.</p>
+            <div class="buttons-container">
+              <a href="https://clamgamebeta.netlify.app/"
+                 target="_blank"
+                 class="proj_button">LIVE DEMO</a>
+
+              <a href="https://github.com/clarencelam/clamgame_beta"
+                 target="_blank"
+                 class="proj_button">SOURCE
+                CODE</a>
+            </div>
+          </div>
+        </project-leftside>
+
+        <project-rightside>
+          <h6 class="project-title">Tech Stack</h6>
+          <ul class="project-details">
+            <li>Built with Javascript, HTML, and CSS.</li>
+            <li>Obects drawn to screen with HTML canvas, and game logic + event handling is handled with Javascript</li>
+            <li>Version control and deployment with Git</li>
+          </ul>
+          <h6 class="project-title">Technical Achievments</h6>
+          <ul class="project-details">
+            <li>Used empty arrays to represent game objects like bullets, coins, npcs, etc.
+              Interactions between these gameobjects, collision handling, as well as input handling from the user, are
+              handled with Javascript functions.
+              Game variables are 'upgradable', so the user can increase the "food" spawn rate, and decrease the "enemy"
+              spawn rate with in-game upgrades.
+              User "lives" are tracked to end the game after sufficient losses.
+            </li>
+            <li>
+              Simulated random "enemy" generation and movement by using a random integer function, and performing
+              actions according to the random integer generated
+            </li>
+            <li>
+              Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. Did this by
+              implementing a gameloop which ingests the current timestamp, and checks the difference between the last
+              timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. This means a new frame
+              is
+              loaded 100 times a second, so the game framerate is cemented at 100 frames per second regardless of the
+              user's browser speed.
+            </li>
+            <li>Implemented a simple gamestate design pattern to manage the different phases of the game. At any given
+              time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), which controls
+              elements like the background image, active functions, etc.</li>
+          </ul>
+        </project-rightside>
+
+      </project-tile>
+
       <!-- TODO ENTRY -->
       <r-project-tile class="js-scroll">
         <r-project-leftside>
-          <img class="project-pic-big" src="https://media.giphy.com/media/3zAZ0Oncl4I4Wwmi3y/giphy.gif" loading="lazy">
+          <img class="project-pic-big"
+               src="https://media.giphy.com/media/3zAZ0Oncl4I4Wwmi3y/giphy.gif"
+               loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Todo Productivity App</h4>
             <p class="project-desc">
@@ -261,8 +335,12 @@
               back-end, communicating via REST API.
             </p>
             <div class="buttons-container">
-              <a href="#" target="_blank" class="proj_button">🚧 LIVE DEMO IN CONSTRUCTION 🚧</a>
-              <a href="https://github.com/clarencelam/rest_todo_v2" target="_blank" class="proj_button">SOURCE CODE</a>
+              <a href="#"
+                 target="_blank"
+                 class="proj_button">🚧 LIVE DEMO IN CONSTRUCTION 🚧</a>
+              <a href="https://github.com/clarencelam/rest_todo_v2"
+                 target="_blank"
+                 class="proj_button">SOURCE CODE</a>
             </div>
           </div>
         </r-project-leftside>
@@ -298,15 +376,21 @@
 
       <project-tile class="js-scroll">
         <project-leftside>
-          <img class="project-pic-big" src="https://media.giphy.com/media/Azn76GDOV7wDG3xJMq/giphy.gif" loading="lazy">
+          <img class="project-pic-big"
+               src="https://media.giphy.com/media/Azn76GDOV7wDG3xJMq/giphy.gif"
+               loading="lazy">
           <div class="project-body">
             <h4 class="project-title">A Foodstand Clam</h4>
             <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the
               purpose of learning to code in vanilla Javascript. Built from scratch.</p>
             <div class="buttons-container">
-              <a href="https://clamgamebeta.netlify.app/" target="_blank" class="proj_button">LIVE DEMO</a>
+              <a href="https://clamgamebeta.netlify.app/"
+                 target="_blank"
+                 class="proj_button">LIVE DEMO</a>
 
-              <a href="https://github.com/clarencelam/clamgame_beta" target="_blank" class="proj_button">SOURCE
+              <a href="https://github.com/clarencelam/clamgame_beta"
+                 target="_blank"
+                 class="proj_button">SOURCE
                 CODE</a>
             </div>
           </div>
@@ -351,15 +435,21 @@
       <!-- LEARNINGLOG ENTRY -->
       <r-project-tile class="js-scroll">
         <r-project-leftside>
-          <img class="project-pic-big" src="https://media.giphy.com/media/U3dO5oAw91QDIgtvml/giphy.gif" loading="lazy">
+          <img class="project-pic-big"
+               src="https://media.giphy.com/media/U3dO5oAw91QDIgtvml/giphy.gif"
+               loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Learning Log</h4>
             <p class="project-desc">A web based learning journal / note taking application. This project was built with
               guidance from the amazing book Python Crash Course, Project #3</p>
             <div class="buttons-container">
-              <a href="https://clarences-learninglog.herokuapp.com/" target="_blank" class="proj_button">LIVE
+              <a href="https://clarences-learninglog.herokuapp.com/"
+                 target="_blank"
+                 class="proj_button">LIVE
                 DEMO</a>
-              <a href="https://github.com/clarencelam/clam_learning_log" target="_blank" class="proj_button">SOURCE
+              <a href="https://github.com/clarencelam/clam_learning_log"
+                 target="_blank"
+                 class="proj_button">SOURCE
                 CODE</a>
             </div>
           </div>
@@ -390,7 +480,9 @@
       <!-- Personal portfolio entry -->
       <project-tile>
         <project-leftside>
-          <img class="project-pic-big" src="https://media.giphy.com/media/5AmPaMdlGLyX7QH07D/giphy.gif" loading="lazy">
+          <img class="project-pic-big"
+               src="https://media.giphy.com/media/5AmPaMdlGLyX7QH07D/giphy.gif"
+               loading="lazy">
           <div class="project-body">
             <h4 class="project-title">Personal Portfolio</h4>
             <p class="project-desc">A personal 1-page website built to showcase my programming portfolio and
@@ -398,9 +490,13 @@
               Built with an emphasis on interactivity and user engagement.
             </p>
             <div class="buttons-container">
-              <a href="#" target="_blank" class="proj_button">LIVE
+              <a href="#"
+                 target="_blank"
+                 class="proj_button">LIVE
                 DEMO</a>
-              <a href="https://github.com/clarencelam/clam-pp-deploy" target="_blank" class="proj_button">SOURCE
+              <a href="https://github.com/clarencelam/clam-pp-deploy"
+                 target="_blank"
+                 class="proj_button">SOURCE
                 CODE</a>
             </div>
           </div>
@@ -450,7 +546,9 @@
 
       <small-tile class="js-scroll">
         <div class="small-tile-main">
-          <img class="project-pic" src="https://i.imgur.com/aTC9cbV.png" loading="lazy">
+          <img class="project-pic"
+               src="https://i.imgur.com/aTC9cbV.png"
+               loading="lazy">
           <div class="project-body">
             <h6 class="project-title">Zense <br> 2018-2019</h6>
             <p class="project-desc">Cofounded Zense along with
@@ -479,7 +577,9 @@
 
       <small-tile class="js-scroll">
         <div class="small-tile-main">
-          <img class="project-pic" src="https://i.imgur.com/Gx69VXy.png" loading="lazy">
+          <img class="project-pic"
+               src="https://i.imgur.com/Gx69VXy.png"
+               loading="lazy">
           <div class="project-body">
             <h6 class="project-title">UBC Biztech Mentorship Program <br> 2016-2017</h6>
             <p class="project-desc">Sole manager of a student & professional mentorship program,
@@ -514,7 +614,9 @@
 
       <project-tile-ed class="js-scroll">
         <project-leftside-ed>
-          <img class="project-pic-fit" src="https://i.imgur.com/sLyDeQC.png" loading="lazy">
+          <img class="project-pic-fit"
+               src="https://i.imgur.com/sLyDeQC.png"
+               loading="lazy">
           <div class="project-body">
             <h4 class="project-title">University of British Columbia <br>2015-2019</h4>
             <p class="project-desc-ed">Bachelors of Commerce with honors,<br>
@@ -580,14 +682,20 @@
     </section>
     <gallery-container class="js-scroll">
       <div class="gallerypics2">
-        <a href="https://drive.google.com/file/d/1sYAhQVP_XOGyy6qkdmLtaawnaZyrXr9N/view?usp=sharing" target="_blank"
-          loading="lazy"><img class="resume-logos" src="https://i.imgur.com/IBKmDGY.png"></a>
+        <a href="https://drive.google.com/file/d/1sYAhQVP_XOGyy6qkdmLtaawnaZyrXr9N/view?usp=sharing"
+           target="_blank"
+           loading="lazy"><img class="resume-logos"
+               src="https://i.imgur.com/IBKmDGY.png"></a>
 
-        <a href="https://www.linkedin.com/in/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
-            src="https://i.imgur.com/FMZIFiD.png"></a>
+        <a href="https://www.linkedin.com/in/clarencelam/"
+           target="_blank"
+           loading="lazy"><img class="resume-logos"
+               src="https://i.imgur.com/FMZIFiD.png"></a>
 
-        <a href="https://github.com/clarencelam/" target="_blank" loading="lazy"><img class="resume-logos"
-            src="https://i.imgur.com/QfHI9AR.png"></a>
+        <a href="https://github.com/clarencelam/"
+           target="_blank"
+           loading="lazy"><img class="resume-logos"
+               src="https://i.imgur.com/QfHI9AR.png"></a>
 
       </div>
     </gallery-container>
@@ -609,13 +717,27 @@
 
     <gallery-container class="js-scroll">
       <div class="gallerypics">
-        <img class="skills-logos" src="https://i.imgur.com/m1TQIfK.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/yzRkSTk.png?1" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/5NENFGS.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/X5LGNcR.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/YM5RhPA.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/XAocEvR.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/D1DIF97.png" loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/m1TQIfK.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/yzRkSTk.png?1"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/5NENFGS.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/X5LGNcR.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/YM5RhPA.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/XAocEvR.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/D1DIF97.png"
+             loading="lazy">
 
       </div>
     </gallery-container>
@@ -626,8 +748,12 @@
           <p>And I'm in the process of learning these right now:
           </p>
         </textbox>
-        <img class="skills-logos" src="https://i.imgur.com/EzCoyUj.png" loading="lazy">
-        <img class="skills-logos" src="https://i.imgur.com/xt12IR4.png" loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/EzCoyUj.png"
+             loading="lazy">
+        <img class="skills-logos"
+             src="https://i.imgur.com/xt12IR4.png"
+             loading="lazy">
       </div>
     </gallery-container>
 
@@ -647,20 +773,39 @@
 
     <!-- contact form built with formspree api handling backend -->
 
-    <form class="js-scroll" accept-charset="utf-8" action="https://formspree.io/f/xqknqnev" method="post">
+    <form class="js-scroll"
+          accept-charset="utf-8"
+          action="https://formspree.io/f/xqknqnev"
+          method="post">
       <fieldset class="form-inputs">
 
         <label>Name:</label><br>
-        <input type="text" name="name" id="full-name" placeholder="Firstname Lastname" required="">
+        <input type="text"
+               name="name"
+               id="full-name"
+               placeholder="Firstname Lastname"
+               required="">
 
         <label>Email Address:</label><br>
-        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+        <input type="email"
+               name="_replyto"
+               id="email-address"
+               placeholder="email@domain.com"
+               required="">
 
         <label>Message:</label><br>
-        <textarea rows="5" name="message" id="message" placeholder="Type your message here." required=""></textarea>
+        <textarea rows="5"
+                  name="message"
+                  id="message"
+                  placeholder="Type your message here."
+                  required=""></textarea>
 
-        <button><input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-          <input type="submit" value="SUBMIT"></button>
+        <button><input type="hidden"
+                 name="_subject"
+                 id="email-subject"
+                 value="Contact Form Submission">
+          <input type="submit"
+                 value="SUBMIT"></button>
       </fieldset>
     </form>
 
@@ -676,17 +821,19 @@
 
     <!-- FAQ 1: WHO ARE YOU -->
     <textbox>
-      <button onclick="toggleShow100()" id="showBtn100">⬇ Who are you? ⬇</button>
+      <button onclick="toggleShow100()"
+              id="showBtn100">⬇ Who are you? ⬇</button>
     </textbox>
 
     <textcontainer id="more100">
       <textbox>
-        <p>I'm a tech professional, born + raised + currently based out of in Vancouver, Canada. 
+        <p>I'm a tech professional, born + raised + currently based out of in Vancouver, Canada.
         </p>
         <p>
           Prior to pursuing a developer role, I've worked as a Technical Support Analyst for two years,
           using my technical acumen to support
-          <a href="https://www.visier.com/" target="_blank">Visier's</a> SAAS data analytics web application
+          <a href="https://www.visier.com/"
+             target="_blank">Visier's</a> SAAS data analytics web application
         </p>
       </textbox>
       <textbox>
@@ -695,23 +842,26 @@
         </p>
         <p>
           In my university days, I worked in IT help-desk on campus at
-          <a href="https://psych.ubc.ca/" target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty +
+          <a href="https://psych.ubc.ca/"
+             target="_blank">UBC's Dept. of Psychology</a>, making sure the faculty +
           students + staff
           all had exactly what they needed IT-wise to perform their research and classes.
         </p>
         <p>
           I also interned for 12 months in a Pre-sales role at <a href="https://www.appnovation.com/"
-            target="_blank">Appnovation</a>, a Technology Services company
+             target="_blank">Appnovation</a>, a Technology Services company
           specializing in open source technologies.
         </p>
         <p>And had a 4-month summer internship as a Jr. Business Analyst for
-          BC's healthcare's <a href="https://cstproject.ca/" target="_blank">Clinical & Systems Transformation (CST)</a>
+          BC's healthcare's <a href="https://cstproject.ca/"
+             target="_blank">Clinical & Systems Transformation (CST)</a>
           project.
         </p>
       </textbox>
       <textbox>
         <p>
-          Now, I’m making the next step in my career, looking to find a role where I can leverage my SAAS Support background with my growing passion for development
+          Now, I’m making the next step in my career, looking to find a role where I can leverage my SAAS Support
+          background with my growing passion for development
         </p>
       </textbox>
     </textcontainer>
@@ -720,17 +870,20 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow101()" id="showBtn101">⬇ What's your educational background? ⬇</button>
+      <button onclick="toggleShow101()"
+              id="showBtn101">⬇ What's your educational background? ⬇</button>
     </textbox>
 
     <textcontainer id="more101">
       <textbox>
         <p>
-          In 2019, I graduated from the <a href="https://cstproject.ca/" target="_blank">University of British
+          In 2019, I graduated from the <a href="https://cstproject.ca/"
+             target="_blank">University of British
             Columbia</a> (UBC)
         </p>
         <p>
-          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/" target="_blank">Business Technology
+          I earned a Bachelor's of Commerce in <a href="https://cstproject.ca/"
+             target="_blank">Business Technology
             Management</a>.
           <br>
           Despite getting a business degree, I had my sights set on working in the tech industry going into this degree.
@@ -744,7 +897,8 @@
 
       <textbox>
         <br><br>
-        <button onclick="toggleShow104()" id="showBtn104">Why didn't you study Computer Science?</button>
+        <button onclick="toggleShow104()"
+                id="showBtn104">Why didn't you study Computer Science?</button>
       </textbox>
 
       <textcontainer id="more104">
@@ -757,7 +911,7 @@
           <p>
             The first would be that business disciplines (particularly entrepreneurship, finance,
             and business analysis) interest me greatly.
-                    </p>
+          </p>
           <p>
             Second, I've been lucky enough to have a great mentor in my youth who's an entrepreneur.
             He influenced me greatly and piqued my interest in entrepreneurship and finance.
@@ -778,25 +932,29 @@
       </textcontainer>
       <textbox>
         <br><br>
-        <button onclick="toggleShow105()" id="showBtn105">If you could go back, would you change your degree?</button>
+        <button onclick="toggleShow105()"
+                id="showBtn105">If you could go back, would you change your degree?</button>
       </textbox>
 
       <textcontainer id="more105">
         <textbox>
           <p>
-            Although I think a computer science degree would've been incredibly valuable, I do take pride in self-learning development.
+            Although I think a computer science degree would've been incredibly valuable, I do take pride in
+            self-learning development.
           </p>
           <p>
             I think being a self-taught developer
             is a powerful demonstration of my intrinsic motivation towards continuous, life-long learning.
           </p>
           <p>
-            And at the end of the day, I believe that all technical professionals have to be "self taught" to some degree--<br>
+            And at the end of the day, I believe that all technical professionals have to be "self taught" to some
+            degree--<br>
             Web technologies grow and mutate so quickly that it seems the learning never stops in this profession.
           </p>
           <p>
             So I can confidently say I'm happy with being a business school grad trying to be a Dev;
-            and having a sharp business acumen and strong customer focus will make me a very well-rounded tech professional in the end.
+            and having a sharp business acumen and strong customer focus will make me a very well-rounded tech
+            professional in the end.
           </p>
         </textbox>
       </textcontainer>
@@ -807,7 +965,8 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow102()" id="showBtn102">⬇ When did you start learning to code? ⬇</button>
+      <button onclick="toggleShow102()"
+              id="showBtn102">⬇ When did you start learning to code? ⬇</button>
     </textbox>
 
     <textcontainer id="more102">
@@ -837,7 +996,8 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow103()" id="showBtn103">⬇ Why are you learning development? ⬇</button>
+      <button onclick="toggleShow103()"
+              id="showBtn103">⬇ Why are you learning development? ⬇</button>
     </textbox>
     <textcontainer id="more103">
       <textbox>
@@ -848,7 +1008,8 @@
       <!-- FAQ 4.1-->
       <textbox>
         <br><br>
-        <button onclick="toggleShow106()" id="showBtn106">1. Professional Goals and Progression</button>
+        <button onclick="toggleShow106()"
+                id="showBtn106">1. Professional Goals and Progression</button>
       </textbox>
       <textcontainer id="more106">
         <textbox>
@@ -857,8 +1018,10 @@
             I've noticed a universal truth in this business: knowledge of code is powerful.
           </p>
           <p>
-            I know that the hours I've spent debugging code, and racking my brain setting up my project environment, will pay off in
-            any role I undertake in the IT field. In a nutshell, this development experience would add a ton of value to what I offer as a tech professional.
+            I know that the hours I've spent debugging code, and racking my brain setting up my project environment,
+            will pay off in
+            any role I undertake in the IT field. In a nutshell, this development experience would add a ton of value to
+            what I offer as a tech professional.
           </p>
         </textbox>
       </textcontainer>
@@ -866,16 +1029,19 @@
       <!-- FAQ 4.2-->
       <textbox>
         <br><br>
-        <button onclick="toggleShow107()" id="showBtn107">2. Alignment with personal and professional values</button>
+        <button onclick="toggleShow107()"
+                id="showBtn107">2. Alignment with personal and professional values</button>
       </textbox>
       <textcontainer id="more107">
         <textbox>
           <p>
-            My biggest professional/life value is lifetime learning. I feel most accomplished when I'm improving in something, or
+            My biggest professional/life value is lifetime learning. I feel most accomplished when I'm improving in
+            something, or
             learning something new.
           </p>
           <p>
-            This translates well to the field of technology, where the learning never ceases. Learning to develop applications is a natural 
+            This translates well to the field of technology, where the learning never ceases. Learning to develop
+            applications is a natural
             result of my pursuit of learning and improving as a professional.
           </p>
           <p>
@@ -884,8 +1050,8 @@
             often not satisfied unless it's completed to a standard of quality at which I can be proud of my work.
           </p>
           <p>
-            Even though this has made me slower to finish tickets in my as an Application Support professional, 
-            I think a dedication to quality results in robust and readable code. 
+            Even though this has made me slower to finish tickets in my as an Application Support professional,
+            I think a dedication to quality results in robust and readable code.
           </p>
           <p>
 
@@ -896,7 +1062,8 @@
       <!-- FAQ 4.3-->
       <textbox>
         <br><br>
-        <button onclick="toggleShow108()" id="showBtn108">3. Alignment with work style</button>
+        <button onclick="toggleShow108()"
+                id="showBtn108">3. Alignment with work style</button>
       </textbox>
       <textcontainer id="more108">
         <textbox>
@@ -923,7 +1090,8 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow109()" id="showBtn109">⬇ What tools are you using to learn development? ⬇</button>
+      <button onclick="toggleShow109()"
+              id="showBtn109">⬇ What tools are you using to learn development? ⬇</button>
     </textbox>
 
     <textcontainer id="more109">
@@ -951,18 +1119,19 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow111()" id="showBtn111">⬇ What type of roles are you looking for? ⬇</button>
+      <button onclick="toggleShow111()"
+              id="showBtn111">⬇ What type of roles are you looking for? ⬇</button>
     </textbox>
 
     <textcontainer id="more111">
       <textbox>
         <p>
-          I'm at a stage in my career where I'm 100% focused on professional growth. 
-          The role I'm looking for reflects that-- I want to be somewhere where I'm growing my 
+          I'm at a stage in my career where I'm 100% focused on professional growth.
+          The role I'm looking for reflects that-- I want to be somewhere where I'm growing my
           technical knowledge in enterprise-level technologies.
         </p>
         <p>
-          In a perfect world, I'd love to be in a role where I can leverage my user support background, while 
+          In a perfect world, I'd love to be in a role where I can leverage my user support background, while
           touching codebases, and refining my ability to work with enterprise-level technologies/code-bases.
         </p>
       </textbox>
@@ -972,7 +1141,8 @@
 
     <textbox>
       <br><br>
-      <button onclick="toggleShow110()" id="showBtn110">⬇ What are your other interests aside from coding? ⬇</button>
+      <button onclick="toggleShow110()"
+              id="showBtn110">⬇ What are your other interests aside from coding? ⬇</button>
     </textbox>
 
     <textcontainer id="more110">
@@ -980,7 +1150,7 @@
         <p>
           In the past few years, I've been spending many weekends working on my old project cars, and
           keeping them on the road. I'm particularly fond of 90's german cars!
-          I also keep in touch with my cultural roots by performing lion dance, and practicing often, to impress crowds 
+          I also keep in touch with my cultural roots by performing lion dance, and practicing often, to impress crowds
           on Chinese New Year and at weddings and other ceremonies.
         </p>
       </textbox>
@@ -1012,7 +1182,8 @@
 
   </main>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module"
+          src="/main.js"></script>
 
 
   <!----------------------------- Script to handle Hidden Text Showing Buttons ------------------------------->
